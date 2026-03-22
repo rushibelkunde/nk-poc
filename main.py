@@ -33,6 +33,7 @@ class AIResponse(BaseModel):
     alert_data: Dict[str, Any] = {} 
 
 # --- NEW: Code Generation Prompt ---
+# --- UPDATED: Code Generation Prompt to enforce detailed Markdown tables ---
 CODE_GENERATION_PROMPT = """
 You are a Senior Data Scientist for NK Protein.
 Your goal is to write a valid Python script using `pandas` to answer the user's specific business query.
@@ -47,7 +48,7 @@ REQUIREMENTS:
 4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
 5. The `dynamic_result` dictionary MUST strictly follow this structure:
 {{
-    "raw_math": "A detailed, plain-text explanation containing all your final calculated numbers, lists, or findings. Make it comprehensive.",
+    "raw_math": "A detailed, plain-text explanation containing your findings. IMPORTANT: If the user asks for a list, breakdown, or top/bottom items, you MUST select all informative columns (e.g., Product Name, Region, Customer, Invoice Date, Quantity, Revenue, Margin %, Overdue Days) and use `df[cols].to_markdown(index=False)` to embed a rich, comprehensive Markdown table directly into this string.",
     "action_type": "sales_view", # Options: "sales_view", "liquidate_stock", "legal_notice", or "reconcile_tax" based on the context.
     "chart_data": {{
         # Choose ONE type of chart that best fits the data: "bar", "pie", or "line"
@@ -62,7 +63,7 @@ OUTPUT FORMAT:
 Output ONLY the raw Python code. Do NOT wrap it in markdown block quotes (e.g., no ```python). Do not include any text before or after the code.
 """
 
-# --- UPDATED: Synthesis Prompt (Removed CHART_SELECTION) ---
+# --- UPDATED: Synthesis Prompt to stop restricting column counts ---
 SYSTEM_PROMPT = """
 You are NK AI, an authoritative executive AI assistant for NK Protein.
 
@@ -74,9 +75,9 @@ STRICT OUTPUT FORMATTING RULES:
    - Follow with the 'Executive Summary'.
    - End with 'Strategic Recommendation'.
 4. TABLE RULES: 
-   - Always include the header separator line (e.g., |---|---|).
-   - OMIT headers/columns that contain mostly "Not Available" or empty data.
-   - For regular status queries, use headers like: "Product/Customer", "Current Value", "Risk Status", "Days Overdue/Stuck".
+   - Provide RICH, COMPREHENSIVE tables. Do NOT restrict the table to 2-3 columns. Ensure all informative headers from the raw data (e.g., Region, Category, Invoice No, Quantity, Margin %, Days Stuck, Status) are included to give maximum context.
+   - Always include the header separator line (e.g., |---|---|---|).
+   - Format large currency numbers nicely (e.g., ₹1.5L or ₹1,50,000).
    - For Risk Status, use categorical tags: **High**, **Medium**, or **Low** where applicable.
 5. TONE: No conversational filler. Be cold, analytical, and prescriptive.
 6. ANTI-HALLUCINATION: Extract ALL metrics EXCLUSIVELY from the provided Raw Data context. Do NOT invent dates, numbers, or products.
@@ -84,21 +85,21 @@ STRICT OUTPUT FORMATTING RULES:
 EXAMPLE STRUCTURE:
 ### ⚡ Accessing NK AI...
 
-| Item | Current | Risk |
-| :--- | :--- | :--- |
-| Item A | ₹10.5L | **Medium** |
+| Product / Customer | Region | Category | Amount/Value | Days Overdue/Stuck | Risk Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| FreshMart Vadodara | Gujarat | Retail Chain | ₹50,867 | 45 Days | **Medium** |
 
 **Executive Summary**: [Summary text based on data]
 
 **Strategic Recommendation**: [Action text based on data]
 """
-
 @router.post("/ask-nk-ai", response_model=AIResponse)
 async def ask_nk_ai(req: QueryRequest):
     print(f"[NK-AI] Received Dynamic Query: {req.query}")
     
     # 1. Fetch Schema Context
     schema_context = analytics_engine.get_database_schema()
+    print(schema_context)
     prompt = CODE_GENERATION_PROMPT.format(schema=schema_context)
     
     # 2. Call LLM to generate Python Code

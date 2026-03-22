@@ -80,9 +80,9 @@ export const Dashboard: Component = () => {
     <div class="flex-1 w-full h-full overflow-hidden bg-slate-950 text-slate-100 flex flex-col p-4 md:p-6 gap-4 md:gap-6 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black font-sans">
       
       {/* Universal Header */}
-      <header class="bg-white/5 backdrop-blur-xl border border-white/10 p-4 md:p-6 rounded-3xl shadow-2xl flex items-center justify-between shrink-0">
+      <header class="bg-white/5 backdrop-blur-xl border border-white/10 p-2 md:p-4 rounded-3xl shadow-2xl flex items-center justify-between shrink-0">
         <div>
-          <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+          <h1 class="text-xl md:text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
             NK Proteins CMD Co-pilot
           </h1>
           <p class="text-slate-400 mt-1 text-xs md:text-sm font-medium tracking-wide">AI-Driven Executive Intelligence</p>
