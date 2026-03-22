@@ -3,12 +3,34 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from datetime import datetime
+import os
+
+# --- NEW: Dynamic Schema Generation ---
+DATASETS = {
+    "sales": "data/nk_sales_data_2022_2026_feb.csv",
+    "inventory": "data/nk_inventory_2022_2026_feb.csv",
+    "receivables": "data/nk_receivables_2022_2026_feb.csv",
+    "gst": "data/nk_gst_data_2022_2026_feb.csv"
+}
+
+def get_database_schema():
+    """Reads the headers of the CSVs to provide context to the LLM."""
+    schema = ""
+    for name, path in DATASETS.items():
+        try:
+            # Read only the first row to get columns without loading heavy data
+            df = pd.read_csv(path, nrows=0) 
+            schema += f"- Dataset '{name}' (path: '{path}'): Columns: {', '.join(df.columns.tolist())}\n"
+        except Exception as e:
+            print(f"[Warning] Could not read schema for {path}: {e}")
+    return schema
+
+# --- EXISTING HARDCODED FUNCTIONS (Kept for backwards compatibility with other endpoints) ---
 
 def run_sales_prediction():
     df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
     df['date'] = pd.to_datetime(df['date'])
     
-    # Calculate MoM growth for top performing and worst performing products
     df['MonthYear'] = df['date'].dt.to_period('M')
     monthly_sales = df.groupby(['product_name', 'MonthYear'])['revenue'].sum().reset_index()
     
@@ -19,7 +41,6 @@ def run_sales_prediction():
         prod_data = monthly_sales[monthly_sales['product_name'] == product].copy()
         prod_data['MonthNum'] = np.arange(len(prod_data))
         
-        # Linear Regression
         X = prod_data[['MonthNum']]
         y = prod_data['revenue']
         
@@ -28,11 +49,9 @@ def run_sales_prediction():
             model.fit(X, y)
             r2 = model.score(X, y)
             
-            # Predict next 3 months
             future_X = pd.DataFrame({'MonthNum': [len(X), len(X)+1, len(X)+2]})
             future_preds = model.predict(future_X)
             
-            # Calculate average growth percentage based on slope vs mean
             mean_sales = y.mean()
             growth_pct = (model.coef_[0] / mean_sales) * 100 if mean_sales else 0
             
@@ -48,14 +67,12 @@ def run_sales_prediction():
                 chart_data['labels'] = [str(m) for m in prod_data['MonthYear']] + ['M+1', 'M+2', 'M+3']
                 chart_data['historical'] = [float(val) for val in y.tolist()]
                 chart_data['forecast'] = [None] * len(y) + [float(val) for val in future_preds.tolist()]
-                chart_data['forecast'][len(y)-1] = float(y.iloc[-1]) # connect line
+                chart_data['forecast'][len(y)-1] = float(y.iloc[-1])
                 
-    # Calculate pie chart breakdown
     product_totals = df.groupby('product_name')['revenue'].sum()
     chart_data['pie_labels'] = product_totals.index.tolist()
     chart_data['pie_data'] = [float(x) for x in product_totals.values.tolist()]
     
-    # Find best and worst
     best_prod = max(results.keys(), key=lambda k: results[k]['growth_pct'])
     worst_prod = min(results.keys(), key=lambda k: results[k]['growth_pct'])
     
@@ -70,8 +87,6 @@ def run_sales_prediction():
 
 def run_liquidity_risk():
     df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
-    
-    # Filter high risk (Outstanding amount > 0 and overdue > 60 days)
     high_risk = df[(df['days_overdue'] > 60) & (df['outstanding_amount'] > 0)]
     total_stuck = int(high_risk['outstanding_amount'].sum())
     
@@ -100,11 +115,10 @@ def run_liquidity_risk():
     total_receivables = float(df['invoice_amount'].sum())
     healthy_receivables = total_receivables - total_stuck
     
-    # Predict next 30-90 days cash requirement using sales history proxy
     try:
         sales_df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
-        recent_90_sales = sales_df.tail(900)['revenue'].sum() # Approximation
-        cash_requirement_90_days = int(recent_90_sales * 0.75) # 75% operating cost proxy
+        recent_90_sales = sales_df.tail(900)['revenue'].sum()
+        cash_requirement_90_days = int(recent_90_sales * 0.75)
     except:
         cash_requirement_90_days = int(total_receivables * 1.5)
         
@@ -126,7 +140,6 @@ def run_inventory_optimization():
     df = pd.read_csv('data/nk_inventory_2022_2026_feb.csv')
     df['snapshot_date'] = pd.to_datetime(df['snapshot_date'])
     
-    # Identify dead stock (from pre-calculated 'is_dead_stock' flag)
     latest_date = df['snapshot_date'].max()
     recent_records = df[df['snapshot_date'] == latest_date]
     dead_stock_prods = recent_records[recent_records['is_dead_stock'] == 1]['product_name'].tolist()
@@ -137,7 +150,6 @@ def run_inventory_optimization():
         row = recent_records[recent_records['product_name'] == dead_prod].iloc[0]
         holding_amount = int(row['current_stock_kg'])
         
-        # Prepare list of all dead stock
         dead_stock_list = []
         for idx, r in recent_records[recent_records['is_dead_stock'] == 1].iterrows():
             days = int(r.get('days_no_movement', 0))
@@ -151,7 +163,6 @@ def run_inventory_optimization():
             
         raw_math = f"Inventory Analysis: Dead stock detected. Full list of items: {json.dumps(dead_stock_list)}. Summary: Highlighted {dead_prod} with {holding_amount} kg. Total dead stock value: ₹{sum(item['value'] for item in dead_stock_list)}."
         
-        # Prepare chart data
         prod_data = df[df['product_name'] == dead_prod].sort_values('snapshot_date').tail(24)
         chart_data['labels'] = prod_data['snapshot_date'].dt.strftime('%Y-%m').tolist()
         chart_data['historical'] = [float(val) for val in prod_data['current_stock_kg'].tolist()]
@@ -180,10 +191,8 @@ def run_tax_delta():
     df['invoice_date'] = pd.to_datetime(df['invoice_date'])
     df['MonthYear'] = df['invoice_date'].dt.to_period('M')
     
-    # Calculate ITC at risk per row (where mismatch_flag is 1)
     df['itc_at_risk'] = df.apply(lambda row: row['total_tax_amount'] if row['mismatch_flag'] == 1 else 0, axis=1)
     
-    # Group by month
     monthly_stats = df.groupby('MonthYear').agg({
         'total_tax_amount': 'sum',
         'itc_at_risk': 'sum',
@@ -193,14 +202,12 @@ def run_tax_delta():
     latest_month = monthly_stats.iloc[-1]
     mismatch_amt = float(latest_month['itc_at_risk'])
     
-    # Project liability using linear regression on monthly tax value
     monthly_stats['MonthNum'] = np.arange(len(monthly_stats))
     X = monthly_stats[['MonthNum']]
     y = monthly_stats['total_tax_amount']
     model = LinearRegression()
     model.fit(X, y)
     
-    # Predict next 3 months
     future_X = pd.DataFrame({'MonthNum': [len(X), len(X)+1, len(X)+2]})
     q3_liability = int(model.predict(future_X).sum())
     
@@ -231,10 +238,7 @@ def run_customer_health():
     df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
     pending = df[df['outstanding_amount'] > 0]
     
-    # Calculate total outstanding per customer
     customer_debt = pending.groupby('customer_name')['outstanding_amount'].sum().sort_values(ascending=False)
-    
-    # Calculate max days overdue per customer
     customer_delay = pending.groupby('customer_name')['days_overdue'].max()
     
     health_profiles = {}
@@ -267,7 +271,6 @@ def run_margin_velocity():
     df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
     df['date'] = pd.to_datetime(df['date'])
     
-    # Calculate moving average quantity sold over last 30 entries
     recent_sales = df.sort_values('date').groupby('product_name').tail(30)
     velocity = recent_sales.groupby('product_name')['quantity_sold'].mean().sort_values(ascending=False)
     
@@ -297,7 +300,6 @@ def run_margin_velocity():
 def run_profitability_analysis():
     df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
     
-    # 1. Top Profitable Products
     prod_profit = df.groupby('product_name').agg({
         'gross_margin': 'sum',
         'margin_pct': 'mean',
@@ -313,7 +315,6 @@ def run_profitability_analysis():
             "revenue": int(row['revenue'])
         })
         
-    # 2. Low Margin High Sales Customers
     cust_profit = df.groupby('customer_name').agg({
         'revenue': 'sum',
         'margin_pct': 'mean'
@@ -342,11 +343,9 @@ def run_profitability_analysis():
     return raw_math, meta
 
 def run_working_capital_analysis():
-    # Load Receivables
     rec_df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
     overdue_cache = int(rec_df[rec_df['days_overdue'] > 0]['outstanding_amount'].sum())
     
-    # Load Inventory
     inv_df = pd.read_csv('data/nk_inventory_2022_2026_feb.csv')
     inv_df['snapshot_date'] = pd.to_datetime(inv_df['snapshot_date'])
     latest_inv_date = inv_df['snapshot_date'].max()

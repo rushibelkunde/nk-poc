@@ -6,10 +6,11 @@ import analytics_engine
 from llm_service import call_ai_orchestration
 import json
 import re
+import traceback
 
 app = FastAPI(
     title="NK Executive Command API",
-    description="API for NK Protein POC that generates AI responses backed by heavy data analysis.",
+    description="API for NK Protein POC that generates AI responses backed by dynamic Pandas execution.",
     version="1.0.0"
 )
 
@@ -29,214 +30,140 @@ class QueryRequest(BaseModel):
 class AIResponse(BaseModel):
     response: str
     action_type: str = "none"
-    alert_data: Dict[str, Any] = {} # Holds the dynamic numbers to render on the UI
+    alert_data: Dict[str, Any] = {} 
 
+# --- NEW: Code Generation Prompt ---
+CODE_GENERATION_PROMPT = """
+You are a Senior Data Scientist for NK Protein.
+Your goal is to write a valid Python script using `pandas` to answer the user's specific business query.
+
+Here are the available CSV datasets and their exact columns:
+{schema}
+
+REQUIREMENTS:
+1. Import necessary libraries (import pandas as pd, import numpy as np, import json).
+2. Load the relevant CSV files using pd.read_csv() with the exact paths provided in the schema.
+3. Perform the necessary calculations to answer the user's query. Handle any potential NaN values.
+4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
+5. The `dynamic_result` dictionary MUST strictly follow this structure:
+{{
+    "raw_math": "A detailed, plain-text explanation containing all your final calculated numbers, lists, or findings. Make it comprehensive.",
+    "action_type": "sales_view", # Options: "sales_view", "liquidate_stock", "legal_notice", or "reconcile_tax" based on the context.
+    "chart_data": {{
+        # Choose ONE type of chart that best fits the data: "bar", "pie", or "line"
+        "type": "bar",
+        "labels": ["List", "of", "X-axis", "labels"],
+        "data": [10, 20, 30] # Y-axis data
+        # If choosing a pie chart, use "pie_labels" and "pie_data" instead.
+    }}
+}}
+
+OUTPUT FORMAT:
+Output ONLY the raw Python code. Do NOT wrap it in markdown block quotes (e.g., no ```python). Do not include any text before or after the code.
+"""
+
+# --- UPDATED: Synthesis Prompt (Removed CHART_SELECTION) ---
 SYSTEM_PROMPT = """
 You are NK AI, an authoritative executive AI assistant for NK Protein.
 
 STRICT OUTPUT FORMATTING RULES:
 1. Start with: "### ⚡ Accessing NK AI..."
 2. Use DOUBLE NEWLINES (\n\n) between every section, header, and list item. 
-3. If a list or table is requested:
+3. If a list or table is requested (or if the raw data provides list-based data):
    - Provide the Table/List FIRST.
    - Follow with the 'Executive Summary'.
    - End with 'Strategic Recommendation'.
 4. TABLE RULES: 
    - Always include the header separator line (e.g., |---|---|).
    - OMIT headers/columns that contain mostly "Not Available" or empty data.
-   - Show the "Forecast (Next Qtr)" header ONLY if the user explicitly asks for a forecast or future projection.
    - For regular status queries, use headers like: "Product/Customer", "Current Value", "Risk Status", "Days Overdue/Stuck".
    - For Risk Status, use categorical tags: **High**, **Medium**, or **Low** where applicable.
 5. TONE: No conversational filler. Be cold, analytical, and prescriptive.
-6. ANTI-HALLUCINATION: Extract ALL metrics EXCLUSIVELY from the provided Raw Data. Do NOT invent dates or products.
-7. DYNAMIC VISUALS: You will be provided with a list of "Available Chart IDs". You MUST choose exactly one main chart (line/bar) and exactly one pie chart (pie/doughnut) that best represent your textual analysis. You MUST place your selection at the very end of your response, formatted as raw JSON block under the exact header `### CHART_SELECTION`. Do not use markdown backticks for this JSON block.
+6. ANTI-HALLUCINATION: Extract ALL metrics EXCLUSIVELY from the provided Raw Data context. Do NOT invent dates, numbers, or products.
 
 EXAMPLE STRUCTURE:
 ### ⚡ Accessing NK AI...
 
-| Item | Current | Forecast | Risk |
-| :--- | :--- | :--- | :--- |
-| Item A | ₹10.5L | ₹12.2L | **Medium** |
+| Item | Current | Risk |
+| :--- | :--- | :--- |
+| Item A | ₹10.5L | **Medium** |
 
-**Executive Summary**: [Summary text]
+**Executive Summary**: [Summary text based on data]
 
-**Strategic Recommendation**: [Action text]
-
-### CHART_SELECTION
-{"main": "sales_trend", "pie": "liquidity_risk_pie"}
-"""
-
-ROUTER_PROMPT = """
-You are an intelligent API Router. Analyze the user's request and determine which internal analytical modules are required to answer it.
-Modules available:
-- "sales": Historical sales predictions, revenue trends, top/bottom performing products.
-- "liquidity": Receivables ledger, defaulting customers, overdue cash, trapped cash.
-- "inventory": Dead stock, holding amounts, variance, warehouse optimization.
-- "tax": GST liability, GSTR-2B mismatches, external tax forecasting.
-- "customer_health": Customer sales volume versus outstanding debt profiles.
-- "margin_velocity": Sales velocity and product movement.
-- "profitability": Top profitable products, high-margin/low-margin analysis.
-- "working_capital": Capital tied up in aging receivables and dead inventory.
-
-Respond EXCLUSIVELY with a valid JSON array of strings containing the required module IDs. Do NOT wrap the JSON in markdown code blocks or add any other text.
-Example Output:
-["sales", "liquidity"]
+**Strategic Recommendation**: [Action text based on data]
 """
 
 @router.post("/ask-nk-ai", response_model=AIResponse)
 async def ask_nk_ai(req: QueryRequest):
-    print(f"[NK-AI] Received Query: {req.query}")
+    print(f"[NK-AI] Received Dynamic Query: {req.query}")
     
-    # 1. Routing Pass
-    route_response = await call_ai_orchestration(ROUTER_PROMPT, f"User Query: {req.query}", {})
+    # 1. Fetch Schema Context
+    schema_context = analytics_engine.get_database_schema()
+    prompt = CODE_GENERATION_PROMPT.format(schema=schema_context)
     
-    # Clean possible markdown from LLaMA response
-    clean_json = re.sub(r'```[a-zA-Z]*\n', '', route_response)
-    clean_json = re.sub(r'\n```', '', clean_json).strip()
+    # 2. Call LLM to generate Python Code
+    generated_code_response = await call_ai_orchestration(prompt, f"User Query: {req.query}", {})
     
+    # Clean up any potential markdown wrappers the LLM might hallucinate
+    clean_code = generated_code_response.strip()
+    clean_code = re.sub(r'^```[a-zA-Z]*\n', '', clean_code)
+    clean_code = re.sub(r'\n```$', '', clean_code).strip()
+    
+    print("\n--- [NK-AI] EXECUTING DYNAMIC CODE ---")
+    print(clean_code)
+    print("--------------------------------------\n")
+    
+    # 3. Securely Execute Code (Sandbox Environment)
+    local_vars = {}
     try:
-        modules = json.loads(clean_json)
-        if not isinstance(modules, list):
-            modules = ["sales"]
+        # Note: In a production environment, you would run this in an isolated Docker container
+        exec(clean_code, globals(), local_vars)
+        
+        dynamic_result = local_vars.get('dynamic_result', {})
+        if not dynamic_result:
+             raise ValueError("The script did not produce a 'dynamic_result' dictionary.")
+             
+        raw_math = dynamic_result.get("raw_math", "Data processed successfully.")
+        action_type = dynamic_result.get("action_type", "sales_view")
+        chart_data = dynamic_result.get("chart_data", {})
+        
     except Exception as e:
-        print(f"[NK-AI] Failed to parse Router JSON: {e}")
-        modules = ["sales"]
+        print(f"[NK-AI] Code Execution Error: {e}")
+        traceback.print_exc()
         
-    print(f"[NK-AI] Executing Modules: {modules}")
-        
-    # 2. Dynamic Execution Pass
-    raw_math_synthesized = []
-    available_charts = {}
-    action_type = "sales_view" # Default
-    
-    # Map of module keys to their respective runner functions and chart mapping logic
-    MODULE_MAP = {
-        "sales": (analytics_engine.run_sales_prediction, ["sales_trend", "sales_distribution_pie"]),
-        "liquidity": (analytics_engine.run_liquidity_risk, ["liquidity_risk_pie"]),
-        "inventory": (analytics_engine.run_inventory_optimization, ["dead_stock_trend", "inventory_health_pie"]),
-        "tax": (analytics_engine.run_tax_delta, ["tax_delta_bar"]),
-        "customer_health": (analytics_engine.run_customer_health, ["customer_solvency_bar"]),
-        "margin_velocity": (analytics_engine.run_margin_velocity, ["sales_velocity_bar"]),
-        "profitability": (analytics_engine.run_profitability_analysis, ["profitability_bar"]),
-        "working_capital": (analytics_engine.run_working_capital_analysis, ["working_capital_pie"])
-    }
-    
-    for mod_id in modules:
-        if mod_id in MODULE_MAP:
-            func, chart_keys = MODULE_MAP[mod_id]
-            if hasattr(analytics_engine, func.__name__):
-                m, md = func()
-                raw_math_synthesized.append(m)
-                
-                # Dynamically map charts
-                if "chart_data" in md and md["chart_data"]:
-                    cd = md["chart_data"]
-                    for ck in chart_keys:
-                        if "pie" in ck:
-                            available_charts[ck] = {
-                                "pie_labels": cd.get("pie_labels") or cd.get("labels"),
-                                "pie_data": cd.get("pie_data") or cd.get("data"),
-                                "pie_type": cd.get("pie_type") or "pie"
-                            }
-                        else:
-                            available_charts[ck] = cd
-                
-                # Action type steering (simple heuristic)
-                if mod_id in ["inventory", "working_capital"]: action_type = "liquidate_stock"
-                elif mod_id in ["liquidity", "customer_health"]: action_type = "legal_notice"
-                elif mod_id == "tax": action_type = "reconcile_tax"
-                elif mod_id in ["sales", "profitability", "margin_velocity"]: action_type = "sales_view"
-        
-    # Ensure at least something fired
-    if not raw_math_synthesized:
-        m, md = analytics_engine.run_sales_prediction()
-        raw_math_synthesized.append(m)
-        cd = md["chart_data"]
-        available_charts["sales_trend"] = {"labels": cd.get("labels"), "historical": cd.get("historical"), "forecast": cd.get("forecast")}
-        available_charts["sales_distribution_pie"] = {"pie_labels": cd.get("pie_labels"), "pie_data": cd.get("pie_data")}
+        # Fallback to standard sales function if dynamic execution fails
+        raw_math, meta = analytics_engine.run_sales_prediction()
+        action_type = "sales_view"
+        chart_data = meta.get("chart_data", {})
+        raw_math = f"Error in dynamic processing. Defaulting to general overview. Raw: {raw_math}"
 
-    combined_context = f"User asked: {req.query}\n\nSynthesized Raw Data from Multiple Cross-Domain Modules combined:\n" + "\n---\n".join(raw_math_synthesized)
-    combined_context += f"\n\nAvailable Chart IDs for CHART_SELECTION: {list(available_charts.keys())}"
+    # 4. Final Synthesis Pass
+    combined_context = f"User asked: {req.query}\n\nDynamically Synthesized Raw Data from Custom Script:\n{raw_math}"
     
     if "list" in req.query.lower() or "top" in req.query.lower() or "worst" in req.query.lower():
         combined_context += "\n\nIMPORTANT: Use a Markdown table for any comparisons, rankings, or lists, and ensure double spacing between sections."
 
-    # 3. Synthesis Pass
     ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, combined_context, {})
-    
-    # 4. Extract CHART_SELECTION
     formatted_resp = ai_resp.strip()
-    chart_selection = {"main": "sales_trend", "pie": "sales_distribution_pie"} # safe fallback
     
-    if "### CHART_SELECTION" in formatted_resp:
-        parts = formatted_resp.split("### CHART_SELECTION")
-        formatted_resp = parts[0].strip()
-        json_str = parts[1].strip()
-        # Clean markdown wrappers if hallucinated
-        json_str = re.sub(r'```[a-zA-Z]*\n', '', json_str)
-        json_str = re.sub(r'\n```', '', json_str).strip()
-        try:
-            parsed = json.loads(json_str)
-            if "main" in parsed: chart_selection["main"] = parsed["main"]
-            if "pie" in parsed: chart_selection["pie"] = parsed["pie"]
-        except Exception as e:
-            print(f"[NK-AI] Warn: Failed to parse CHART_SELECTION json {e}")
+    return AIResponse(
+        response=formatted_resp, 
+        action_type=action_type, 
+        alert_data=chart_data # Direct mapping of the generated chart data to UI alert_data
+    )
 
-    # Build final UI alert_data payload from the AI's selection
-    final_alert_data = {}
-    
-    default_main = list(available_charts.keys())[0] if available_charts else None
-    main_id = chart_selection.get("main", default_main)
-    if main_id not in available_charts:
-        main_id = default_main
-        
-    if main_id and main_id in available_charts:
-        mc = available_charts[main_id]
-        if "historical" in mc:
-            final_alert_data["labels"] = mc["labels"]
-            final_alert_data["historical"] = mc["historical"]
-            if "forecast" in mc and mc["forecast"]:
-                final_alert_data["forecast"] = mc["forecast"]
-        elif "type" in mc:
-            final_alert_data["type"] = mc["type"]
-            final_alert_data["labels"] = mc["labels"]
-            final_alert_data["data"] = mc["data"]
-            
-    pie_id = chart_selection.get("pie")
-    if pie_id not in available_charts:
-        pie_keys = [k for k in available_charts.keys() if "pie" in k]
-        pie_id = pie_keys[0] if pie_keys else None
-        
-    if pie_id and pie_id in available_charts:
-        pc = available_charts[pie_id]
-        if "pie_labels" in pc:
-            final_alert_data["pie_labels"] = pc["pie_labels"]
-            final_alert_data["pie_data"] = pc["pie_data"]
-            if "pie_type" in pc:
-                final_alert_data["pie_type"] = pc["pie_type"]
-    
-    return AIResponse(response=formatted_resp, action_type=action_type, alert_data=final_alert_data)
 
+# --- Existing Specific Endpoints (Kept for backwards compatibility) ---
 
 @router.post("/get-sales-prediction", response_model=AIResponse)
 async def get_sales_prediction(req: QueryRequest):
     raw_math, metadata = analytics_engine.run_sales_prediction()
-    
-    # Explicitly telling the AI how to handle "list" requests in the user prompt
     user_context = f"User asked: {req.query}\n\nRaw Core Engine Data: {raw_math}"
     if "list" in req.query.lower():
-        user_context += "\n\nIMPORTANT: Use a Markdown table for the products and ensure double spacing between sections. Extract ALL product names directly from the Raw Core Engine Data."
-
+        user_context += "\n\nIMPORTANT: Use a Markdown table for the products and ensure double spacing between sections."
     ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, user_context, metadata)
-    
-    # Clean up: Ensure there are no weird trailing spaces that break Markdown
-    formatted_resp = ai_resp.strip() 
+    return AIResponse(response=ai_resp.strip(), action_type="sales_view", alert_data=metadata)
 
-    return AIResponse(
-        response=formatted_resp, 
-        action_type="sales_view", 
-        alert_data=metadata
-    )
 @router.post("/get-liquidity-risk", response_model=AIResponse)
 async def get_liquidity_risk(req: QueryRequest):
     raw_math, metadata = analytics_engine.run_liquidity_risk()
