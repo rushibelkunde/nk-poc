@@ -9,6 +9,7 @@ export const Dashboard: Component = () => {
   const [chartMode, setChartMode] = createSignal<'sales' | 'inventory'>('sales');
   const [dynamicChartData, setDynamicChartData] = createSignal<any>(null);
   const [isChartVisible, setIsChartVisible] = createSignal(false);
+  const [isVisualExpanded, setIsVisualExpanded] = createSignal(false);
   const [isLoading, setIsLoading] = createSignal(true);
 
   onMount(async () => {
@@ -100,6 +101,55 @@ export const Dashboard: Component = () => {
         </div>
       </header>
 
+      {/* Full-Screen Expanded Visual Modal */}
+      <Show when={isVisualExpanded()}>
+        <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 pointer-events-auto">
+          <div 
+            class="absolute inset-0 bg-slate-950/80 backdrop-blur-2xl transition-opacity animate-in fade-in duration-300" 
+            onClick={() => setIsVisualExpanded(false)}
+          ></div>
+          
+          <div class="relative w-full h-full max-w-7xl bg-white/5 border border-white/10 rounded-[2rem] shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-300">
+             <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 pointer-events-none"></div>
+             
+             <div class="px-8 py-6 border-b border-white/10 flex items-center justify-between relative z-10">
+                <div class="flex items-center gap-4">
+                   <div class="p-3 bg-indigo-500/20 rounded-2xl border border-indigo-500/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                      </svg>
+                   </div>
+                   <div>
+                      <h2 class="text-2xl font-bold text-slate-100 tracking-tight">Expanded Intelligence View</h2>
+                      <p class="text-slate-400 text-sm font-medium">Real-time data synchronization active</p>
+                   </div>
+                </div>
+                
+                <button 
+                  onClick={() => setIsVisualExpanded(false)}
+                  class="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-400 hover:text-white"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                   </svg>
+                </button>
+             </div>
+             
+             <div class="flex-1 p-8 relative z-10 overflow-hidden">
+                <Show when={!isLoading()} fallback={
+                  <div class="flex flex-col items-center justify-center h-full">
+                     <div class="w-16 h-16 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin"></div>
+                  </div>
+                }>
+                  <div class="h-full w-full">
+                    <PulseChart mode={chartMode()} dynamicData={dynamicChartData()} />
+                  </div>
+                </Show>
+             </div>
+          </div>
+        </div>
+      </Show>
+
       {/* Main Body Grid */}
       <div class="flex flex-col lg:flex-row flex-1 gap-4 md:gap-6 min-h-0">
         
@@ -123,10 +173,13 @@ export const Dashboard: Component = () => {
                   Live Metrix Pulse
                 </h2>
                 <button 
-                  onClick={() => setIsChartVisible(!isChartVisible())}
-                  class="lg:hidden text-xs bg-indigo-500/20 text-indigo-200 px-3 py-1.5 rounded-lg border border-indigo-500/30"
+                  onClick={() => setIsVisualExpanded(true)}
+                  class="text-xs bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 px-3 py-1.5 rounded-xl border border-indigo-500/30 transition flex items-center gap-2 shadow-lg shadow-indigo-500/10"
                 >
-                  Hide
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                  Expand View
                 </button>
               </div>
               

@@ -83,7 +83,7 @@ export const PulseChart: Component<{ mode: 'sales' | 'inventory', dynamicData?: 
       } else if (dynData.labels) {
         // Render standard Historical Line chart
         const datasetActual = {
-          label: 'Historical Data',
+          label: 'Historical Sales Data',
           data: dynData.historical,
           borderColor: '#60a5fa',
           backgroundColor: 'rgba(96, 165, 250, 0.15)',

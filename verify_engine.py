@@ -45,5 +45,19 @@ def test_all():
     except Exception as e:
         print(f"FAILED: {e}")
 
+    print("\nTesting Profitability Analysis...")
+    try:
+        raw, meta = analytics_engine.run_profitability_analysis()
+        print("SUCCESS")
+    except Exception as e:
+        print(f"FAILED: {e}")
+
+    print("\nTesting Working Capital Analysis...")
+    try:
+        raw, meta = analytics_engine.run_working_capital_analysis()
+        print("SUCCESS")
+    except Exception as e:
+        print(f"FAILED: {e}")
+
 if __name__ == "__main__":
     test_all()

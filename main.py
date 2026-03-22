@@ -41,17 +41,22 @@ STRICT OUTPUT FORMATTING RULES:
    - Provide the Table/List FIRST.
    - Follow with the 'Executive Summary'.
    - End with 'Strategic Recommendation'.
-4. TABLE RULES: Always include the header separator line (e.g., |---|---|).
+4. TABLE RULES: 
+   - Always include the header separator line (e.g., |---|---|).
+   - OMIT headers/columns that contain mostly "Not Available" or empty data.
+   - Show the "Forecast (Next Qtr)" header ONLY if the user explicitly asks for a forecast or future projection.
+   - For regular status queries, use headers like: "Product/Customer", "Current Value", "Risk Status", "Days Overdue/Stuck".
+   - For Risk Status, use categorical tags: **High**, **Medium**, or **Low** where applicable.
 5. TONE: No conversational filler. Be cold, analytical, and prescriptive.
-6. ANTI-HALLUCINATION: Do NOT use the exact dummy products ('Product A') from the example below. Extract ALL metrics EXCLUSIVELY from the provided Raw Data.
+6. ANTI-HALLUCINATION: Extract ALL metrics EXCLUSIVELY from the provided Raw Data. Do NOT invent dates or products.
 7. DYNAMIC VISUALS: You will be provided with a list of "Available Chart IDs". You MUST choose exactly one main chart (line/bar) and exactly one pie chart (pie/doughnut) that best represent your textual analysis. You MUST place your selection at the very end of your response, formatted as raw JSON block under the exact header `### CHART_SELECTION`. Do not use markdown backticks for this JSON block.
 
 EXAMPLE STRUCTURE:
 ### ⚡ Accessing NK AI...
 
-| Product | Trend | R^2 |
-| :--- | :--- | :--- |
-| Product A | +1.5% | 0.85 |
+| Item | Current | Forecast | Risk |
+| :--- | :--- | :--- | :--- |
+| Item A | ₹10.5L | ₹12.2L | **Medium** |
 
 **Executive Summary**: [Summary text]
 
@@ -70,6 +75,8 @@ Modules available:
 - "tax": GST liability, GSTR-2B mismatches, external tax forecasting.
 - "customer_health": Customer sales volume versus outstanding debt profiles.
 - "margin_velocity": Sales velocity and product movement.
+- "profitability": Top profitable products, high-margin/low-margin analysis.
+- "working_capital": Capital tied up in aging receivables and dead inventory.
 
 Respond EXCLUSIVELY with a valid JSON array of strings containing the required module IDs. Do NOT wrap the JSON in markdown code blocks or add any other text.
 Example Output:
@@ -148,6 +155,20 @@ async def ask_nk_ai(req: QueryRequest):
         if "chart_data" in md and md["chart_data"]:
             available_charts["sales_velocity_bar"] = md["chart_data"]
         action_type = "sales_view"
+        
+    if "profitability" in modules and hasattr(analytics_engine, 'run_profitability_analysis'):
+        m, md = analytics_engine.run_profitability_analysis()
+        raw_math_synthesized.append(m)
+        if "chart_data" in md:
+            available_charts["profitability_bar"] = md["chart_data"]
+        action_type = "sales_view"
+        
+    if "working_capital" in modules and hasattr(analytics_engine, 'run_working_capital_analysis'):
+        m, md = analytics_engine.run_working_capital_analysis()
+        raw_math_synthesized.append(m)
+        if "chart_data" in md:
+            available_charts["working_capital_pie"] = {"pie_labels": md["chart_data"]["pie_labels"], "pie_data": md["chart_data"]["pie_data"], "pie_type": "doughnut"}
+        action_type = "liquidate_stock"
         
     # Ensure at least something fired
     if not raw_math_synthesized:
@@ -256,6 +277,18 @@ async def get_tax_delta(req: QueryRequest):
     raw_math, metadata = analytics_engine.run_tax_delta()
     ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
     return AIResponse(response=ai_resp, action_type="reconcile_tax", alert_data=metadata)
+
+@router.post("/get-profitability", response_model=AIResponse)
+async def get_profitability(req: QueryRequest):
+    raw_math, metadata = analytics_engine.run_profitability_analysis()
+    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
+    return AIResponse(response=ai_resp, action_type="sales_view", alert_data=metadata)
+
+@router.post("/get-working-capital", response_model=AIResponse)
+async def get_working_capital(req: QueryRequest):
+    raw_math, metadata = analytics_engine.run_working_capital_analysis()
+    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
+    return AIResponse(response=ai_resp, action_type="liquidate_stock", alert_data=metadata)
 
 app.include_router(router)
 

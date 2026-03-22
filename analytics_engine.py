@@ -40,6 +40,7 @@ def run_sales_prediction():
                 'growth_pct': round(growth_pct, 2),
                 'r2': round(r2, 2),
                 'future_avg_month': float(future_preds.mean()),
+                'forecast_qtr': float(future_preds.sum()),
                 'current_trend': 'up' if growth_pct > 0 else 'down'
             }
             
@@ -79,12 +80,22 @@ def run_liquidity_risk():
         top_defaulter = list(top_defaulters_raw.keys())[0]
         top_defaulter_amt = int(top_defaulters_raw[top_defaulter])
         max_days = int(high_risk[high_risk['customer_name'] == top_defaulter]['days_overdue'].max())
-        top_defaulters = {str(k): int(v) for k,v in top_defaulters_raw.items()}
+        
+        defaulter_details = []
+        for cust, amt in top_defaulters_raw.items():
+            days = int(high_risk[high_risk['customer_name'] == cust]['days_overdue'].max())
+            defaulter_details.append({
+                "customer": cust,
+                "outstanding": int(amt),
+                "days_overdue": days,
+                "risk_status": "High" if days > 90 else "Medium" if days > 60 else "Low"
+            })
+        top_defaulters = defaulter_details
     else:
         top_defaulter = "None"
         top_defaulter_amt = 0
         max_days = 0
-        top_defaulters = {}
+        top_defaulters = []
         
     total_receivables = float(df['invoice_amount'].sum())
     healthy_receivables = total_receivables - total_stuck
@@ -138,10 +149,23 @@ def run_inventory_optimization():
         chart_data['pie_labels'] = [f"{dead_prod} (Dead)", "Moving Stock"]
         chart_data['pie_data'] = [float(holding_amount), moving_stock]
         
+        # Prepare list of all dead stock
+        dead_stock_list = []
+        for idx, r in recent_records[recent_records['is_dead_stock'] == 1].iterrows():
+            days = int(r.get('days_since_last_movement', 0))
+            dead_stock_list.append({
+                "product": r['product_name'],
+                "holding_kg": int(r['current_stock_kg']),
+                "value": int(r.get('inventory_value', 0)),
+                "days_stuck": days,
+                "risk_status": "High" if days > 180 else "Medium" if days > 90 else "Low"
+            })
+
         meta = {
             "dead_product": dead_prod,
             "holding_amount": holding_amount,
             "days_stuck": int(row.get('days_since_last_movement', 120)),
+            "dead_stock_details": dead_stock_list,
             "chart_data": chart_data
         }
     else:
@@ -180,9 +204,17 @@ def run_tax_delta():
     q3_liability = int(model.predict(future_X).sum())
     
     recent_mismatches = monthly_stats.tail(6)
-    mismatches_dict = {str(row['MonthYear']): float(row['itc_at_risk']) for _, row in recent_mismatches.iterrows()}
+    mismatches_list = []
+    for _, row in recent_mismatches.iterrows():
+        mismatches_list.append({
+            "period": str(row['MonthYear']),
+            "tax_liability": int(row['total_tax_amount']),
+            "itc_at_risk": int(row['itc_at_risk']),
+            "mismatches": int(row['mismatch_flag']),
+            "risk_status": "High" if row['itc_at_risk'] > 100000 else "Medium" if row['itc_at_risk'] > 50000 else "Low"
+        })
     
-    raw_math = f"Tax Analysis: Latest month ITC at risk is ₹{mismatch_amt}. Previous 6 months ITC risks: {json.dumps(mismatches_dict)}. Predicted Q3 liability: ₹{q3_liability}."
+    raw_math = f"Tax Analysis: Latest month ITC at risk is ₹{mismatch_amt}. Previous 6 months detailed breakdown: {json.dumps(mismatches_list)}. Predicted Q3 liability: ₹{q3_liability}."
     return raw_math, {
         "mismatch": mismatch_amt,
         "q3_liability": q3_liability,
@@ -246,10 +278,94 @@ def run_margin_velocity():
     meta = {
         "fastest_moving_product": str(best_velocity_prod),
         "top_velocity": float(velocity.iloc[0]) if len(velocity) > 0 else 0.0,
+        "velocity_details": [
+            {
+                "product": str(p),
+                "avg_qty_per_entry": round(float(v), 2),
+                "velocity_status": "High" if v > 5000 else "Medium" if v > 2000 else "Low"
+            } for p, v in velocity.head(10).items()
+        ],
         "chart_data": {
             "type": "bar",
             "labels": [str(p) for p in velocity.index[:5]],
             "data": [float(v) for v in velocity.values[:5]]
+        }
+    }
+    return raw_math, meta
+
+def run_profitability_analysis():
+    df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
+    
+    # 1. Top Profitable Products
+    prod_profit = df.groupby('product_name').agg({
+        'gross_margin': 'sum',
+        'margin_pct': 'mean',
+        'revenue': 'sum'
+    }).sort_values('gross_margin', ascending=False)
+    
+    top_products = []
+    for p, row in prod_profit.head(10).iterrows():
+        top_products.append({
+            "product": str(p),
+            "total_margin": int(row['gross_margin']),
+            "margin_pct": round(float(row['margin_pct']), 2),
+            "revenue": int(row['revenue'])
+        })
+        
+    # 2. Low Margin High Sales Customers
+    cust_profit = df.groupby('customer_name').agg({
+        'revenue': 'sum',
+        'margin_pct': 'mean'
+    }).sort_values('revenue', ascending=False)
+    
+    low_margin_custs = []
+    for c, row in cust_profit[cust_profit['margin_pct'] < 15].head(10).iterrows():
+        low_margin_custs.append({
+            "customer": str(c),
+            "revenue": int(row['revenue']),
+            "margin_pct": round(float(row['margin_pct']), 2),
+            "risk_status": "High" if row['margin_pct'] < 10 else "Medium"
+        })
+        
+    raw_math = f"Profitability Analysis: Top products by gross margin: {json.dumps(top_products)}. Low margin high volume customers: {json.dumps(low_margin_custs)}."
+    
+    meta = {
+        "top_profitable_products": top_products,
+        "low_margin_customers": low_margin_custs,
+        "chart_data": {
+            "type": "bar",
+            "labels": [str(x['product']) for x in top_products[:5]],
+            "data": [int(x['total_margin']) for x in top_products[:5]]
+        }
+    }
+    return raw_math, meta
+
+def run_working_capital_analysis():
+    # Load Receivables
+    rec_df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
+    overdue_cache = int(rec_df[rec_df['days_overdue'] > 0]['outstanding_amount'].sum())
+    
+    # Load Inventory
+    inv_df = pd.read_csv('data/nk_inventory_2022_2026_feb.csv')
+    recent_inv = inv_df.sort_values('snapshot_date').groupby('product_name').tail(1)
+    dead_stock_value = int(recent_inv[recent_inv['is_dead_stock'] == 1]['total_value_inr'].sum())
+    
+    total_blocked = overdue_cache + dead_stock_value
+    
+    breakdown = [
+        {"category": "Overdue Receivables", "amount": overdue_cache, "risk": "High" if overdue_cache > 5000000 else "Medium"},
+        {"category": "Dead Inventory", "amount": dead_stock_value, "risk": "High" if dead_stock_value > 2000000 else "Medium"}
+    ]
+    
+    raw_math = f"Working Capital Analysis: Total capital blocked is ₹{total_blocked}. Breakdown: Receivables ₹{overdue_cache}, Dead Inventory ₹{dead_stock_value}."
+    
+    meta = {
+        "total_blocked": total_blocked,
+        "breakdown": breakdown,
+        "chart_data": {
+            "pie_type": "doughnut",
+            "pie_labels": ["Receivables", "Inventory"],
+            "pie_data": [float(overdue_cache), float(dead_stock_value)]
         }
     }
     return raw_math, meta
