@@ -5,23 +5,23 @@ from sklearn.linear_model import LinearRegression
 from datetime import datetime
 
 def run_sales_prediction():
-    df = pd.read_csv('data/historical_sales.csv')
-    df['Date'] = pd.to_datetime(df['Date'])
+    df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
+    df['date'] = pd.to_datetime(df['date'])
     
     # Calculate MoM growth for top performing and worst performing products
-    df['MonthYear'] = df['Date'].dt.to_period('M')
-    monthly_sales = df.groupby(['Product', 'MonthYear'])['Sales_INR'].sum().reset_index()
+    df['MonthYear'] = df['date'].dt.to_period('M')
+    monthly_sales = df.groupby(['product_name', 'MonthYear'])['revenue'].sum().reset_index()
     
     results = {}
     chart_data = {}
     
-    for product in monthly_sales['Product'].unique():
-        prod_data = monthly_sales[monthly_sales['Product'] == product].copy()
+    for product in monthly_sales['product_name'].unique():
+        prod_data = monthly_sales[monthly_sales['product_name'] == product].copy()
         prod_data['MonthNum'] = np.arange(len(prod_data))
         
         # Linear Regression
         X = prod_data[['MonthNum']]
-        y = prod_data['Sales_INR']
+        y = prod_data['revenue']
         
         if len(X) > 1:
             model = LinearRegression()
@@ -43,14 +43,14 @@ def run_sales_prediction():
                 'current_trend': 'up' if growth_pct > 0 else 'down'
             }
             
-            if product == "Tirupati Cottonseed Oil":
+            if product == "Tirupati Cottonseed Oil 1L":
                 chart_data['labels'] = [str(m) for m in prod_data['MonthYear']] + ['M+1', 'M+2', 'M+3']
                 chart_data['historical'] = [float(val) for val in y.tolist()]
                 chart_data['forecast'] = [None] * len(y) + [float(val) for val in future_preds.tolist()]
                 chart_data['forecast'][len(y)-1] = float(y.iloc[-1]) # connect line
                 
     # Calculate pie chart breakdown
-    product_totals = df.groupby('Product')['Sales_INR'].sum()
+    product_totals = df.groupby('product_name')['revenue'].sum()
     chart_data['pie_labels'] = product_totals.index.tolist()
     chart_data['pie_data'] = [float(x) for x in product_totals.values.tolist()]
     
@@ -68,17 +68,17 @@ def run_sales_prediction():
     }
 
 def run_liquidity_risk():
-    df = pd.read_csv('data/receivables_ledger.csv')
+    df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
     
-    # Filter high risk
-    high_risk = df[(df['DaysOverdue'] > 60) & (df['Status'] == 'Pending')]
-    total_stuck = int(high_risk['Amount_INR'].sum())
+    # Filter high risk (Outstanding amount > 0 and overdue > 60 days)
+    high_risk = df[(df['days_overdue'] > 60) & (df['outstanding_amount'] > 0)]
+    total_stuck = int(high_risk['outstanding_amount'].sum())
     
     if total_stuck > 0:
-        top_defaulters_raw = high_risk.groupby('Customer')['Amount_INR'].sum().sort_values(ascending=False).head(10).to_dict()
+        top_defaulters_raw = high_risk.groupby('customer_name')['outstanding_amount'].sum().sort_values(ascending=False).head(10).to_dict()
         top_defaulter = list(top_defaulters_raw.keys())[0]
         top_defaulter_amt = int(top_defaulters_raw[top_defaulter])
-        max_days = int(high_risk[high_risk['Customer'] == top_defaulter]['DaysOverdue'].max())
+        max_days = int(high_risk[high_risk['customer_name'] == top_defaulter]['days_overdue'].max())
         top_defaulters = {str(k): int(v) for k,v in top_defaulters_raw.items()}
     else:
         top_defaulter = "None"
@@ -86,13 +86,13 @@ def run_liquidity_risk():
         max_days = 0
         top_defaulters = {}
         
-    total_receivables = float(df['Amount_INR'].sum())
+    total_receivables = float(df['invoice_amount'].sum())
     healthy_receivables = total_receivables - total_stuck
     
     # Predict next 30-90 days cash requirement using sales history proxy
     try:
-        sales_df = pd.read_csv('data/historical_sales.csv')
-        recent_90_sales = sales_df.head(90*10)['Sales_INR'].sum() # Assuming 10 products
+        sales_df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
+        recent_90_sales = sales_df.tail(900)['revenue'].sum() # Approximation
         cash_requirement_90_days = int(recent_90_sales * 0.75) # 75% operating cost proxy
     except:
         cash_requirement_90_days = int(total_receivables * 1.5)
@@ -112,28 +112,27 @@ def run_liquidity_risk():
     }
 
 def run_inventory_optimization():
-    df = pd.read_csv('data/inventory_snapshots.csv')
-    df['Date'] = pd.to_datetime(df['Date'])
+    df = pd.read_csv('data/nk_inventory_2022_2026_feb.csv')
+    df['snapshot_date'] = pd.to_datetime(df['snapshot_date'])
     
-    # Identify dead stock (0 standard deviation in stock over last X weeks)
-    recent_weeks = df.sort_values('Date').groupby('Product').tail(16)
-    std_devs = recent_weeks.groupby('Product')['Stock_Kg'].std()
-    dead_stock_prods = std_devs[std_devs == 0].index.tolist()
+    # Identify dead stock (from pre-calculated 'is_dead_stock' flag)
+    recent_records = df.sort_values('snapshot_date').groupby('product_name').tail(1)
+    dead_stock_prods = recent_records[recent_records['is_dead_stock'] == 1]['product_name'].tolist()
     
     chart_data = {}
     if dead_stock_prods:
         dead_prod = dead_stock_prods[0]
-        holding_amount = int(recent_weeks[recent_weeks['Product'] == dead_prod]['Stock_Kg'].iloc[0])
-        all_std = std_devs.fillna(0).to_dict()
-        all_std_json = {str(k): float(v) for k,v in all_std.items()}
-        raw_math = f"Inventory Analysis: Variance in Stock_Kg over last 16 weeks (0 variance = dead stock). Full product variance breakdown: {json.dumps(all_std_json)}. Highlighted dead product for charting: {dead_prod} holding {holding_amount} kg."
+        row = recent_records[recent_records['product_name'] == dead_prod].iloc[0]
+        holding_amount = int(row['current_stock_kg'])
+        
+        raw_math = f"Inventory Analysis: Dead stock flag detected. Highlighted dead product: {dead_prod} with {holding_amount} kg currently. Blocking ₹{row.get('inventory_value', 0)} in capital."
         
         # Prepare chart data
-        prod_data = df[df['Product'] == dead_prod].sort_values('Date').tail(24)
-        chart_data['labels'] = prod_data['Date'].dt.strftime('%Y-%m-%d').tolist()
-        chart_data['historical'] = [float(val) for val in prod_data['Stock_Kg'].tolist()]
+        prod_data = df[df['product_name'] == dead_prod].sort_values('snapshot_date').tail(24)
+        chart_data['labels'] = prod_data['snapshot_date'].dt.strftime('%Y-%m').tolist()
+        chart_data['historical'] = [float(val) for val in prod_data['current_stock_kg'].tolist()]
         
-        total_stock = float(df.groupby('Product').tail(1)['Stock_Kg'].sum())
+        total_stock = float(recent_records['current_stock_kg'].sum())
         moving_stock = total_stock - float(holding_amount)
         chart_data['pie_type'] = 'doughnut'
         chart_data['pie_labels'] = [f"{dead_prod} (Dead)", "Moving Stock"]
@@ -142,7 +141,7 @@ def run_inventory_optimization():
         meta = {
             "dead_product": dead_prod,
             "holding_amount": holding_amount,
-            "days_stuck": 120,
+            "days_stuck": int(row.get('days_since_last_movement', 120)),
             "chart_data": chart_data
         }
     else:
@@ -152,47 +151,58 @@ def run_inventory_optimization():
     return raw_math, meta
 
 def run_tax_delta():
-    df = pd.read_csv('data/gst_compliance_log.csv')
-    df['Month'] = pd.to_datetime(df['Month'])
-    df = df.sort_values('Month')
+    df = pd.read_csv('data/nk_gst_data_2022_2026_feb.csv')
+    df['invoice_date'] = pd.to_datetime(df['invoice_date'])
+    df['MonthYear'] = df['invoice_date'].dt.to_period('M')
     
-    latest_month = df.iloc[-1]
-    mismatch = int(latest_month['Mismatch_INR'])
+    # Calculate ITC at risk per row (where mismatch_flag is 1)
+    df['itc_at_risk'] = df.apply(lambda row: row['total_tax_amount'] if row['mismatch_flag'] == 1 else 0, axis=1)
     
-    # Project liability
-    X = np.arange(len(df)).reshape(-1, 1)
-    y = df['Internal_Tax_INR'].values
+    # Group by month
+    monthly_stats = df.groupby('MonthYear').agg({
+        'total_tax_amount': 'sum',
+        'itc_at_risk': 'sum',
+        'mismatch_flag': 'sum'
+    }).reset_index()
+    
+    latest_month = monthly_stats.iloc[-1]
+    mismatch_amt = float(latest_month['itc_at_risk'])
+    
+    # Project liability using linear regression on monthly tax value
+    monthly_stats['MonthNum'] = np.arange(len(monthly_stats))
+    X = monthly_stats[['MonthNum']]
+    y = monthly_stats['total_tax_amount']
     model = LinearRegression()
     model.fit(X, y)
     
-    # Predict next 3 months (Q3)
-    future_X = np.array([[len(df)], [len(df)+1], [len(df)+2]])
+    # Predict next 3 months
+    future_X = pd.DataFrame({'MonthNum': [len(X), len(X)+1, len(X)+2]})
     q3_liability = int(model.predict(future_X).sum())
     
-    recent_mismatches = df.tail(6).copy()
-    mismatches_dict = {row['Month'].strftime('%Y-%m'): int(row['Mismatch_INR']) for _, row in recent_mismatches.iterrows()}
+    recent_mismatches = monthly_stats.tail(6)
+    mismatches_dict = {str(row['MonthYear']): float(row['itc_at_risk']) for _, row in recent_mismatches.iterrows()}
     
-    raw_math = f"Tax Analysis: Latest month mismatch is ₹{mismatch}. Previous 6 months mismatches: {json.dumps(mismatches_dict)}. Predicted Q3 liability: ₹{q3_liability} based on linear projection."
+    raw_math = f"Tax Analysis: Latest month ITC at risk is ₹{mismatch_amt}. Previous 6 months ITC risks: {json.dumps(mismatches_dict)}. Predicted Q3 liability: ₹{q3_liability}."
     return raw_math, {
-        "mismatch": mismatch,
+        "mismatch": mismatch_amt,
         "q3_liability": q3_liability,
-        "latest_month": latest_month['Month'].strftime('%Y-%m'),
+        "latest_month": str(latest_month['MonthYear']),
         "chart_data": {
             "type": "bar",
-            "labels": ["Internal TaxCalc", "GSTR-2B Logged"],
-            "data": [float(latest_month['Internal_Tax_INR']), float(latest_month['GSTR_2B_INR'])]
+            "labels": [str(m) for m in monthly_stats.tail(6)['MonthYear']],
+            "data": [float(v) for v in monthly_stats.tail(6)['total_tax_amount']]
         }
     }
 
 def run_customer_health():
-    df = pd.read_csv('data/receivables_ledger.csv')
-    pending = df[df['Status'] == 'Pending']
+    df = pd.read_csv('data/nk_receivables_2022_2026_feb.csv')
+    pending = df[df['outstanding_amount'] > 0]
     
     # Calculate total outstanding per customer
-    customer_debt = pending.groupby('Customer')['Amount_INR'].sum().sort_values(ascending=False)
+    customer_debt = pending.groupby('customer_name')['outstanding_amount'].sum().sort_values(ascending=False)
     
     # Calculate max days overdue per customer
-    customer_delay = pending.groupby('Customer')['DaysOverdue'].max()
+    customer_delay = pending.groupby('customer_name')['days_overdue'].max()
     
     health_profiles = {}
     for cust in customer_debt.index:
@@ -221,17 +231,17 @@ def run_customer_health():
     return raw_math, meta
 
 def run_margin_velocity():
-    df = pd.read_csv('data/historical_sales.csv')
-    df['Date'] = pd.to_datetime(df['Date'])
+    df = pd.read_csv('data/nk_sales_data_2022_2026_feb.csv')
+    df['date'] = pd.to_datetime(df['date'])
     
-    # Calculate moving average quantity sold over last 30 days
-    recent_sales = df.sort_values('Date').groupby('Product').tail(30)
-    velocity = recent_sales.groupby('Product')['Quantity'].mean().sort_values(ascending=False)
+    # Calculate moving average quantity sold over last 30 entries
+    recent_sales = df.sort_values('date').groupby('product_name').tail(30)
+    velocity = recent_sales.groupby('product_name')['quantity_sold'].mean().sort_values(ascending=False)
     
     velocity_profile = {str(k): round(float(v), 2) for k, v in velocity.items()}
     best_velocity_prod = velocity.index[0] if len(velocity) > 0 else "None"
     
-    raw_math = f"Sales Velocity Analysis (30-day moving average of kg sold per day): {json.dumps(velocity_profile)}."
+    raw_math = f"Sales Velocity Analysis (recent entries average of units sold): {json.dumps(velocity_profile)}."
     
     meta = {
         "fastest_moving_product": str(best_velocity_prod),

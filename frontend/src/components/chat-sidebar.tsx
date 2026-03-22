@@ -56,8 +56,21 @@ export const ChatSidebar: Component<{ onActionReceived: (type: string, payload?:
   return (
     <div class="flex flex-col h-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
       <div class="px-6 py-5 bg-black/20 border-b border-white/10 flex items-center justify-between">
-        <h2 class="text-lg font-bold text-slate-200">Executive AI Chat</h2>
-        <div class="text-xs px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 font-bold border border-blue-500/30">AI Ready</div>
+        <div class="flex flex-col">
+          <h2 class="text-lg font-bold text-slate-200">Executive AI Chat</h2>
+          <div class="flex items-center gap-3 mt-1">
+            <div class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-bold border border-blue-500/30">AI Ready</div>
+            <button 
+              onClick={() => setMessages([{ id: Date.now().toString(), role: 'ai', content: 'Conversation cleared. How can I assist you today?' }])}
+              class="text-[10px] text-slate-500 hover:text-red-400 transition-colors uppercase font-bold tracking-wider flex items-center gap-1"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              Clear History
+            </button>
+          </div>
+        </div>
       </div>
       
       <div ref={chatContainerRef} class="flex-1 overflow-y-auto p-6 flex flex-col gap-4 min-h-0 scroll-smooth">
