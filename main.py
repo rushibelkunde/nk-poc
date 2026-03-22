@@ -45,17 +45,17 @@ REQUIREMENTS:
 1. Import necessary libraries (import pandas as pd, import numpy as np, import json).
 2. Load the relevant CSV files using pd.read_csv() with the exact paths provided in the schema.
 3. Perform the necessary calculations. 
-   - IMPORTANT: If the user asks for "trends", "history", or "over time", you MUST include the FULL date range from the dataset (e.g. from 2022 to 2026). Do NOT truncate the rows (no `.head(20)`).
-   - If the user asks "Which [entities]" (e.g. Which customers, Which products), you should PREFER GROUPING AND AGGREGATING the data by that entity (e.g. `df.groupby('customer_name')`).
-   - For grouped data, sum the values (e.g. `outstanding_amount`) and count or identify the most relevant status flags.
+   - IMPORTANT: For "Predict next quarter sales", use the `sales` dataset. Note that the `quarter` column might contain values like 'Q1' (strings). If you need to convert to numeric, handles prefixes like 'Q' safely (e.g. `row['quarter'].replace('Q','')`).
+   - If the user asks for "trends" or "history", include the FULL date range (2022 to 2026). Do NOT truncate.
+   - If the user asks "Which [entities]", PREFER GROUPING AND AGGREGATING (e.g. `df.groupby('customer_name')`).
 4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
 5. The `dynamic_result` dictionary MUST strictly follow this structure:
 {{
-    "raw_math": "A detailed explanation of findings. IMPORTANT: Include the FULL table for trends. Use `to_markdown(index=False)`.",
+    "raw_math": "A detailed explanation of findings. IMPORTANT: Include tables for lists/trends. Use `to_markdown(index=False)`.",
     "action_type": "sales_view", 
     "chart_data": {{
-        "type": "line", # Use "line" for trends
-        "labels": ["Jan 2022", "..."], 
+        "type": "line", # Use "line" for trends, "bar" for others
+        "labels": ["Labels"], 
         "data": [10.5, 20.2] 
     }}
 }}
