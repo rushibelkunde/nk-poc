@@ -49,15 +49,21 @@ REQUIREMENTS:
    - If the user explicitly asks for "trends", "history", or "since 2022", then include the FULL date range. 
    - If the user uses "now" or "recently", filter the data to the most recent year/quarter relative to Feb 2026.
    - For "Which [entities]", PREFER GROUPING AND AGGREGATING (e.g. `df.groupby('customer_name')`).
-4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
-5. The `dynamic_result` dictionary MUST strictly follow this structure:
+4. DETERMINE THE OPTIMAL CHART TYPE based on the user's intent and the shape of the resulting data:
+   - "line": Use for continuous time-series data, historical trends, and forecasting.
+   - "bar": Use for categorical comparisons, discrete rankings (e.g., top 10 customers), or cross-sectional data.
+   - "pie": Use ONLY for composition, market share, or parts-of-a-whole where percentages sum to 100%.
+   - "scatter": Use for correlation, variance, or comparing two independent numeric variables.
+5. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
+6. The `dynamic_result` dictionary MUST strictly follow this structure:
 {{
     "raw_math": "A detailed explanation of findings. IMPORTANT: Include concise tables. Use `to_markdown(index=False)`.",
     "action_type": "sales_view", 
     "chart_data": {{
-        "type": "line", # Use "line" for trends/predictions
-        "labels": ["Labels"], 
-        "data": [10.5, 20.2] 
+        "type": "<INSERT_DYNAMIC_CHART_TYPE_HERE>", # E.g., "line", "bar", "pie", or "scatter" based on Rule 4
+        "title": "A concise title for the chart",
+        "labels": ["Label1", "Label2"], # X-axis items, pie slices, etc. Ensure these are lists of native Python strings/ints.
+        "data": [10.5, 20.2] # Y-axis values. Ensure these are native Python floats/ints, NOT Pandas Series.
     }}
 }}
 

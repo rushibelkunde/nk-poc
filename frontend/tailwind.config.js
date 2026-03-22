@@ -7,8 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        nkPrimary: "#1E3A8A", // Deep blue
-        nkAccent: "#F59E0B",  // Amber
+        nkPrimary: "#0e1117", // Main background
+        nkCard: "#262730",    // Card background
+        nkAccent: "#ff4b4b",  // Streamlit red
+        nkHighlight: "#f97316", // Streamlit-style orange/amber
+        nkText: "#fafafa",    // Main text
+        nkBorder: "rgba(250, 250, 250, 0.1)", // Subtle white border
       }
     },
   },
