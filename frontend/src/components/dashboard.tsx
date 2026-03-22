@@ -8,7 +8,7 @@ export const Dashboard: Component = () => {
   const [criticalAlerts, setCriticalAlerts] = createSignal<{message: string, action_type: string}[]>([]);
   const [chartMode, setChartMode] = createSignal<'sales' | 'inventory'>('sales');
   const [dynamicChartData, setDynamicChartData] = createSignal<any>(null);
-  const [isChartVisible, setIsChartVisible] = createSignal(true);
+  const [isChartVisible, setIsChartVisible] = createSignal(false);
   const [isLoading, setIsLoading] = createSignal(true);
 
   onMount(async () => {
@@ -82,7 +82,7 @@ export const Dashboard: Component = () => {
       <header class="bg-white/5 backdrop-blur-xl border border-white/10 p-4 md:p-6 rounded-3xl shadow-2xl flex items-center justify-between shrink-0">
         <div>
           <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
-            NK Proteins Command Center
+            NK Proteins CMD Co-pilot
           </h1>
           <p class="text-slate-400 mt-1 text-xs md:text-sm font-medium tracking-wide">AI-Driven Executive Intelligence</p>
         </div>
