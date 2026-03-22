@@ -44,18 +44,18 @@ Here are the available CSV datasets and their exact columns:
 REQUIREMENTS:
 1. Import necessary libraries (import pandas as pd, import numpy as np, import json).
 2. Load the relevant CSV files using pd.read_csv() with the exact paths provided in the schema.
-3. Perform the necessary calculations to answer the user's query. Handle any potential NaN values.
+3. Perform the necessary calculations. 
+   - IMPORTANT: If the user asks "Which [entities]" (e.g. Which customers, Which products), you should PREFER GROUPING AND AGGREGATING the data by that entity (e.g. `df.groupby('customer_name')`).
+   - For grouped data, sum the values (e.g. `outstanding_amount`) and count or identify the most relevant status flags.
 4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
 5. The `dynamic_result` dictionary MUST strictly follow this structure:
 {{
-    "raw_math": "A detailed, plain-text explanation containing your findings. IMPORTANT: If the user asks for a list, breakdown, or top/bottom items, you MUST select all informative columns (e.g., Product Name, Region, Customer, Invoice Date, Quantity, Revenue, Margin %, Overdue Days) and use `df[cols].to_markdown(index=False)` to embed a rich, comprehensive Markdown table directly into this string.",
-    "action_type": "sales_view", # Options: "sales_view", "liquidate_stock", "legal_notice", or "reconcile_tax" based on the context.
+    "raw_math": "A detailed explanation of findings. IMPORTANT: If providing a list/rankings, use `to_markdown(index=False)` to embed a rich table including key metrics like Region, Total Value, Max Overdue Days, and Risk Status.",
+    "action_type": "sales_view", # Choices: "sales_view", "liquidate_stock", "legal_notice", "reconcile_tax"
     "chart_data": {{
-        # Choose ONE type of chart that best fits the data: "bar", "pie", or "line"
         "type": "bar",
-        "labels": ["List", "of", "X-axis", "labels"],
-        "data": [10, 20, 30] # Y-axis data
-        # If choosing a pie chart, use "pie_labels" and "pie_data" instead.
+        "labels": ["Labels"],
+        "data": [10, 20] 
     }}
 }}
 
