@@ -45,17 +45,18 @@ REQUIREMENTS:
 1. Import necessary libraries (import pandas as pd, import numpy as np, import json).
 2. Load the relevant CSV files using pd.read_csv() with the exact paths provided in the schema.
 3. Perform the necessary calculations. 
-   - IMPORTANT: If the user asks "Which [entities]" (e.g. Which customers, Which products), you should PREFER GROUPING AND AGGREGATING the data by that entity (e.g. `df.groupby('customer_name')`).
+   - IMPORTANT: If the user asks for "trends", "history", or "over time", you MUST include the FULL date range from the dataset (e.g. from 2022 to 2026). Do NOT truncate the rows (no `.head(20)`).
+   - If the user asks "Which [entities]" (e.g. Which customers, Which products), you should PREFER GROUPING AND AGGREGATING the data by that entity (e.g. `df.groupby('customer_name')`).
    - For grouped data, sum the values (e.g. `outstanding_amount`) and count or identify the most relevant status flags.
 4. You MUST create a final Python dictionary named exactly `dynamic_result` at the global scope of your script.
 5. The `dynamic_result` dictionary MUST strictly follow this structure:
 {{
-    "raw_math": "A detailed explanation of findings. IMPORTANT: If providing a list/rankings, use `to_markdown(index=False)` to embed a rich table including key metrics like Region, Total Value, Max Overdue Days, and Risk Status.",
-    "action_type": "sales_view", # Choices: "sales_view", "liquidate_stock", "legal_notice", "reconcile_tax"
+    "raw_math": "A detailed explanation of findings. IMPORTANT: Include the FULL table for trends. Use `to_markdown(index=False)`.",
+    "action_type": "sales_view", 
     "chart_data": {{
-        "type": "bar",
-        "labels": ["Labels"],
-        "data": [10, 20] 
+        "type": "line", # Use "line" for trends
+        "labels": ["Jan 2022", "..."], 
+        "data": [10.5, 20.2] 
     }}
 }}
 
