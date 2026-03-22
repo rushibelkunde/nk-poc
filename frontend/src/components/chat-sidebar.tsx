@@ -16,10 +16,33 @@ export const ChatSidebar: Component<{ onActionReceived: (type: string, payload?:
   const [isLoading, setIsLoading] = createSignal(false);
   let chatContainerRef: HTMLDivElement | undefined;
 
+  const queryOptions = [
+    "Give me a summary of current business performance",
+    "How have our sales trended from 2022 till now?",
+    "Predict next quarter sales",
+    "Show top profitable products",
+    "Which customers are low margin despite high sales?",
+    "Which products should we promote next month?",
+    "Which customers are slow-paying?",
+    "How much cash do we need in next 30 days?",
+    "Which items are dead stock?",
+    "How much capital is blocked in inventory?",
+    "Show GST mismatch summary",
+    "What should I focus on in next 30 days?",
+    "What are the top risks in the business right now?",
+    "What is blocking my working capital?"
+  ];
+
   createEffect(() => {
     messages(); // track array changes
     if (chatContainerRef) chatContainerRef.scrollTop = chatContainerRef.scrollHeight;
   });
+
+  const handleQuerySelect = (query: string) => {
+    if (query === "") return;
+    setInput(query);
+    sendMessage();
+  };
 
   const sendMessage = async () => {
     if (!input().trim() || isLoading()) return;
@@ -103,28 +126,45 @@ export const ChatSidebar: Component<{ onActionReceived: (type: string, payload?:
         </Show>
       </div>
 
-      <div class="p-4 bg-black/20 border-t border-white/10 gap-3 flex flex-col">
-        <div class="flex gap-2">
-          <input 
-            type="text" 
-            value={input()}
-            onInput={(e) => setInput(e.currentTarget.value)}
-            onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            placeholder="Ask NK AI..."
-            class="flex-1 bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 text-slate-200 placeholder-slate-500 transition-all placeholder:text-sm shadow-inner"
-            disabled={isLoading()}
-          />
-          <button 
-            onClick={sendMessage}
-            class="bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white rounded-xl px-5 py-3 transition-all disabled:opacity-50 shadow-lg shadow-blue-500/20 shadow-xl"
-            disabled={isLoading() || !input().trim()}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
-          </button>
-        </div>
-        <div class="flex flex-wrap gap-2">
-           <button class="text-[10px] bg-slate-800/50 hover:bg-slate-700/50 text-slate-400 px-3 py-1.5 rounded-lg transition border border-slate-700" onClick={() => { setInput("Give me a health check on next quarter's sales."); sendMessage(); }}>Next Quarter Sales</button>
-           <button class="text-[10px] bg-slate-800/50 hover:bg-slate-700/50 text-slate-400 px-3 py-1.5 rounded-lg transition border border-slate-700" onClick={() => { setInput("Where is my cash trapped?"); sendMessage(); }}>Cash Flow Risk</button>
+      <div class="p-4 bg-black/20 border-t border-white/10 flex flex-col gap-3">
+        <div class="flex gap-2 items-center">
+          {/* Executive Command Dropdown - Inline */}
+          <div class="relative shrink-0 w-10 md:w-16">
+            <select 
+              onChange={(e) => handleQuerySelect(e.currentTarget.value)}
+              class="w-full h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-xl px-2 text-[10px] text-indigo-300 font-bold focus:outline-none focus:ring-2 focus:ring-indigo-500/50 appearance-none cursor-pointer transition-all hover:bg-indigo-500/30 text-center"
+              title="Select Executive Command"
+            >
+              <option value="" class="bg-slate-900 text-slate-400">⚡</option>
+              <For each={queryOptions}>
+                {(option) => <option value={option} class="bg-slate-900 text-slate-200 py-2">{option}</option>}
+              </For>
+            </select>
+            <div class="absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none text-indigo-400 opacity-50">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex-1 flex gap-2">
+            <input 
+              type="text" 
+              value={input()}
+              onInput={(e) => setInput(e.currentTarget.value)}
+              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+              placeholder="Ask AI or select ⚡"
+              class="flex-1 bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 text-slate-200 placeholder-slate-500 transition-all placeholder:text-sm shadow-inner"
+              disabled={isLoading()}
+            />
+            <button 
+              onClick={sendMessage}
+              class="bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white rounded-xl px-4 py-3 transition-all disabled:opacity-50 shadow-lg shadow-blue-500/20"
+              disabled={isLoading() || !input().trim()}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
