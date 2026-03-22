@@ -104,71 +104,48 @@ async def ask_nk_ai(req: QueryRequest):
         
     print(f"[NK-AI] Executing Modules: {modules}")
         
-    # 2. Execution Pass
+    # 2. Dynamic Execution Pass
     raw_math_synthesized = []
     available_charts = {}
-    action_type = "sales_view" # Default fallback
+    action_type = "sales_view" # Default
     
-    if "sales" in modules:
-        m, md = analytics_engine.run_sales_prediction()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md:
-            cd = md["chart_data"]
-            available_charts["sales_trend"] = {"labels": cd.get("labels"), "historical": cd.get("historical"), "forecast": cd.get("forecast")}
-            available_charts["sales_distribution_pie"] = {"pie_labels": cd.get("pie_labels"), "pie_data": cd.get("pie_data")}
-        action_type = "sales_view"
+    # Map of module keys to their respective runner functions and chart mapping logic
+    MODULE_MAP = {
+        "sales": (analytics_engine.run_sales_prediction, ["sales_trend", "sales_distribution_pie"]),
+        "liquidity": (analytics_engine.run_liquidity_risk, ["liquidity_risk_pie"]),
+        "inventory": (analytics_engine.run_inventory_optimization, ["dead_stock_trend", "inventory_health_pie"]),
+        "tax": (analytics_engine.run_tax_delta, ["tax_delta_bar"]),
+        "customer_health": (analytics_engine.run_customer_health, ["customer_solvency_bar"]),
+        "margin_velocity": (analytics_engine.run_margin_velocity, ["sales_velocity_bar"]),
+        "profitability": (analytics_engine.run_profitability_analysis, ["profitability_bar"]),
+        "working_capital": (analytics_engine.run_working_capital_analysis, ["working_capital_pie"])
+    }
     
-    if "liquidity" in modules:
-        m, md = analytics_engine.run_liquidity_risk()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md:
-            cd = md["chart_data"]
-            available_charts["liquidity_risk_pie"] = {"pie_labels": cd.get("labels"), "pie_data": cd.get("data")}
-        action_type = "legal_notice"
-        
-    if "inventory" in modules:
-        m, md = analytics_engine.run_inventory_optimization()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md and md["chart_data"]:
-            cd = md["chart_data"]
-            available_charts["dead_stock_trend"] = {"labels": cd.get("labels"), "historical": cd.get("historical")}
-            available_charts["inventory_health_pie"] = {"pie_labels": cd.get("pie_labels"), "pie_data": cd.get("pie_data"), "pie_type": cd.get("pie_type")}
-        action_type = "liquidate_stock"
-        
-    if "tax" in modules:
-        m, md = analytics_engine.run_tax_delta()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md:
-            available_charts["tax_delta_bar"] = md["chart_data"]
-        action_type = "reconcile_tax"
-        
-    if "customer_health" in modules and hasattr(analytics_engine, 'run_customer_health'):
-        m, md = analytics_engine.run_customer_health()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md and md["chart_data"]:
-            available_charts["customer_solvency_bar"] = md["chart_data"]
-        action_type = "legal_notice"
-        
-    if "margin_velocity" in modules and hasattr(analytics_engine, 'run_margin_velocity'):
-        m, md = analytics_engine.run_margin_velocity()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md and md["chart_data"]:
-            available_charts["sales_velocity_bar"] = md["chart_data"]
-        action_type = "sales_view"
-        
-    if "profitability" in modules and hasattr(analytics_engine, 'run_profitability_analysis'):
-        m, md = analytics_engine.run_profitability_analysis()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md:
-            available_charts["profitability_bar"] = md["chart_data"]
-        action_type = "sales_view"
-        
-    if "working_capital" in modules and hasattr(analytics_engine, 'run_working_capital_analysis'):
-        m, md = analytics_engine.run_working_capital_analysis()
-        raw_math_synthesized.append(m)
-        if "chart_data" in md:
-            available_charts["working_capital_pie"] = {"pie_labels": md["chart_data"]["pie_labels"], "pie_data": md["chart_data"]["pie_data"], "pie_type": "doughnut"}
-        action_type = "liquidate_stock"
+    for mod_id in modules:
+        if mod_id in MODULE_MAP:
+            func, chart_keys = MODULE_MAP[mod_id]
+            if hasattr(analytics_engine, func.__name__):
+                m, md = func()
+                raw_math_synthesized.append(m)
+                
+                # Dynamically map charts
+                if "chart_data" in md and md["chart_data"]:
+                    cd = md["chart_data"]
+                    for ck in chart_keys:
+                        if "pie" in ck:
+                            available_charts[ck] = {
+                                "pie_labels": cd.get("pie_labels") or cd.get("labels"),
+                                "pie_data": cd.get("pie_data") or cd.get("data"),
+                                "pie_type": cd.get("pie_type") or "pie"
+                            }
+                        else:
+                            available_charts[ck] = cd
+                
+                # Action type steering (simple heuristic)
+                if mod_id in ["inventory", "working_capital"]: action_type = "liquidate_stock"
+                elif mod_id in ["liquidity", "customer_health"]: action_type = "legal_notice"
+                elif mod_id == "tax": action_type = "reconcile_tax"
+                elif mod_id in ["sales", "profitability", "margin_velocity"]: action_type = "sales_view"
         
     # Ensure at least something fired
     if not raw_math_synthesized:

@@ -108,7 +108,7 @@ def run_liquidity_risk():
     except:
         cash_requirement_90_days = int(total_receivables * 1.5)
         
-    raw_math = f"Receivables Analysis: High risk tier > 60 days. Total: ₹{total_stuck}. Top 10 defaulters breakdown: {json.dumps(top_defaulters)}. Predicted 90-day cash requirement: ₹{cash_requirement_90_days}."
+    raw_math = f"Receivables Analysis: High risk tier (>60 days). Total Amount Stuck: ₹{total_stuck}. Full breakdown of aging and defaulters: {json.dumps(top_defaulters)}. Predicted 90-day cash requirement for operations: ₹{cash_requirement_90_days}."
     return raw_math, {
         "total_stuck": total_stuck,
         "top_defaulter": top_defaulter,
@@ -127,7 +127,8 @@ def run_inventory_optimization():
     df['snapshot_date'] = pd.to_datetime(df['snapshot_date'])
     
     # Identify dead stock (from pre-calculated 'is_dead_stock' flag)
-    recent_records = df.sort_values('snapshot_date').groupby('product_name').tail(1)
+    latest_date = df['snapshot_date'].max()
+    recent_records = df[df['snapshot_date'] == latest_date]
     dead_stock_prods = recent_records[recent_records['is_dead_stock'] == 1]['product_name'].tolist()
     
     chart_data = {}
@@ -136,7 +137,19 @@ def run_inventory_optimization():
         row = recent_records[recent_records['product_name'] == dead_prod].iloc[0]
         holding_amount = int(row['current_stock_kg'])
         
-        raw_math = f"Inventory Analysis: Dead stock flag detected. Highlighted dead product: {dead_prod} with {holding_amount} kg currently. Blocking ₹{row.get('inventory_value', 0)} in capital."
+        # Prepare list of all dead stock
+        dead_stock_list = []
+        for idx, r in recent_records[recent_records['is_dead_stock'] == 1].iterrows():
+            days = int(r.get('days_no_movement', 0))
+            dead_stock_list.append({
+                "product": r['product_name'],
+                "holding_kg": int(r['current_stock_kg']),
+                "value": int(r.get('total_value_inr', 0)),
+                "days_stuck": days,
+                "risk_status": "High" if days > 180 else "Medium" if days > 90 else "Low"
+            })
+            
+        raw_math = f"Inventory Analysis: Dead stock detected. Full list of items: {json.dumps(dead_stock_list)}. Summary: Highlighted {dead_prod} with {holding_amount} kg. Total dead stock value: ₹{sum(item['value'] for item in dead_stock_list)}."
         
         # Prepare chart data
         prod_data = df[df['product_name'] == dead_prod].sort_values('snapshot_date').tail(24)
@@ -149,22 +162,10 @@ def run_inventory_optimization():
         chart_data['pie_labels'] = [f"{dead_prod} (Dead)", "Moving Stock"]
         chart_data['pie_data'] = [float(holding_amount), moving_stock]
         
-        # Prepare list of all dead stock
-        dead_stock_list = []
-        for idx, r in recent_records[recent_records['is_dead_stock'] == 1].iterrows():
-            days = int(r.get('days_since_last_movement', 0))
-            dead_stock_list.append({
-                "product": r['product_name'],
-                "holding_kg": int(r['current_stock_kg']),
-                "value": int(r.get('inventory_value', 0)),
-                "days_stuck": days,
-                "risk_status": "High" if days > 180 else "Medium" if days > 90 else "Low"
-            })
-
         meta = {
             "dead_product": dead_prod,
             "holding_amount": holding_amount,
-            "days_stuck": int(row.get('days_since_last_movement', 120)),
+            "days_stuck": int(row.get('days_no_movement', 120)),
             "dead_stock_details": dead_stock_list,
             "chart_data": chart_data
         }
@@ -244,7 +245,7 @@ def run_customer_health():
             'risk_status': 'critical' if customer_delay[cust] > 60 else 'warning' if customer_delay[cust] > 30 else 'healthy'
         }
         
-    raw_math = f"Customer Health Analysis: Total outstanding debt by customer and their max days overdue: {json.dumps(health_profiles)}."
+    raw_math = f"Customer Health and Solvency Profile: Providing full map of customer debt levels and risk statuses: {json.dumps(health_profiles)}. This includes total outstanding amount and maximum days overdue for each customer."
     
     if len(customer_debt) > 0:
         top_cust = customer_debt.index[0]
@@ -327,7 +328,7 @@ def run_profitability_analysis():
             "risk_status": "High" if row['margin_pct'] < 10 else "Medium"
         })
         
-    raw_math = f"Profitability Analysis: Top products by gross margin: {json.dumps(top_products)}. Low margin high volume customers: {json.dumps(low_margin_custs)}."
+    raw_math = f"Comprehensive Profitability Analysis: Top products by total gross margin: {json.dumps(top_products)}. Also identified low margin high volume customers (potential risk): {json.dumps(low_margin_custs)}."
     
     meta = {
         "top_profitable_products": top_products,
@@ -347,7 +348,9 @@ def run_working_capital_analysis():
     
     # Load Inventory
     inv_df = pd.read_csv('data/nk_inventory_2022_2026_feb.csv')
-    recent_inv = inv_df.sort_values('snapshot_date').groupby('product_name').tail(1)
+    inv_df['snapshot_date'] = pd.to_datetime(inv_df['snapshot_date'])
+    latest_inv_date = inv_df['snapshot_date'].max()
+    recent_inv = inv_df[inv_df['snapshot_date'] == latest_inv_date]
     dead_stock_value = int(recent_inv[recent_inv['is_dead_stock'] == 1]['total_value_inr'].sum())
     
     total_blocked = overdue_cache + dead_stock_value
@@ -357,7 +360,7 @@ def run_working_capital_analysis():
         {"category": "Dead Inventory", "amount": dead_stock_value, "risk": "High" if dead_stock_value > 2000000 else "Medium"}
     ]
     
-    raw_math = f"Working Capital Analysis: Total capital blocked is ₹{total_blocked}. Breakdown: Receivables ₹{overdue_cache}, Dead Inventory ₹{dead_stock_value}."
+    raw_math = f"Working Capital and Liquidity Snapshot: Total capital blocked is ₹{total_blocked}. Itemized breakdown into Overdue Receivables (₹{overdue_cache}) and Dead Inventory Stock (₹{dead_stock_value})."
     
     meta = {
         "total_blocked": total_blocked,
