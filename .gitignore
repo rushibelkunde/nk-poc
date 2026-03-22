@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.eslintcache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+data/nk_poc_data.xlsx

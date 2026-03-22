@@ -1,0 +1,2601 @@
+Date,Product,Stock_Kg
+2021-04-04,Tirupati Cottonseed Oil,1569
+2021-04-04,Tirupati Sunflower Oil,4188
+2021-04-04,Tirupati Groundnut Oil,4008
+2021-04-04,Tirupati Soybean Oil,8923
+2021-04-04,Tirupati Mustard Oil,5590
+2021-04-04,Olixir Olive Oil,3707
+2021-04-04,Olixir Sesame Oil,4617
+2021-04-04,Castor Oil,2560
+2021-04-04,Refined Castor Oil,9573
+2021-04-04,De Oiled Cake,1682
+2021-04-11,Tirupati Cottonseed Oil,4761
+2021-04-11,Tirupati Sunflower Oil,1708
+2021-04-11,Tirupati Groundnut Oil,2315
+2021-04-11,Tirupati Soybean Oil,1369
+2021-04-11,Tirupati Mustard Oil,1569
+2021-04-11,Olixir Olive Oil,9998
+2021-04-11,Olixir Sesame Oil,6823
+2021-04-11,Castor Oil,1575
+2021-04-11,Refined Castor Oil,5339
+2021-04-11,De Oiled Cake,4909
+2021-04-18,Tirupati Cottonseed Oil,7323
+2021-04-18,Tirupati Sunflower Oil,3155
+2021-04-18,Tirupati Groundnut Oil,1552
+2021-04-18,Tirupati Soybean Oil,7040
+2021-04-18,Tirupati Mustard Oil,1305
+2021-04-18,Olixir Olive Oil,3679
+2021-04-18,Olixir Sesame Oil,1790
+2021-04-18,Castor Oil,1407
+2021-04-18,Refined Castor Oil,2319
+2021-04-18,De Oiled Cake,2898
+2021-04-25,Tirupati Cottonseed Oil,9869
+2021-04-25,Tirupati Sunflower Oil,3064
+2021-04-25,Tirupati Groundnut Oil,5572
+2021-04-25,Tirupati Soybean Oil,7980
+2021-04-25,Tirupati Mustard Oil,2929
+2021-04-25,Olixir Olive Oil,3751
+2021-04-25,Olixir Sesame Oil,1428
+2021-04-25,Castor Oil,2637
+2021-04-25,Refined Castor Oil,4563
+2021-04-25,De Oiled Cake,7875
+2021-05-02,Tirupati Cottonseed Oil,7609
+2021-05-02,Tirupati Sunflower Oil,5612
+2021-05-02,Tirupati Groundnut Oil,6528
+2021-05-02,Tirupati Soybean Oil,4474
+2021-05-02,Tirupati Mustard Oil,7936
+2021-05-02,Olixir Olive Oil,5952
+2021-05-02,Olixir Sesame Oil,8194
+2021-05-02,Castor Oil,3480
+2021-05-02,Refined Castor Oil,5686
+2021-05-02,De Oiled Cake,5061
+2021-05-09,Tirupati Cottonseed Oil,2825
+2021-05-09,Tirupati Sunflower Oil,7796
+2021-05-09,Tirupati Groundnut Oil,6195
+2021-05-09,Tirupati Soybean Oil,5038
+2021-05-09,Tirupati Mustard Oil,2151
+2021-05-09,Olixir Olive Oil,6743
+2021-05-09,Olixir Sesame Oil,1677
+2021-05-09,Castor Oil,8015
+2021-05-09,Refined Castor Oil,3628
+2021-05-09,De Oiled Cake,3708
+2021-05-16,Tirupati Cottonseed Oil,2020
+2021-05-16,Tirupati Sunflower Oil,5563
+2021-05-16,Tirupati Groundnut Oil,2964
+2021-05-16,Tirupati Soybean Oil,4013
+2021-05-16,Tirupati Mustard Oil,3632
+2021-05-16,Olixir Olive Oil,8228
+2021-05-16,Olixir Sesame Oil,1749
+2021-05-16,Castor Oil,1534
+2021-05-16,Refined Castor Oil,7330
+2021-05-16,De Oiled Cake,5526
+2021-05-23,Tirupati Cottonseed Oil,2235
+2021-05-23,Tirupati Sunflower Oil,6768
+2021-05-23,Tirupati Groundnut Oil,6069
+2021-05-23,Tirupati Soybean Oil,2142
+2021-05-23,Tirupati Mustard Oil,7264
+2021-05-23,Olixir Olive Oil,3414
+2021-05-23,Olixir Sesame Oil,4982
+2021-05-23,Castor Oil,9694
+2021-05-23,Refined Castor Oil,2125
+2021-05-23,De Oiled Cake,3977
+2021-05-30,Tirupati Cottonseed Oil,5683
+2021-05-30,Tirupati Sunflower Oil,7291
+2021-05-30,Tirupati Groundnut Oil,5217
+2021-05-30,Tirupati Soybean Oil,9474
+2021-05-30,Tirupati Mustard Oil,1488
+2021-05-30,Olixir Olive Oil,2384
+2021-05-30,Olixir Sesame Oil,3402
+2021-05-30,Castor Oil,7146
+2021-05-30,Refined Castor Oil,4533
+2021-05-30,De Oiled Cake,9309
+2021-06-06,Tirupati Cottonseed Oil,3691
+2021-06-06,Tirupati Sunflower Oil,2219
+2021-06-06,Tirupati Groundnut Oil,8609
+2021-06-06,Tirupati Soybean Oil,8684
+2021-06-06,Tirupati Mustard Oil,3975
+2021-06-06,Olixir Olive Oil,4021
+2021-06-06,Olixir Sesame Oil,9284
+2021-06-06,Castor Oil,3085
+2021-06-06,Refined Castor Oil,9058
+2021-06-06,De Oiled Cake,4032
+2021-06-13,Tirupati Cottonseed Oil,1301
+2021-06-13,Tirupati Sunflower Oil,3331
+2021-06-13,Tirupati Groundnut Oil,8327
+2021-06-13,Tirupati Soybean Oil,4938
+2021-06-13,Tirupati Mustard Oil,7913
+2021-06-13,Olixir Olive Oil,1360
+2021-06-13,Olixir Sesame Oil,5400
+2021-06-13,Castor Oil,4891
+2021-06-13,Refined Castor Oil,3108
+2021-06-13,De Oiled Cake,8482
+2021-06-20,Tirupati Cottonseed Oil,7120
+2021-06-20,Tirupati Sunflower Oil,6451
+2021-06-20,Tirupati Groundnut Oil,1974
+2021-06-20,Tirupati Soybean Oil,5117
+2021-06-20,Tirupati Mustard Oil,6557
+2021-06-20,Olixir Olive Oil,4887
+2021-06-20,Olixir Sesame Oil,3256
+2021-06-20,Castor Oil,4292
+2021-06-20,Refined Castor Oil,3471
+2021-06-20,De Oiled Cake,8469
+2021-06-27,Tirupati Cottonseed Oil,3986
+2021-06-27,Tirupati Sunflower Oil,7361
+2021-06-27,Tirupati Groundnut Oil,1981
+2021-06-27,Tirupati Soybean Oil,7629
+2021-06-27,Tirupati Mustard Oil,7573
+2021-06-27,Olixir Olive Oil,4238
+2021-06-27,Olixir Sesame Oil,1276
+2021-06-27,Castor Oil,6463
+2021-06-27,Refined Castor Oil,2941
+2021-06-27,De Oiled Cake,6943
+2021-07-04,Tirupati Cottonseed Oil,9664
+2021-07-04,Tirupati Sunflower Oil,8590
+2021-07-04,Tirupati Groundnut Oil,7750
+2021-07-04,Tirupati Soybean Oil,7723
+2021-07-04,Tirupati Mustard Oil,7952
+2021-07-04,Olixir Olive Oil,7194
+2021-07-04,Olixir Sesame Oil,9748
+2021-07-04,Castor Oil,8968
+2021-07-04,Refined Castor Oil,6835
+2021-07-04,De Oiled Cake,6171
+2021-07-11,Tirupati Cottonseed Oil,2000
+2021-07-11,Tirupati Sunflower Oil,8003
+2021-07-11,Tirupati Groundnut Oil,1510
+2021-07-11,Tirupati Soybean Oil,5872
+2021-07-11,Tirupati Mustard Oil,2018
+2021-07-11,Olixir Olive Oil,1218
+2021-07-11,Olixir Sesame Oil,2880
+2021-07-11,Castor Oil,3781
+2021-07-11,Refined Castor Oil,6360
+2021-07-11,De Oiled Cake,5146
+2021-07-18,Tirupati Cottonseed Oil,2138
+2021-07-18,Tirupati Sunflower Oil,7297
+2021-07-18,Tirupati Groundnut Oil,2109
+2021-07-18,Tirupati Soybean Oil,9880
+2021-07-18,Tirupati Mustard Oil,7634
+2021-07-18,Olixir Olive Oil,9527
+2021-07-18,Olixir Sesame Oil,7091
+2021-07-18,Castor Oil,3587
+2021-07-18,Refined Castor Oil,6730
+2021-07-18,De Oiled Cake,2549
+2021-07-25,Tirupati Cottonseed Oil,3499
+2021-07-25,Tirupati Sunflower Oil,8344
+2021-07-25,Tirupati Groundnut Oil,1072
+2021-07-25,Tirupati Soybean Oil,6629
+2021-07-25,Tirupati Mustard Oil,5504
+2021-07-25,Olixir Olive Oil,6530
+2021-07-25,Olixir Sesame Oil,4861
+2021-07-25,Castor Oil,2588
+2021-07-25,Refined Castor Oil,6442
+2021-07-25,De Oiled Cake,9692
+2021-08-01,Tirupati Cottonseed Oil,3121
+2021-08-01,Tirupati Sunflower Oil,3625
+2021-08-01,Tirupati Groundnut Oil,2342
+2021-08-01,Tirupati Soybean Oil,2144
+2021-08-01,Tirupati Mustard Oil,2759
+2021-08-01,Olixir Olive Oil,6755
+2021-08-01,Olixir Sesame Oil,8076
+2021-08-01,Castor Oil,2330
+2021-08-01,Refined Castor Oil,1550
+2021-08-01,De Oiled Cake,1322
+2021-08-08,Tirupati Cottonseed Oil,1661
+2021-08-08,Tirupati Sunflower Oil,9661
+2021-08-08,Tirupati Groundnut Oil,1521
+2021-08-08,Tirupati Soybean Oil,9657
+2021-08-08,Tirupati Mustard Oil,6043
+2021-08-08,Olixir Olive Oil,5651
+2021-08-08,Olixir Sesame Oil,3990
+2021-08-08,Castor Oil,9134
+2021-08-08,Refined Castor Oil,8048
+2021-08-08,De Oiled Cake,5552
+2021-08-15,Tirupati Cottonseed Oil,4322
+2021-08-15,Tirupati Sunflower Oil,3377
+2021-08-15,Tirupati Groundnut Oil,3386
+2021-08-15,Tirupati Soybean Oil,9524
+2021-08-15,Tirupati Mustard Oil,2320
+2021-08-15,Olixir Olive Oil,2753
+2021-08-15,Olixir Sesame Oil,9125
+2021-08-15,Castor Oil,5597
+2021-08-15,Refined Castor Oil,2248
+2021-08-15,De Oiled Cake,6344
+2021-08-22,Tirupati Cottonseed Oil,6748
+2021-08-22,Tirupati Sunflower Oil,1616
+2021-08-22,Tirupati Groundnut Oil,4870
+2021-08-22,Tirupati Soybean Oil,8612
+2021-08-22,Tirupati Mustard Oil,8064
+2021-08-22,Olixir Olive Oil,4157
+2021-08-22,Olixir Sesame Oil,7575
+2021-08-22,Castor Oil,8652
+2021-08-22,Refined Castor Oil,6757
+2021-08-22,De Oiled Cake,9611
+2021-08-29,Tirupati Cottonseed Oil,9036
+2021-08-29,Tirupati Sunflower Oil,9450
+2021-08-29,Tirupati Groundnut Oil,1891
+2021-08-29,Tirupati Soybean Oil,5537
+2021-08-29,Tirupati Mustard Oil,8844
+2021-08-29,Olixir Olive Oil,9258
+2021-08-29,Olixir Sesame Oil,2342
+2021-08-29,Castor Oil,5731
+2021-08-29,Refined Castor Oil,5633
+2021-08-29,De Oiled Cake,6398
+2021-09-05,Tirupati Cottonseed Oil,8004
+2021-09-05,Tirupati Sunflower Oil,7680
+2021-09-05,Tirupati Groundnut Oil,9911
+2021-09-05,Tirupati Soybean Oil,7560
+2021-09-05,Tirupati Mustard Oil,8156
+2021-09-05,Olixir Olive Oil,3058
+2021-09-05,Olixir Sesame Oil,1810
+2021-09-05,Castor Oil,6696
+2021-09-05,Refined Castor Oil,3387
+2021-09-05,De Oiled Cake,4688
+2021-09-12,Tirupati Cottonseed Oil,7062
+2021-09-12,Tirupati Sunflower Oil,7665
+2021-09-12,Tirupati Groundnut Oil,7312
+2021-09-12,Tirupati Soybean Oil,4343
+2021-09-12,Tirupati Mustard Oil,9545
+2021-09-12,Olixir Olive Oil,3400
+2021-09-12,Olixir Sesame Oil,3706
+2021-09-12,Castor Oil,5411
+2021-09-12,Refined Castor Oil,5562
+2021-09-12,De Oiled Cake,3954
+2021-09-19,Tirupati Cottonseed Oil,9191
+2021-09-19,Tirupati Sunflower Oil,4182
+2021-09-19,Tirupati Groundnut Oil,9069
+2021-09-19,Tirupati Soybean Oil,3893
+2021-09-19,Tirupati Mustard Oil,3651
+2021-09-19,Olixir Olive Oil,6327
+2021-09-19,Olixir Sesame Oil,8317
+2021-09-19,Castor Oil,2022
+2021-09-19,Refined Castor Oil,7292
+2021-09-19,De Oiled Cake,6170
+2021-09-26,Tirupati Cottonseed Oil,3722
+2021-09-26,Tirupati Sunflower Oil,3550
+2021-09-26,Tirupati Groundnut Oil,6697
+2021-09-26,Tirupati Soybean Oil,8697
+2021-09-26,Tirupati Mustard Oil,1111
+2021-09-26,Olixir Olive Oil,1730
+2021-09-26,Olixir Sesame Oil,8476
+2021-09-26,Castor Oil,8535
+2021-09-26,Refined Castor Oil,7309
+2021-09-26,De Oiled Cake,8171
+2021-10-03,Tirupati Cottonseed Oil,3983
+2021-10-03,Tirupati Sunflower Oil,5489
+2021-10-03,Tirupati Groundnut Oil,2897
+2021-10-03,Tirupati Soybean Oil,9145
+2021-10-03,Tirupati Mustard Oil,9603
+2021-10-03,Olixir Olive Oil,5733
+2021-10-03,Olixir Sesame Oil,1547
+2021-10-03,Castor Oil,7773
+2021-10-03,Refined Castor Oil,7440
+2021-10-03,De Oiled Cake,6168
+2021-10-10,Tirupati Cottonseed Oil,4167
+2021-10-10,Tirupati Sunflower Oil,8963
+2021-10-10,Tirupati Groundnut Oil,1817
+2021-10-10,Tirupati Soybean Oil,8573
+2021-10-10,Tirupati Mustard Oil,2733
+2021-10-10,Olixir Olive Oil,5164
+2021-10-10,Olixir Sesame Oil,3979
+2021-10-10,Castor Oil,7114
+2021-10-10,Refined Castor Oil,3436
+2021-10-10,De Oiled Cake,8410
+2021-10-17,Tirupati Cottonseed Oil,8905
+2021-10-17,Tirupati Sunflower Oil,8636
+2021-10-17,Tirupati Groundnut Oil,5769
+2021-10-17,Tirupati Soybean Oil,5081
+2021-10-17,Tirupati Mustard Oil,9736
+2021-10-17,Olixir Olive Oil,6202
+2021-10-17,Olixir Sesame Oil,2801
+2021-10-17,Castor Oil,8265
+2021-10-17,Refined Castor Oil,6224
+2021-10-17,De Oiled Cake,8752
+2021-10-24,Tirupati Cottonseed Oil,4552
+2021-10-24,Tirupati Sunflower Oil,5610
+2021-10-24,Tirupati Groundnut Oil,5164
+2021-10-24,Tirupati Soybean Oil,1501
+2021-10-24,Tirupati Mustard Oil,6962
+2021-10-24,Olixir Olive Oil,7343
+2021-10-24,Olixir Sesame Oil,2671
+2021-10-24,Castor Oil,6566
+2021-10-24,Refined Castor Oil,1224
+2021-10-24,De Oiled Cake,9828
+2021-10-31,Tirupati Cottonseed Oil,9950
+2021-10-31,Tirupati Sunflower Oil,6560
+2021-10-31,Tirupati Groundnut Oil,3958
+2021-10-31,Tirupati Soybean Oil,9121
+2021-10-31,Tirupati Mustard Oil,1072
+2021-10-31,Olixir Olive Oil,8468
+2021-10-31,Olixir Sesame Oil,8294
+2021-10-31,Castor Oil,3951
+2021-10-31,Refined Castor Oil,9646
+2021-10-31,De Oiled Cake,1947
+2021-11-07,Tirupati Cottonseed Oil,2643
+2021-11-07,Tirupati Sunflower Oil,7113
+2021-11-07,Tirupati Groundnut Oil,3451
+2021-11-07,Tirupati Soybean Oil,1478
+2021-11-07,Tirupati Mustard Oil,7149
+2021-11-07,Olixir Olive Oil,9735
+2021-11-07,Olixir Sesame Oil,5256
+2021-11-07,Castor Oil,5017
+2021-11-07,Refined Castor Oil,4788
+2021-11-07,De Oiled Cake,6219
+2021-11-14,Tirupati Cottonseed Oil,9319
+2021-11-14,Tirupati Sunflower Oil,9548
+2021-11-14,Tirupati Groundnut Oil,3404
+2021-11-14,Tirupati Soybean Oil,5123
+2021-11-14,Tirupati Mustard Oil,9732
+2021-11-14,Olixir Olive Oil,5332
+2021-11-14,Olixir Sesame Oil,2463
+2021-11-14,Castor Oil,9119
+2021-11-14,Refined Castor Oil,5019
+2021-11-14,De Oiled Cake,4828
+2021-11-21,Tirupati Cottonseed Oil,6268
+2021-11-21,Tirupati Sunflower Oil,7998
+2021-11-21,Tirupati Groundnut Oil,3023
+2021-11-21,Tirupati Soybean Oil,5649
+2021-11-21,Tirupati Mustard Oil,8304
+2021-11-21,Olixir Olive Oil,6182
+2021-11-21,Olixir Sesame Oil,1035
+2021-11-21,Castor Oil,8369
+2021-11-21,Refined Castor Oil,6822
+2021-11-21,De Oiled Cake,4070
+2021-11-28,Tirupati Cottonseed Oil,2084
+2021-11-28,Tirupati Sunflower Oil,9178
+2021-11-28,Tirupati Groundnut Oil,4119
+2021-11-28,Tirupati Soybean Oil,9696
+2021-11-28,Tirupati Mustard Oil,5221
+2021-11-28,Olixir Olive Oil,7665
+2021-11-28,Olixir Sesame Oil,6011
+2021-11-28,Castor Oil,8801
+2021-11-28,Refined Castor Oil,4303
+2021-11-28,De Oiled Cake,7491
+2021-12-05,Tirupati Cottonseed Oil,2758
+2021-12-05,Tirupati Sunflower Oil,6558
+2021-12-05,Tirupati Groundnut Oil,3203
+2021-12-05,Tirupati Soybean Oil,4745
+2021-12-05,Tirupati Mustard Oil,7180
+2021-12-05,Olixir Olive Oil,3024
+2021-12-05,Olixir Sesame Oil,4661
+2021-12-05,Castor Oil,5157
+2021-12-05,Refined Castor Oil,7627
+2021-12-05,De Oiled Cake,1665
+2021-12-12,Tirupati Cottonseed Oil,3298
+2021-12-12,Tirupati Sunflower Oil,7617
+2021-12-12,Tirupati Groundnut Oil,3153
+2021-12-12,Tirupati Soybean Oil,3276
+2021-12-12,Tirupati Mustard Oil,8985
+2021-12-12,Olixir Olive Oil,9721
+2021-12-12,Olixir Sesame Oil,8823
+2021-12-12,Castor Oil,2577
+2021-12-12,Refined Castor Oil,9791
+2021-12-12,De Oiled Cake,5125
+2021-12-19,Tirupati Cottonseed Oil,5603
+2021-12-19,Tirupati Sunflower Oil,7797
+2021-12-19,Tirupati Groundnut Oil,6601
+2021-12-19,Tirupati Soybean Oil,4520
+2021-12-19,Tirupati Mustard Oil,2665
+2021-12-19,Olixir Olive Oil,5266
+2021-12-19,Olixir Sesame Oil,6276
+2021-12-19,Castor Oil,1192
+2021-12-19,Refined Castor Oil,6561
+2021-12-19,De Oiled Cake,5648
+2021-12-26,Tirupati Cottonseed Oil,7262
+2021-12-26,Tirupati Sunflower Oil,6936
+2021-12-26,Tirupati Groundnut Oil,5521
+2021-12-26,Tirupati Soybean Oil,1721
+2021-12-26,Tirupati Mustard Oil,7852
+2021-12-26,Olixir Olive Oil,2623
+2021-12-26,Olixir Sesame Oil,9817
+2021-12-26,Castor Oil,2091
+2021-12-26,Refined Castor Oil,5010
+2021-12-26,De Oiled Cake,9442
+2022-01-02,Tirupati Cottonseed Oil,7532
+2022-01-02,Tirupati Sunflower Oil,7471
+2022-01-02,Tirupati Groundnut Oil,8649
+2022-01-02,Tirupati Soybean Oil,1057
+2022-01-02,Tirupati Mustard Oil,1997
+2022-01-02,Olixir Olive Oil,6483
+2022-01-02,Olixir Sesame Oil,7959
+2022-01-02,Castor Oil,4374
+2022-01-02,Refined Castor Oil,6850
+2022-01-02,De Oiled Cake,7490
+2022-01-09,Tirupati Cottonseed Oil,8913
+2022-01-09,Tirupati Sunflower Oil,2878
+2022-01-09,Tirupati Groundnut Oil,4820
+2022-01-09,Tirupati Soybean Oil,6547
+2022-01-09,Tirupati Mustard Oil,5515
+2022-01-09,Olixir Olive Oil,9690
+2022-01-09,Olixir Sesame Oil,4200
+2022-01-09,Castor Oil,3951
+2022-01-09,Refined Castor Oil,5544
+2022-01-09,De Oiled Cake,9432
+2022-01-16,Tirupati Cottonseed Oil,4073
+2022-01-16,Tirupati Sunflower Oil,7175
+2022-01-16,Tirupati Groundnut Oil,8919
+2022-01-16,Tirupati Soybean Oil,6834
+2022-01-16,Tirupati Mustard Oil,7489
+2022-01-16,Olixir Olive Oil,6527
+2022-01-16,Olixir Sesame Oil,5613
+2022-01-16,Castor Oil,9161
+2022-01-16,Refined Castor Oil,1742
+2022-01-16,De Oiled Cake,1407
+2022-01-23,Tirupati Cottonseed Oil,1102
+2022-01-23,Tirupati Sunflower Oil,4658
+2022-01-23,Tirupati Groundnut Oil,3600
+2022-01-23,Tirupati Soybean Oil,7734
+2022-01-23,Tirupati Mustard Oil,2473
+2022-01-23,Olixir Olive Oil,8939
+2022-01-23,Olixir Sesame Oil,1900
+2022-01-23,Castor Oil,1368
+2022-01-23,Refined Castor Oil,8230
+2022-01-23,De Oiled Cake,7104
+2022-01-30,Tirupati Cottonseed Oil,2409
+2022-01-30,Tirupati Sunflower Oil,3628
+2022-01-30,Tirupati Groundnut Oil,5539
+2022-01-30,Tirupati Soybean Oil,7451
+2022-01-30,Tirupati Mustard Oil,9499
+2022-01-30,Olixir Olive Oil,4302
+2022-01-30,Olixir Sesame Oil,1146
+2022-01-30,Castor Oil,7172
+2022-01-30,Refined Castor Oil,1442
+2022-01-30,De Oiled Cake,9808
+2022-02-06,Tirupati Cottonseed Oil,9868
+2022-02-06,Tirupati Sunflower Oil,9356
+2022-02-06,Tirupati Groundnut Oil,3663
+2022-02-06,Tirupati Soybean Oil,3539
+2022-02-06,Tirupati Mustard Oil,4731
+2022-02-06,Olixir Olive Oil,6326
+2022-02-06,Olixir Sesame Oil,6629
+2022-02-06,Castor Oil,1658
+2022-02-06,Refined Castor Oil,6590
+2022-02-06,De Oiled Cake,7769
+2022-02-13,Tirupati Cottonseed Oil,9780
+2022-02-13,Tirupati Sunflower Oil,1380
+2022-02-13,Tirupati Groundnut Oil,3948
+2022-02-13,Tirupati Soybean Oil,6921
+2022-02-13,Tirupati Mustard Oil,8667
+2022-02-13,Olixir Olive Oil,9901
+2022-02-13,Olixir Sesame Oil,1369
+2022-02-13,Castor Oil,2106
+2022-02-13,Refined Castor Oil,3170
+2022-02-13,De Oiled Cake,8048
+2022-02-20,Tirupati Cottonseed Oil,1895
+2022-02-20,Tirupati Sunflower Oil,5763
+2022-02-20,Tirupati Groundnut Oil,3770
+2022-02-20,Tirupati Soybean Oil,3996
+2022-02-20,Tirupati Mustard Oil,3042
+2022-02-20,Olixir Olive Oil,7423
+2022-02-20,Olixir Sesame Oil,8093
+2022-02-20,Castor Oil,9609
+2022-02-20,Refined Castor Oil,7141
+2022-02-20,De Oiled Cake,8240
+2022-02-27,Tirupati Cottonseed Oil,8137
+2022-02-27,Tirupati Sunflower Oil,7537
+2022-02-27,Tirupati Groundnut Oil,5027
+2022-02-27,Tirupati Soybean Oil,5369
+2022-02-27,Tirupati Mustard Oil,3119
+2022-02-27,Olixir Olive Oil,3216
+2022-02-27,Olixir Sesame Oil,9503
+2022-02-27,Castor Oil,8674
+2022-02-27,Refined Castor Oil,2213
+2022-02-27,De Oiled Cake,5469
+2022-03-06,Tirupati Cottonseed Oil,4822
+2022-03-06,Tirupati Sunflower Oil,9043
+2022-03-06,Tirupati Groundnut Oil,6777
+2022-03-06,Tirupati Soybean Oil,4536
+2022-03-06,Tirupati Mustard Oil,3764
+2022-03-06,Olixir Olive Oil,7985
+2022-03-06,Olixir Sesame Oil,3573
+2022-03-06,Castor Oil,2367
+2022-03-06,Refined Castor Oil,6962
+2022-03-06,De Oiled Cake,4422
+2022-03-13,Tirupati Cottonseed Oil,5570
+2022-03-13,Tirupati Sunflower Oil,1122
+2022-03-13,Tirupati Groundnut Oil,3475
+2022-03-13,Tirupati Soybean Oil,5201
+2022-03-13,Tirupati Mustard Oil,2528
+2022-03-13,Olixir Olive Oil,8999
+2022-03-13,Olixir Sesame Oil,7204
+2022-03-13,Castor Oil,2231
+2022-03-13,Refined Castor Oil,2504
+2022-03-13,De Oiled Cake,7124
+2022-03-20,Tirupati Cottonseed Oil,2139
+2022-03-20,Tirupati Sunflower Oil,2109
+2022-03-20,Tirupati Groundnut Oil,8010
+2022-03-20,Tirupati Soybean Oil,4405
+2022-03-20,Tirupati Mustard Oil,3247
+2022-03-20,Olixir Olive Oil,6616
+2022-03-20,Olixir Sesame Oil,4868
+2022-03-20,Castor Oil,7833
+2022-03-20,Refined Castor Oil,5394
+2022-03-20,De Oiled Cake,9883
+2022-03-27,Tirupati Cottonseed Oil,1686
+2022-03-27,Tirupati Sunflower Oil,4692
+2022-03-27,Tirupati Groundnut Oil,5647
+2022-03-27,Tirupati Soybean Oil,9085
+2022-03-27,Tirupati Mustard Oil,2242
+2022-03-27,Olixir Olive Oil,1613
+2022-03-27,Olixir Sesame Oil,2397
+2022-03-27,Castor Oil,4542
+2022-03-27,Refined Castor Oil,2146
+2022-03-27,De Oiled Cake,5695
+2022-04-03,Tirupati Cottonseed Oil,6986
+2022-04-03,Tirupati Sunflower Oil,8494
+2022-04-03,Tirupati Groundnut Oil,2077
+2022-04-03,Tirupati Soybean Oil,8515
+2022-04-03,Tirupati Mustard Oil,1993
+2022-04-03,Olixir Olive Oil,7487
+2022-04-03,Olixir Sesame Oil,7793
+2022-04-03,Castor Oil,3141
+2022-04-03,Refined Castor Oil,2422
+2022-04-03,De Oiled Cake,7033
+2022-04-10,Tirupati Cottonseed Oil,6247
+2022-04-10,Tirupati Sunflower Oil,4969
+2022-04-10,Tirupati Groundnut Oil,2764
+2022-04-10,Tirupati Soybean Oil,5052
+2022-04-10,Tirupati Mustard Oil,4480
+2022-04-10,Olixir Olive Oil,2119
+2022-04-10,Olixir Sesame Oil,8228
+2022-04-10,Castor Oil,3224
+2022-04-10,Refined Castor Oil,1178
+2022-04-10,De Oiled Cake,8470
+2022-04-17,Tirupati Cottonseed Oil,7531
+2022-04-17,Tirupati Sunflower Oil,9854
+2022-04-17,Tirupati Groundnut Oil,4706
+2022-04-17,Tirupati Soybean Oil,6406
+2022-04-17,Tirupati Mustard Oil,9898
+2022-04-17,Olixir Olive Oil,8499
+2022-04-17,Olixir Sesame Oil,7439
+2022-04-17,Castor Oil,3112
+2022-04-17,Refined Castor Oil,2508
+2022-04-17,De Oiled Cake,4604
+2022-04-24,Tirupati Cottonseed Oil,6447
+2022-04-24,Tirupati Sunflower Oil,3293
+2022-04-24,Tirupati Groundnut Oil,4860
+2022-04-24,Tirupati Soybean Oil,2400
+2022-04-24,Tirupati Mustard Oil,6487
+2022-04-24,Olixir Olive Oil,4771
+2022-04-24,Olixir Sesame Oil,4150
+2022-04-24,Castor Oil,1003
+2022-04-24,Refined Castor Oil,1958
+2022-04-24,De Oiled Cake,7443
+2022-05-01,Tirupati Cottonseed Oil,8900
+2022-05-01,Tirupati Sunflower Oil,9912
+2022-05-01,Tirupati Groundnut Oil,5501
+2022-05-01,Tirupati Soybean Oil,1903
+2022-05-01,Tirupati Mustard Oil,6362
+2022-05-01,Olixir Olive Oil,3640
+2022-05-01,Olixir Sesame Oil,5988
+2022-05-01,Castor Oil,3257
+2022-05-01,Refined Castor Oil,9207
+2022-05-01,De Oiled Cake,1643
+2022-05-08,Tirupati Cottonseed Oil,1776
+2022-05-08,Tirupati Sunflower Oil,7416
+2022-05-08,Tirupati Groundnut Oil,2202
+2022-05-08,Tirupati Soybean Oil,4516
+2022-05-08,Tirupati Mustard Oil,8379
+2022-05-08,Olixir Olive Oil,8013
+2022-05-08,Olixir Sesame Oil,9184
+2022-05-08,Castor Oil,9283
+2022-05-08,Refined Castor Oil,6225
+2022-05-08,De Oiled Cake,9423
+2022-05-15,Tirupati Cottonseed Oil,6014
+2022-05-15,Tirupati Sunflower Oil,7932
+2022-05-15,Tirupati Groundnut Oil,7362
+2022-05-15,Tirupati Soybean Oil,5240
+2022-05-15,Tirupati Mustard Oil,8850
+2022-05-15,Olixir Olive Oil,3337
+2022-05-15,Olixir Sesame Oil,3978
+2022-05-15,Castor Oil,6895
+2022-05-15,Refined Castor Oil,8028
+2022-05-15,De Oiled Cake,8350
+2022-05-22,Tirupati Cottonseed Oil,2149
+2022-05-22,Tirupati Sunflower Oil,8589
+2022-05-22,Tirupati Groundnut Oil,9754
+2022-05-22,Tirupati Soybean Oil,4006
+2022-05-22,Tirupati Mustard Oil,1012
+2022-05-22,Olixir Olive Oil,6617
+2022-05-22,Olixir Sesame Oil,8395
+2022-05-22,Castor Oil,5774
+2022-05-22,Refined Castor Oil,6278
+2022-05-22,De Oiled Cake,5710
+2022-05-29,Tirupati Cottonseed Oil,5232
+2022-05-29,Tirupati Sunflower Oil,8411
+2022-05-29,Tirupati Groundnut Oil,3864
+2022-05-29,Tirupati Soybean Oil,6715
+2022-05-29,Tirupati Mustard Oil,3582
+2022-05-29,Olixir Olive Oil,1191
+2022-05-29,Olixir Sesame Oil,8682
+2022-05-29,Castor Oil,8252
+2022-05-29,Refined Castor Oil,2707
+2022-05-29,De Oiled Cake,2978
+2022-06-05,Tirupati Cottonseed Oil,3697
+2022-06-05,Tirupati Sunflower Oil,1984
+2022-06-05,Tirupati Groundnut Oil,6498
+2022-06-05,Tirupati Soybean Oil,2585
+2022-06-05,Tirupati Mustard Oil,7840
+2022-06-05,Olixir Olive Oil,8920
+2022-06-05,Olixir Sesame Oil,3194
+2022-06-05,Castor Oil,1150
+2022-06-05,Refined Castor Oil,7195
+2022-06-05,De Oiled Cake,2349
+2022-06-12,Tirupati Cottonseed Oil,4169
+2022-06-12,Tirupati Sunflower Oil,3769
+2022-06-12,Tirupati Groundnut Oil,7479
+2022-06-12,Tirupati Soybean Oil,6899
+2022-06-12,Tirupati Mustard Oil,9387
+2022-06-12,Olixir Olive Oil,5248
+2022-06-12,Olixir Sesame Oil,9277
+2022-06-12,Castor Oil,2774
+2022-06-12,Refined Castor Oil,9507
+2022-06-12,De Oiled Cake,6318
+2022-06-19,Tirupati Cottonseed Oil,3593
+2022-06-19,Tirupati Sunflower Oil,2259
+2022-06-19,Tirupati Groundnut Oil,4823
+2022-06-19,Tirupati Soybean Oil,4495
+2022-06-19,Tirupati Mustard Oil,1933
+2022-06-19,Olixir Olive Oil,2224
+2022-06-19,Olixir Sesame Oil,8855
+2022-06-19,Castor Oil,1632
+2022-06-19,Refined Castor Oil,2213
+2022-06-19,De Oiled Cake,1471
+2022-06-26,Tirupati Cottonseed Oil,2290
+2022-06-26,Tirupati Sunflower Oil,6511
+2022-06-26,Tirupati Groundnut Oil,4230
+2022-06-26,Tirupati Soybean Oil,5594
+2022-06-26,Tirupati Mustard Oil,4671
+2022-06-26,Olixir Olive Oil,5887
+2022-06-26,Olixir Sesame Oil,7122
+2022-06-26,Castor Oil,5870
+2022-06-26,Refined Castor Oil,7474
+2022-06-26,De Oiled Cake,4351
+2022-07-03,Tirupati Cottonseed Oil,5601
+2022-07-03,Tirupati Sunflower Oil,4612
+2022-07-03,Tirupati Groundnut Oil,9530
+2022-07-03,Tirupati Soybean Oil,3110
+2022-07-03,Tirupati Mustard Oil,9950
+2022-07-03,Olixir Olive Oil,4097
+2022-07-03,Olixir Sesame Oil,8749
+2022-07-03,Castor Oil,9475
+2022-07-03,Refined Castor Oil,7657
+2022-07-03,De Oiled Cake,2912
+2022-07-10,Tirupati Cottonseed Oil,6888
+2022-07-10,Tirupati Sunflower Oil,7387
+2022-07-10,Tirupati Groundnut Oil,7332
+2022-07-10,Tirupati Soybean Oil,7186
+2022-07-10,Tirupati Mustard Oil,4650
+2022-07-10,Olixir Olive Oil,1219
+2022-07-10,Olixir Sesame Oil,3279
+2022-07-10,Castor Oil,9701
+2022-07-10,Refined Castor Oil,1353
+2022-07-10,De Oiled Cake,2639
+2022-07-17,Tirupati Cottonseed Oil,2451
+2022-07-17,Tirupati Sunflower Oil,5007
+2022-07-17,Tirupati Groundnut Oil,9947
+2022-07-17,Tirupati Soybean Oil,9189
+2022-07-17,Tirupati Mustard Oil,2507
+2022-07-17,Olixir Olive Oil,5446
+2022-07-17,Olixir Sesame Oil,2858
+2022-07-17,Castor Oil,4251
+2022-07-17,Refined Castor Oil,6024
+2022-07-17,De Oiled Cake,2399
+2022-07-24,Tirupati Cottonseed Oil,3777
+2022-07-24,Tirupati Sunflower Oil,7995
+2022-07-24,Tirupati Groundnut Oil,6773
+2022-07-24,Tirupati Soybean Oil,7830
+2022-07-24,Tirupati Mustard Oil,7924
+2022-07-24,Olixir Olive Oil,7843
+2022-07-24,Olixir Sesame Oil,1487
+2022-07-24,Castor Oil,9273
+2022-07-24,Refined Castor Oil,3603
+2022-07-24,De Oiled Cake,1084
+2022-07-31,Tirupati Cottonseed Oil,9544
+2022-07-31,Tirupati Sunflower Oil,4365
+2022-07-31,Tirupati Groundnut Oil,8504
+2022-07-31,Tirupati Soybean Oil,4138
+2022-07-31,Tirupati Mustard Oil,3111
+2022-07-31,Olixir Olive Oil,3938
+2022-07-31,Olixir Sesame Oil,6126
+2022-07-31,Castor Oil,5534
+2022-07-31,Refined Castor Oil,9729
+2022-07-31,De Oiled Cake,2701
+2022-08-07,Tirupati Cottonseed Oil,9687
+2022-08-07,Tirupati Sunflower Oil,1046
+2022-08-07,Tirupati Groundnut Oil,1259
+2022-08-07,Tirupati Soybean Oil,7154
+2022-08-07,Tirupati Mustard Oil,6053
+2022-08-07,Olixir Olive Oil,6139
+2022-08-07,Olixir Sesame Oil,6753
+2022-08-07,Castor Oil,9036
+2022-08-07,Refined Castor Oil,9256
+2022-08-07,De Oiled Cake,1601
+2022-08-14,Tirupati Cottonseed Oil,7544
+2022-08-14,Tirupati Sunflower Oil,8019
+2022-08-14,Tirupati Groundnut Oil,6305
+2022-08-14,Tirupati Soybean Oil,6782
+2022-08-14,Tirupati Mustard Oil,9316
+2022-08-14,Olixir Olive Oil,9055
+2022-08-14,Olixir Sesame Oil,8674
+2022-08-14,Castor Oil,5325
+2022-08-14,Refined Castor Oil,5312
+2022-08-14,De Oiled Cake,2809
+2022-08-21,Tirupati Cottonseed Oil,8750
+2022-08-21,Tirupati Sunflower Oil,4129
+2022-08-21,Tirupati Groundnut Oil,8923
+2022-08-21,Tirupati Soybean Oil,6646
+2022-08-21,Tirupati Mustard Oil,6469
+2022-08-21,Olixir Olive Oil,9532
+2022-08-21,Olixir Sesame Oil,9529
+2022-08-21,Castor Oil,4132
+2022-08-21,Refined Castor Oil,2158
+2022-08-21,De Oiled Cake,1417
+2022-08-28,Tirupati Cottonseed Oil,7994
+2022-08-28,Tirupati Sunflower Oil,8513
+2022-08-28,Tirupati Groundnut Oil,3408
+2022-08-28,Tirupati Soybean Oil,8586
+2022-08-28,Tirupati Mustard Oil,9137
+2022-08-28,Olixir Olive Oil,2524
+2022-08-28,Olixir Sesame Oil,8649
+2022-08-28,Castor Oil,8949
+2022-08-28,Refined Castor Oil,7742
+2022-08-28,De Oiled Cake,2153
+2022-09-04,Tirupati Cottonseed Oil,5896
+2022-09-04,Tirupati Sunflower Oil,9191
+2022-09-04,Tirupati Groundnut Oil,7286
+2022-09-04,Tirupati Soybean Oil,7165
+2022-09-04,Tirupati Mustard Oil,2986
+2022-09-04,Olixir Olive Oil,5077
+2022-09-04,Olixir Sesame Oil,4479
+2022-09-04,Castor Oil,1689
+2022-09-04,Refined Castor Oil,1188
+2022-09-04,De Oiled Cake,1227
+2022-09-11,Tirupati Cottonseed Oil,4454
+2022-09-11,Tirupati Sunflower Oil,1188
+2022-09-11,Tirupati Groundnut Oil,2552
+2022-09-11,Tirupati Soybean Oil,4836
+2022-09-11,Tirupati Mustard Oil,5830
+2022-09-11,Olixir Olive Oil,3401
+2022-09-11,Olixir Sesame Oil,7272
+2022-09-11,Castor Oil,3350
+2022-09-11,Refined Castor Oil,6216
+2022-09-11,De Oiled Cake,4814
+2022-09-18,Tirupati Cottonseed Oil,2153
+2022-09-18,Tirupati Sunflower Oil,2118
+2022-09-18,Tirupati Groundnut Oil,1406
+2022-09-18,Tirupati Soybean Oil,5930
+2022-09-18,Tirupati Mustard Oil,8806
+2022-09-18,Olixir Olive Oil,4744
+2022-09-18,Olixir Sesame Oil,6898
+2022-09-18,Castor Oil,7972
+2022-09-18,Refined Castor Oil,4520
+2022-09-18,De Oiled Cake,8560
+2022-09-25,Tirupati Cottonseed Oil,5795
+2022-09-25,Tirupati Sunflower Oil,6730
+2022-09-25,Tirupati Groundnut Oil,7567
+2022-09-25,Tirupati Soybean Oil,1198
+2022-09-25,Tirupati Mustard Oil,5960
+2022-09-25,Olixir Olive Oil,8564
+2022-09-25,Olixir Sesame Oil,1485
+2022-09-25,Castor Oil,7724
+2022-09-25,Refined Castor Oil,4846
+2022-09-25,De Oiled Cake,3376
+2022-10-02,Tirupati Cottonseed Oil,2348
+2022-10-02,Tirupati Sunflower Oil,5229
+2022-10-02,Tirupati Groundnut Oil,2567
+2022-10-02,Tirupati Soybean Oil,6937
+2022-10-02,Tirupati Mustard Oil,4092
+2022-10-02,Olixir Olive Oil,8942
+2022-10-02,Olixir Sesame Oil,1125
+2022-10-02,Castor Oil,7728
+2022-10-02,Refined Castor Oil,1561
+2022-10-02,De Oiled Cake,4433
+2022-10-09,Tirupati Cottonseed Oil,7249
+2022-10-09,Tirupati Sunflower Oil,6212
+2022-10-09,Tirupati Groundnut Oil,8552
+2022-10-09,Tirupati Soybean Oil,4516
+2022-10-09,Tirupati Mustard Oil,5041
+2022-10-09,Olixir Olive Oil,9728
+2022-10-09,Olixir Sesame Oil,1411
+2022-10-09,Castor Oil,3672
+2022-10-09,Refined Castor Oil,6989
+2022-10-09,De Oiled Cake,1621
+2022-10-16,Tirupati Cottonseed Oil,5647
+2022-10-16,Tirupati Sunflower Oil,7084
+2022-10-16,Tirupati Groundnut Oil,5986
+2022-10-16,Tirupati Soybean Oil,9703
+2022-10-16,Tirupati Mustard Oil,8798
+2022-10-16,Olixir Olive Oil,4224
+2022-10-16,Olixir Sesame Oil,5230
+2022-10-16,Castor Oil,5022
+2022-10-16,Refined Castor Oil,9400
+2022-10-16,De Oiled Cake,6860
+2022-10-23,Tirupati Cottonseed Oil,6615
+2022-10-23,Tirupati Sunflower Oil,2953
+2022-10-23,Tirupati Groundnut Oil,9016
+2022-10-23,Tirupati Soybean Oil,8268
+2022-10-23,Tirupati Mustard Oil,8931
+2022-10-23,Olixir Olive Oil,6507
+2022-10-23,Olixir Sesame Oil,1892
+2022-10-23,Castor Oil,2814
+2022-10-23,Refined Castor Oil,4767
+2022-10-23,De Oiled Cake,2383
+2022-10-30,Tirupati Cottonseed Oil,5068
+2022-10-30,Tirupati Sunflower Oil,2629
+2022-10-30,Tirupati Groundnut Oil,3585
+2022-10-30,Tirupati Soybean Oil,4512
+2022-10-30,Tirupati Mustard Oil,3817
+2022-10-30,Olixir Olive Oil,3287
+2022-10-30,Olixir Sesame Oil,1762
+2022-10-30,Castor Oil,5459
+2022-10-30,Refined Castor Oil,3001
+2022-10-30,De Oiled Cake,4136
+2022-11-06,Tirupati Cottonseed Oil,7875
+2022-11-06,Tirupati Sunflower Oil,2862
+2022-11-06,Tirupati Groundnut Oil,7502
+2022-11-06,Tirupati Soybean Oil,1852
+2022-11-06,Tirupati Mustard Oil,3949
+2022-11-06,Olixir Olive Oil,8312
+2022-11-06,Olixir Sesame Oil,9457
+2022-11-06,Castor Oil,7204
+2022-11-06,Refined Castor Oil,9862
+2022-11-06,De Oiled Cake,9016
+2022-11-13,Tirupati Cottonseed Oil,9565
+2022-11-13,Tirupati Sunflower Oil,2913
+2022-11-13,Tirupati Groundnut Oil,1116
+2022-11-13,Tirupati Soybean Oil,2656
+2022-11-13,Tirupati Mustard Oil,5809
+2022-11-13,Olixir Olive Oil,5414
+2022-11-13,Olixir Sesame Oil,2801
+2022-11-13,Castor Oil,6803
+2022-11-13,Refined Castor Oil,5091
+2022-11-13,De Oiled Cake,2843
+2022-11-20,Tirupati Cottonseed Oil,6160
+2022-11-20,Tirupati Sunflower Oil,6248
+2022-11-20,Tirupati Groundnut Oil,2733
+2022-11-20,Tirupati Soybean Oil,2506
+2022-11-20,Tirupati Mustard Oil,2089
+2022-11-20,Olixir Olive Oil,9750
+2022-11-20,Olixir Sesame Oil,9956
+2022-11-20,Castor Oil,4135
+2022-11-20,Refined Castor Oil,9717
+2022-11-20,De Oiled Cake,6634
+2022-11-27,Tirupati Cottonseed Oil,2210
+2022-11-27,Tirupati Sunflower Oil,9566
+2022-11-27,Tirupati Groundnut Oil,9744
+2022-11-27,Tirupati Soybean Oil,9624
+2022-11-27,Tirupati Mustard Oil,1562
+2022-11-27,Olixir Olive Oil,8716
+2022-11-27,Olixir Sesame Oil,6913
+2022-11-27,Castor Oil,4551
+2022-11-27,Refined Castor Oil,1170
+2022-11-27,De Oiled Cake,6733
+2022-12-04,Tirupati Cottonseed Oil,6453
+2022-12-04,Tirupati Sunflower Oil,2357
+2022-12-04,Tirupati Groundnut Oil,3260
+2022-12-04,Tirupati Soybean Oil,4700
+2022-12-04,Tirupati Mustard Oil,5132
+2022-12-04,Olixir Olive Oil,4785
+2022-12-04,Olixir Sesame Oil,2468
+2022-12-04,Castor Oil,8408
+2022-12-04,Refined Castor Oil,3467
+2022-12-04,De Oiled Cake,5617
+2022-12-11,Tirupati Cottonseed Oil,9249
+2022-12-11,Tirupati Sunflower Oil,3573
+2022-12-11,Tirupati Groundnut Oil,3475
+2022-12-11,Tirupati Soybean Oil,6157
+2022-12-11,Tirupati Mustard Oil,5532
+2022-12-11,Olixir Olive Oil,6914
+2022-12-11,Olixir Sesame Oil,2113
+2022-12-11,Castor Oil,3449
+2022-12-11,Refined Castor Oil,4360
+2022-12-11,De Oiled Cake,5402
+2022-12-18,Tirupati Cottonseed Oil,2144
+2022-12-18,Tirupati Sunflower Oil,2431
+2022-12-18,Tirupati Groundnut Oil,1504
+2022-12-18,Tirupati Soybean Oil,2493
+2022-12-18,Tirupati Mustard Oil,6173
+2022-12-18,Olixir Olive Oil,5853
+2022-12-18,Olixir Sesame Oil,5590
+2022-12-18,Castor Oil,8514
+2022-12-18,Refined Castor Oil,7593
+2022-12-18,De Oiled Cake,2307
+2022-12-25,Tirupati Cottonseed Oil,4958
+2022-12-25,Tirupati Sunflower Oil,2156
+2022-12-25,Tirupati Groundnut Oil,8276
+2022-12-25,Tirupati Soybean Oil,7966
+2022-12-25,Tirupati Mustard Oil,7526
+2022-12-25,Olixir Olive Oil,9422
+2022-12-25,Olixir Sesame Oil,8294
+2022-12-25,Castor Oil,5095
+2022-12-25,Refined Castor Oil,6705
+2022-12-25,De Oiled Cake,8696
+2023-01-01,Tirupati Cottonseed Oil,6174
+2023-01-01,Tirupati Sunflower Oil,4086
+2023-01-01,Tirupati Groundnut Oil,5290
+2023-01-01,Tirupati Soybean Oil,4419
+2023-01-01,Tirupati Mustard Oil,9786
+2023-01-01,Olixir Olive Oil,2791
+2023-01-01,Olixir Sesame Oil,2956
+2023-01-01,Castor Oil,9440
+2023-01-01,Refined Castor Oil,6853
+2023-01-01,De Oiled Cake,3669
+2023-01-08,Tirupati Cottonseed Oil,3343
+2023-01-08,Tirupati Sunflower Oil,6203
+2023-01-08,Tirupati Groundnut Oil,1878
+2023-01-08,Tirupati Soybean Oil,4050
+2023-01-08,Tirupati Mustard Oil,8394
+2023-01-08,Olixir Olive Oil,6030
+2023-01-08,Olixir Sesame Oil,5802
+2023-01-08,Castor Oil,7029
+2023-01-08,Refined Castor Oil,1883
+2023-01-08,De Oiled Cake,4843
+2023-01-15,Tirupati Cottonseed Oil,6657
+2023-01-15,Tirupati Sunflower Oil,2589
+2023-01-15,Tirupati Groundnut Oil,4202
+2023-01-15,Tirupati Soybean Oil,8146
+2023-01-15,Tirupati Mustard Oil,4405
+2023-01-15,Olixir Olive Oil,2475
+2023-01-15,Olixir Sesame Oil,7098
+2023-01-15,Castor Oil,8539
+2023-01-15,Refined Castor Oil,7307
+2023-01-15,De Oiled Cake,4536
+2023-01-22,Tirupati Cottonseed Oil,7574
+2023-01-22,Tirupati Sunflower Oil,6753
+2023-01-22,Tirupati Groundnut Oil,2533
+2023-01-22,Tirupati Soybean Oil,3706
+2023-01-22,Tirupati Mustard Oil,4457
+2023-01-22,Olixir Olive Oil,2080
+2023-01-22,Olixir Sesame Oil,1683
+2023-01-22,Castor Oil,3617
+2023-01-22,Refined Castor Oil,5955
+2023-01-22,De Oiled Cake,7672
+2023-01-29,Tirupati Cottonseed Oil,4449
+2023-01-29,Tirupati Sunflower Oil,2791
+2023-01-29,Tirupati Groundnut Oil,4995
+2023-01-29,Tirupati Soybean Oil,4185
+2023-01-29,Tirupati Mustard Oil,5363
+2023-01-29,Olixir Olive Oil,5460
+2023-01-29,Olixir Sesame Oil,9544
+2023-01-29,Castor Oil,6766
+2023-01-29,Refined Castor Oil,6867
+2023-01-29,De Oiled Cake,7383
+2023-02-05,Tirupati Cottonseed Oil,4910
+2023-02-05,Tirupati Sunflower Oil,8747
+2023-02-05,Tirupati Groundnut Oil,3574
+2023-02-05,Tirupati Soybean Oil,8123
+2023-02-05,Tirupati Mustard Oil,2385
+2023-02-05,Olixir Olive Oil,9440
+2023-02-05,Olixir Sesame Oil,3832
+2023-02-05,Castor Oil,9185
+2023-02-05,Refined Castor Oil,1524
+2023-02-05,De Oiled Cake,8814
+2023-02-12,Tirupati Cottonseed Oil,9686
+2023-02-12,Tirupati Sunflower Oil,4257
+2023-02-12,Tirupati Groundnut Oil,7912
+2023-02-12,Tirupati Soybean Oil,4099
+2023-02-12,Tirupati Mustard Oil,4511
+2023-02-12,Olixir Olive Oil,7583
+2023-02-12,Olixir Sesame Oil,5474
+2023-02-12,Castor Oil,5190
+2023-02-12,Refined Castor Oil,3446
+2023-02-12,De Oiled Cake,8030
+2023-02-19,Tirupati Cottonseed Oil,7129
+2023-02-19,Tirupati Sunflower Oil,9643
+2023-02-19,Tirupati Groundnut Oil,5547
+2023-02-19,Tirupati Soybean Oil,6005
+2023-02-19,Tirupati Mustard Oil,3758
+2023-02-19,Olixir Olive Oil,5327
+2023-02-19,Olixir Sesame Oil,7448
+2023-02-19,Castor Oil,4359
+2023-02-19,Refined Castor Oil,3962
+2023-02-19,De Oiled Cake,4586
+2023-02-26,Tirupati Cottonseed Oil,5745
+2023-02-26,Tirupati Sunflower Oil,4707
+2023-02-26,Tirupati Groundnut Oil,9215
+2023-02-26,Tirupati Soybean Oil,6730
+2023-02-26,Tirupati Mustard Oil,4630
+2023-02-26,Olixir Olive Oil,5931
+2023-02-26,Olixir Sesame Oil,6535
+2023-02-26,Castor Oil,4675
+2023-02-26,Refined Castor Oil,5589
+2023-02-26,De Oiled Cake,4182
+2023-03-05,Tirupati Cottonseed Oil,9133
+2023-03-05,Tirupati Sunflower Oil,8278
+2023-03-05,Tirupati Groundnut Oil,8155
+2023-03-05,Tirupati Soybean Oil,4625
+2023-03-05,Tirupati Mustard Oil,3627
+2023-03-05,Olixir Olive Oil,2416
+2023-03-05,Olixir Sesame Oil,8018
+2023-03-05,Castor Oil,9237
+2023-03-05,Refined Castor Oil,2039
+2023-03-05,De Oiled Cake,6906
+2023-03-12,Tirupati Cottonseed Oil,9196
+2023-03-12,Tirupati Sunflower Oil,6472
+2023-03-12,Tirupati Groundnut Oil,3797
+2023-03-12,Tirupati Soybean Oil,9644
+2023-03-12,Tirupati Mustard Oil,7848
+2023-03-12,Olixir Olive Oil,5869
+2023-03-12,Olixir Sesame Oil,5809
+2023-03-12,Castor Oil,7214
+2023-03-12,Refined Castor Oil,7279
+2023-03-12,De Oiled Cake,6604
+2023-03-19,Tirupati Cottonseed Oil,6222
+2023-03-19,Tirupati Sunflower Oil,6109
+2023-03-19,Tirupati Groundnut Oil,9858
+2023-03-19,Tirupati Soybean Oil,3456
+2023-03-19,Tirupati Mustard Oil,7657
+2023-03-19,Olixir Olive Oil,7764
+2023-03-19,Olixir Sesame Oil,8449
+2023-03-19,Castor Oil,2443
+2023-03-19,Refined Castor Oil,7473
+2023-03-19,De Oiled Cake,2932
+2023-03-26,Tirupati Cottonseed Oil,9312
+2023-03-26,Tirupati Sunflower Oil,9786
+2023-03-26,Tirupati Groundnut Oil,1914
+2023-03-26,Tirupati Soybean Oil,6657
+2023-03-26,Tirupati Mustard Oil,9175
+2023-03-26,Olixir Olive Oil,1888
+2023-03-26,Olixir Sesame Oil,9537
+2023-03-26,Castor Oil,4838
+2023-03-26,Refined Castor Oil,5311
+2023-03-26,De Oiled Cake,6211
+2023-04-02,Tirupati Cottonseed Oil,2031
+2023-04-02,Tirupati Sunflower Oil,6432
+2023-04-02,Tirupati Groundnut Oil,9169
+2023-04-02,Tirupati Soybean Oil,6780
+2023-04-02,Tirupati Mustard Oil,6969
+2023-04-02,Olixir Olive Oil,4297
+2023-04-02,Olixir Sesame Oil,8954
+2023-04-02,Castor Oil,1530
+2023-04-02,Refined Castor Oil,1936
+2023-04-02,De Oiled Cake,3228
+2023-04-09,Tirupati Cottonseed Oil,6245
+2023-04-09,Tirupati Sunflower Oil,7416
+2023-04-09,Tirupati Groundnut Oil,3030
+2023-04-09,Tirupati Soybean Oil,6384
+2023-04-09,Tirupati Mustard Oil,5406
+2023-04-09,Olixir Olive Oil,8714
+2023-04-09,Olixir Sesame Oil,6746
+2023-04-09,Castor Oil,1991
+2023-04-09,Refined Castor Oil,8867
+2023-04-09,De Oiled Cake,7260
+2023-04-16,Tirupati Cottonseed Oil,6591
+2023-04-16,Tirupati Sunflower Oil,9219
+2023-04-16,Tirupati Groundnut Oil,8107
+2023-04-16,Tirupati Soybean Oil,2914
+2023-04-16,Tirupati Mustard Oil,3119
+2023-04-16,Olixir Olive Oil,9662
+2023-04-16,Olixir Sesame Oil,8666
+2023-04-16,Castor Oil,3040
+2023-04-16,Refined Castor Oil,7947
+2023-04-16,De Oiled Cake,1231
+2023-04-23,Tirupati Cottonseed Oil,9219
+2023-04-23,Tirupati Sunflower Oil,5570
+2023-04-23,Tirupati Groundnut Oil,7552
+2023-04-23,Tirupati Soybean Oil,7504
+2023-04-23,Tirupati Mustard Oil,8899
+2023-04-23,Olixir Olive Oil,2105
+2023-04-23,Olixir Sesame Oil,8803
+2023-04-23,Castor Oil,7382
+2023-04-23,Refined Castor Oil,9629
+2023-04-23,De Oiled Cake,3383
+2023-04-30,Tirupati Cottonseed Oil,6374
+2023-04-30,Tirupati Sunflower Oil,1786
+2023-04-30,Tirupati Groundnut Oil,6389
+2023-04-30,Tirupati Soybean Oil,6550
+2023-04-30,Tirupati Mustard Oil,6109
+2023-04-30,Olixir Olive Oil,6099
+2023-04-30,Olixir Sesame Oil,3823
+2023-04-30,Castor Oil,1106
+2023-04-30,Refined Castor Oil,9509
+2023-04-30,De Oiled Cake,8251
+2023-05-07,Tirupati Cottonseed Oil,7627
+2023-05-07,Tirupati Sunflower Oil,2846
+2023-05-07,Tirupati Groundnut Oil,2558
+2023-05-07,Tirupati Soybean Oil,2804
+2023-05-07,Tirupati Mustard Oil,1584
+2023-05-07,Olixir Olive Oil,4615
+2023-05-07,Olixir Sesame Oil,9340
+2023-05-07,Castor Oil,8756
+2023-05-07,Refined Castor Oil,3123
+2023-05-07,De Oiled Cake,3425
+2023-05-14,Tirupati Cottonseed Oil,3999
+2023-05-14,Tirupati Sunflower Oil,4790
+2023-05-14,Tirupati Groundnut Oil,8625
+2023-05-14,Tirupati Soybean Oil,6760
+2023-05-14,Tirupati Mustard Oil,4918
+2023-05-14,Olixir Olive Oil,3494
+2023-05-14,Olixir Sesame Oil,5460
+2023-05-14,Castor Oil,8592
+2023-05-14,Refined Castor Oil,5620
+2023-05-14,De Oiled Cake,7385
+2023-05-21,Tirupati Cottonseed Oil,7598
+2023-05-21,Tirupati Sunflower Oil,8226
+2023-05-21,Tirupati Groundnut Oil,2257
+2023-05-21,Tirupati Soybean Oil,1773
+2023-05-21,Tirupati Mustard Oil,9052
+2023-05-21,Olixir Olive Oil,5564
+2023-05-21,Olixir Sesame Oil,8059
+2023-05-21,Castor Oil,4799
+2023-05-21,Refined Castor Oil,4672
+2023-05-21,De Oiled Cake,9599
+2023-05-28,Tirupati Cottonseed Oil,6090
+2023-05-28,Tirupati Sunflower Oil,9847
+2023-05-28,Tirupati Groundnut Oil,4779
+2023-05-28,Tirupati Soybean Oil,8455
+2023-05-28,Tirupati Mustard Oil,6687
+2023-05-28,Olixir Olive Oil,6692
+2023-05-28,Olixir Sesame Oil,6341
+2023-05-28,Castor Oil,7618
+2023-05-28,Refined Castor Oil,9421
+2023-05-28,De Oiled Cake,6664
+2023-06-04,Tirupati Cottonseed Oil,4145
+2023-06-04,Tirupati Sunflower Oil,6099
+2023-06-04,Tirupati Groundnut Oil,5583
+2023-06-04,Tirupati Soybean Oil,8609
+2023-06-04,Tirupati Mustard Oil,8494
+2023-06-04,Olixir Olive Oil,6945
+2023-06-04,Olixir Sesame Oil,3323
+2023-06-04,Castor Oil,8061
+2023-06-04,Refined Castor Oil,5761
+2023-06-04,De Oiled Cake,1954
+2023-06-11,Tirupati Cottonseed Oil,4352
+2023-06-11,Tirupati Sunflower Oil,6391
+2023-06-11,Tirupati Groundnut Oil,8891
+2023-06-11,Tirupati Soybean Oil,2742
+2023-06-11,Tirupati Mustard Oil,1799
+2023-06-11,Olixir Olive Oil,9519
+2023-06-11,Olixir Sesame Oil,8184
+2023-06-11,Castor Oil,4557
+2023-06-11,Refined Castor Oil,5983
+2023-06-11,De Oiled Cake,1063
+2023-06-18,Tirupati Cottonseed Oil,7336
+2023-06-18,Tirupati Sunflower Oil,7237
+2023-06-18,Tirupati Groundnut Oil,3243
+2023-06-18,Tirupati Soybean Oil,4620
+2023-06-18,Tirupati Mustard Oil,8340
+2023-06-18,Olixir Olive Oil,7253
+2023-06-18,Olixir Sesame Oil,4670
+2023-06-18,Castor Oil,6834
+2023-06-18,Refined Castor Oil,3221
+2023-06-18,De Oiled Cake,8519
+2023-06-25,Tirupati Cottonseed Oil,2187
+2023-06-25,Tirupati Sunflower Oil,2715
+2023-06-25,Tirupati Groundnut Oil,4347
+2023-06-25,Tirupati Soybean Oil,8751
+2023-06-25,Tirupati Mustard Oil,6864
+2023-06-25,Olixir Olive Oil,8853
+2023-06-25,Olixir Sesame Oil,1834
+2023-06-25,Castor Oil,9674
+2023-06-25,Refined Castor Oil,9139
+2023-06-25,De Oiled Cake,9614
+2023-07-02,Tirupati Cottonseed Oil,7639
+2023-07-02,Tirupati Sunflower Oil,6967
+2023-07-02,Tirupati Groundnut Oil,7455
+2023-07-02,Tirupati Soybean Oil,6944
+2023-07-02,Tirupati Mustard Oil,9243
+2023-07-02,Olixir Olive Oil,5930
+2023-07-02,Olixir Sesame Oil,2893
+2023-07-02,Castor Oil,4519
+2023-07-02,Refined Castor Oil,2423
+2023-07-02,De Oiled Cake,7066
+2023-07-09,Tirupati Cottonseed Oil,1416
+2023-07-09,Tirupati Sunflower Oil,2907
+2023-07-09,Tirupati Groundnut Oil,1604
+2023-07-09,Tirupati Soybean Oil,2273
+2023-07-09,Tirupati Mustard Oil,5610
+2023-07-09,Olixir Olive Oil,1996
+2023-07-09,Olixir Sesame Oil,6567
+2023-07-09,Castor Oil,4286
+2023-07-09,Refined Castor Oil,1269
+2023-07-09,De Oiled Cake,4035
+2023-07-16,Tirupati Cottonseed Oil,4191
+2023-07-16,Tirupati Sunflower Oil,4907
+2023-07-16,Tirupati Groundnut Oil,2991
+2023-07-16,Tirupati Soybean Oil,4060
+2023-07-16,Tirupati Mustard Oil,1571
+2023-07-16,Olixir Olive Oil,7205
+2023-07-16,Olixir Sesame Oil,8571
+2023-07-16,Castor Oil,8633
+2023-07-16,Refined Castor Oil,6014
+2023-07-16,De Oiled Cake,2674
+2023-07-23,Tirupati Cottonseed Oil,6434
+2023-07-23,Tirupati Sunflower Oil,3846
+2023-07-23,Tirupati Groundnut Oil,9637
+2023-07-23,Tirupati Soybean Oil,9601
+2023-07-23,Tirupati Mustard Oil,2195
+2023-07-23,Olixir Olive Oil,3175
+2023-07-23,Olixir Sesame Oil,8570
+2023-07-23,Castor Oil,4231
+2023-07-23,Refined Castor Oil,2563
+2023-07-23,De Oiled Cake,9835
+2023-07-30,Tirupati Cottonseed Oil,6038
+2023-07-30,Tirupati Sunflower Oil,9834
+2023-07-30,Tirupati Groundnut Oil,8296
+2023-07-30,Tirupati Soybean Oil,6606
+2023-07-30,Tirupati Mustard Oil,7388
+2023-07-30,Olixir Olive Oil,2881
+2023-07-30,Olixir Sesame Oil,5036
+2023-07-30,Castor Oil,6044
+2023-07-30,Refined Castor Oil,4014
+2023-07-30,De Oiled Cake,2959
+2023-08-06,Tirupati Cottonseed Oil,2273
+2023-08-06,Tirupati Sunflower Oil,1484
+2023-08-06,Tirupati Groundnut Oil,3072
+2023-08-06,Tirupati Soybean Oil,8298
+2023-08-06,Tirupati Mustard Oil,7566
+2023-08-06,Olixir Olive Oil,7030
+2023-08-06,Olixir Sesame Oil,4065
+2023-08-06,Castor Oil,2513
+2023-08-06,Refined Castor Oil,9969
+2023-08-06,De Oiled Cake,2029
+2023-08-13,Tirupati Cottonseed Oil,1474
+2023-08-13,Tirupati Sunflower Oil,3891
+2023-08-13,Tirupati Groundnut Oil,4373
+2023-08-13,Tirupati Soybean Oil,1188
+2023-08-13,Tirupati Mustard Oil,6608
+2023-08-13,Olixir Olive Oil,9305
+2023-08-13,Olixir Sesame Oil,4377
+2023-08-13,Castor Oil,3707
+2023-08-13,Refined Castor Oil,8444
+2023-08-13,De Oiled Cake,8663
+2023-08-20,Tirupati Cottonseed Oil,1624
+2023-08-20,Tirupati Sunflower Oil,4308
+2023-08-20,Tirupati Groundnut Oil,7773
+2023-08-20,Tirupati Soybean Oil,3629
+2023-08-20,Tirupati Mustard Oil,9114
+2023-08-20,Olixir Olive Oil,6192
+2023-08-20,Olixir Sesame Oil,7608
+2023-08-20,Castor Oil,6312
+2023-08-20,Refined Castor Oil,6987
+2023-08-20,De Oiled Cake,7040
+2023-08-27,Tirupati Cottonseed Oil,9252
+2023-08-27,Tirupati Sunflower Oil,6508
+2023-08-27,Tirupati Groundnut Oil,8472
+2023-08-27,Tirupati Soybean Oil,1926
+2023-08-27,Tirupati Mustard Oil,6021
+2023-08-27,Olixir Olive Oil,6117
+2023-08-27,Olixir Sesame Oil,9287
+2023-08-27,Castor Oil,4797
+2023-08-27,Refined Castor Oil,6480
+2023-08-27,De Oiled Cake,1159
+2023-09-03,Tirupati Cottonseed Oil,5608
+2023-09-03,Tirupati Sunflower Oil,4188
+2023-09-03,Tirupati Groundnut Oil,1042
+2023-09-03,Tirupati Soybean Oil,9824
+2023-09-03,Tirupati Mustard Oil,2580
+2023-09-03,Olixir Olive Oil,2016
+2023-09-03,Olixir Sesame Oil,1084
+2023-09-03,Castor Oil,3133
+2023-09-03,Refined Castor Oil,9659
+2023-09-03,De Oiled Cake,8066
+2023-09-10,Tirupati Cottonseed Oil,8160
+2023-09-10,Tirupati Sunflower Oil,1743
+2023-09-10,Tirupati Groundnut Oil,5252
+2023-09-10,Tirupati Soybean Oil,7699
+2023-09-10,Tirupati Mustard Oil,5533
+2023-09-10,Olixir Olive Oil,3852
+2023-09-10,Olixir Sesame Oil,8476
+2023-09-10,Castor Oil,7554
+2023-09-10,Refined Castor Oil,9432
+2023-09-10,De Oiled Cake,8963
+2023-09-17,Tirupati Cottonseed Oil,9263
+2023-09-17,Tirupati Sunflower Oil,1860
+2023-09-17,Tirupati Groundnut Oil,1647
+2023-09-17,Tirupati Soybean Oil,3675
+2023-09-17,Tirupati Mustard Oil,1191
+2023-09-17,Olixir Olive Oil,2989
+2023-09-17,Olixir Sesame Oil,3606
+2023-09-17,Castor Oil,8246
+2023-09-17,Refined Castor Oil,1751
+2023-09-17,De Oiled Cake,2436
+2023-09-24,Tirupati Cottonseed Oil,1294
+2023-09-24,Tirupati Sunflower Oil,4520
+2023-09-24,Tirupati Groundnut Oil,2049
+2023-09-24,Tirupati Soybean Oil,8435
+2023-09-24,Tirupati Mustard Oil,1017
+2023-09-24,Olixir Olive Oil,4037
+2023-09-24,Olixir Sesame Oil,9137
+2023-09-24,Castor Oil,4778
+2023-09-24,Refined Castor Oil,1450
+2023-09-24,De Oiled Cake,2916
+2023-10-01,Tirupati Cottonseed Oil,2352
+2023-10-01,Tirupati Sunflower Oil,4975
+2023-10-01,Tirupati Groundnut Oil,1656
+2023-10-01,Tirupati Soybean Oil,7203
+2023-10-01,Tirupati Mustard Oil,2234
+2023-10-01,Olixir Olive Oil,2528
+2023-10-01,Olixir Sesame Oil,5302
+2023-10-01,Castor Oil,3241
+2023-10-01,Refined Castor Oil,6540
+2023-10-01,De Oiled Cake,9781
+2023-10-08,Tirupati Cottonseed Oil,3118
+2023-10-08,Tirupati Sunflower Oil,6425
+2023-10-08,Tirupati Groundnut Oil,3007
+2023-10-08,Tirupati Soybean Oil,1039
+2023-10-08,Tirupati Mustard Oil,8322
+2023-10-08,Olixir Olive Oil,9001
+2023-10-08,Olixir Sesame Oil,2426
+2023-10-08,Castor Oil,5599
+2023-10-08,Refined Castor Oil,5843
+2023-10-08,De Oiled Cake,3297
+2023-10-15,Tirupati Cottonseed Oil,8997
+2023-10-15,Tirupati Sunflower Oil,3720
+2023-10-15,Tirupati Groundnut Oil,1810
+2023-10-15,Tirupati Soybean Oil,4651
+2023-10-15,Tirupati Mustard Oil,3640
+2023-10-15,Olixir Olive Oil,6360
+2023-10-15,Olixir Sesame Oil,2155
+2023-10-15,Castor Oil,4550
+2023-10-15,Refined Castor Oil,4687
+2023-10-15,De Oiled Cake,2834
+2023-10-22,Tirupati Cottonseed Oil,9529
+2023-10-22,Tirupati Sunflower Oil,5087
+2023-10-22,Tirupati Groundnut Oil,1698
+2023-10-22,Tirupati Soybean Oil,3868
+2023-10-22,Tirupati Mustard Oil,9894
+2023-10-22,Olixir Olive Oil,1591
+2023-10-22,Olixir Sesame Oil,5148
+2023-10-22,Castor Oil,9239
+2023-10-22,Refined Castor Oil,6980
+2023-10-22,De Oiled Cake,9788
+2023-10-29,Tirupati Cottonseed Oil,1382
+2023-10-29,Tirupati Sunflower Oil,7321
+2023-10-29,Tirupati Groundnut Oil,9454
+2023-10-29,Tirupati Soybean Oil,5650
+2023-10-29,Tirupati Mustard Oil,7394
+2023-10-29,Olixir Olive Oil,4298
+2023-10-29,Olixir Sesame Oil,2919
+2023-10-29,Castor Oil,9950
+2023-10-29,Refined Castor Oil,5674
+2023-10-29,De Oiled Cake,3119
+2023-11-05,Tirupati Cottonseed Oil,4909
+2023-11-05,Tirupati Sunflower Oil,6042
+2023-11-05,Tirupati Groundnut Oil,6629
+2023-11-05,Tirupati Soybean Oil,8585
+2023-11-05,Tirupati Mustard Oil,8094
+2023-11-05,Olixir Olive Oil,3036
+2023-11-05,Olixir Sesame Oil,8270
+2023-11-05,Castor Oil,3083
+2023-11-05,Refined Castor Oil,2503
+2023-11-05,De Oiled Cake,6225
+2023-11-12,Tirupati Cottonseed Oil,4613
+2023-11-12,Tirupati Sunflower Oil,6087
+2023-11-12,Tirupati Groundnut Oil,1083
+2023-11-12,Tirupati Soybean Oil,5005
+2023-11-12,Tirupati Mustard Oil,4447
+2023-11-12,Olixir Olive Oil,7724
+2023-11-12,Olixir Sesame Oil,2832
+2023-11-12,Castor Oil,7306
+2023-11-12,Refined Castor Oil,4991
+2023-11-12,De Oiled Cake,2303
+2023-11-19,Tirupati Cottonseed Oil,7525
+2023-11-19,Tirupati Sunflower Oil,7060
+2023-11-19,Tirupati Groundnut Oil,2195
+2023-11-19,Tirupati Soybean Oil,5931
+2023-11-19,Tirupati Mustard Oil,1636
+2023-11-19,Olixir Olive Oil,8501
+2023-11-19,Olixir Sesame Oil,6449
+2023-11-19,Castor Oil,2978
+2023-11-19,Refined Castor Oil,5739
+2023-11-19,De Oiled Cake,3144
+2023-11-26,Tirupati Cottonseed Oil,8618
+2023-11-26,Tirupati Sunflower Oil,8318
+2023-11-26,Tirupati Groundnut Oil,8346
+2023-11-26,Tirupati Soybean Oil,7279
+2023-11-26,Tirupati Mustard Oil,7270
+2023-11-26,Olixir Olive Oil,5838
+2023-11-26,Olixir Sesame Oil,5492
+2023-11-26,Castor Oil,5238
+2023-11-26,Refined Castor Oil,2286
+2023-11-26,De Oiled Cake,4492
+2023-12-03,Tirupati Cottonseed Oil,5652
+2023-12-03,Tirupati Sunflower Oil,6682
+2023-12-03,Tirupati Groundnut Oil,1258
+2023-12-03,Tirupati Soybean Oil,5860
+2023-12-03,Tirupati Mustard Oil,2305
+2023-12-03,Olixir Olive Oil,4207
+2023-12-03,Olixir Sesame Oil,7264
+2023-12-03,Castor Oil,7830
+2023-12-03,Refined Castor Oil,9375
+2023-12-03,De Oiled Cake,3148
+2023-12-10,Tirupati Cottonseed Oil,3789
+2023-12-10,Tirupati Sunflower Oil,5845
+2023-12-10,Tirupati Groundnut Oil,4793
+2023-12-10,Tirupati Soybean Oil,8365
+2023-12-10,Tirupati Mustard Oil,9575
+2023-12-10,Olixir Olive Oil,9781
+2023-12-10,Olixir Sesame Oil,5498
+2023-12-10,Castor Oil,9484
+2023-12-10,Refined Castor Oil,2933
+2023-12-10,De Oiled Cake,6322
+2023-12-17,Tirupati Cottonseed Oil,5926
+2023-12-17,Tirupati Sunflower Oil,6904
+2023-12-17,Tirupati Groundnut Oil,6025
+2023-12-17,Tirupati Soybean Oil,6141
+2023-12-17,Tirupati Mustard Oil,1586
+2023-12-17,Olixir Olive Oil,4226
+2023-12-17,Olixir Sesame Oil,3016
+2023-12-17,Castor Oil,2824
+2023-12-17,Refined Castor Oil,3389
+2023-12-17,De Oiled Cake,7986
+2023-12-24,Tirupati Cottonseed Oil,5303
+2023-12-24,Tirupati Sunflower Oil,9946
+2023-12-24,Tirupati Groundnut Oil,2376
+2023-12-24,Tirupati Soybean Oil,3169
+2023-12-24,Tirupati Mustard Oil,2509
+2023-12-24,Olixir Olive Oil,5174
+2023-12-24,Olixir Sesame Oil,1754
+2023-12-24,Castor Oil,4837
+2023-12-24,Refined Castor Oil,6751
+2023-12-24,De Oiled Cake,6221
+2023-12-31,Tirupati Cottonseed Oil,3586
+2023-12-31,Tirupati Sunflower Oil,4440
+2023-12-31,Tirupati Groundnut Oil,2749
+2023-12-31,Tirupati Soybean Oil,3470
+2023-12-31,Tirupati Mustard Oil,3849
+2023-12-31,Olixir Olive Oil,2744
+2023-12-31,Olixir Sesame Oil,1933
+2023-12-31,Castor Oil,3860
+2023-12-31,Refined Castor Oil,8473
+2023-12-31,De Oiled Cake,6535
+2024-01-07,Tirupati Cottonseed Oil,7321
+2024-01-07,Tirupati Sunflower Oil,7906
+2024-01-07,Tirupati Groundnut Oil,7504
+2024-01-07,Tirupati Soybean Oil,3581
+2024-01-07,Tirupati Mustard Oil,8233
+2024-01-07,Olixir Olive Oil,4224
+2024-01-07,Olixir Sesame Oil,5431
+2024-01-07,Castor Oil,6920
+2024-01-07,Refined Castor Oil,2865
+2024-01-07,De Oiled Cake,3467
+2024-01-14,Tirupati Cottonseed Oil,9585
+2024-01-14,Tirupati Sunflower Oil,9044
+2024-01-14,Tirupati Groundnut Oil,6676
+2024-01-14,Tirupati Soybean Oil,2051
+2024-01-14,Tirupati Mustard Oil,5735
+2024-01-14,Olixir Olive Oil,5732
+2024-01-14,Olixir Sesame Oil,1317
+2024-01-14,Castor Oil,7682
+2024-01-14,Refined Castor Oil,8028
+2024-01-14,De Oiled Cake,4114
+2024-01-21,Tirupati Cottonseed Oil,1870
+2024-01-21,Tirupati Sunflower Oil,6868
+2024-01-21,Tirupati Groundnut Oil,9880
+2024-01-21,Tirupati Soybean Oil,1368
+2024-01-21,Tirupati Mustard Oil,1566
+2024-01-21,Olixir Olive Oil,6943
+2024-01-21,Olixir Sesame Oil,6136
+2024-01-21,Castor Oil,7338
+2024-01-21,Refined Castor Oil,6825
+2024-01-21,De Oiled Cake,2195
+2024-01-28,Tirupati Cottonseed Oil,7152
+2024-01-28,Tirupati Sunflower Oil,4942
+2024-01-28,Tirupati Groundnut Oil,7481
+2024-01-28,Tirupati Soybean Oil,8830
+2024-01-28,Tirupati Mustard Oil,6360
+2024-01-28,Olixir Olive Oil,3826
+2024-01-28,Olixir Sesame Oil,4925
+2024-01-28,Castor Oil,2487
+2024-01-28,Refined Castor Oil,9121
+2024-01-28,De Oiled Cake,4724
+2024-02-04,Tirupati Cottonseed Oil,9855
+2024-02-04,Tirupati Sunflower Oil,5280
+2024-02-04,Tirupati Groundnut Oil,9170
+2024-02-04,Tirupati Soybean Oil,5864
+2024-02-04,Tirupati Mustard Oil,7318
+2024-02-04,Olixir Olive Oil,1334
+2024-02-04,Olixir Sesame Oil,2133
+2024-02-04,Castor Oil,4576
+2024-02-04,Refined Castor Oil,9988
+2024-02-04,De Oiled Cake,4570
+2024-02-11,Tirupati Cottonseed Oil,6902
+2024-02-11,Tirupati Sunflower Oil,5111
+2024-02-11,Tirupati Groundnut Oil,2912
+2024-02-11,Tirupati Soybean Oil,5267
+2024-02-11,Tirupati Mustard Oil,5464
+2024-02-11,Olixir Olive Oil,8817
+2024-02-11,Olixir Sesame Oil,2781
+2024-02-11,Castor Oil,7681
+2024-02-11,Refined Castor Oil,1759
+2024-02-11,De Oiled Cake,5933
+2024-02-18,Tirupati Cottonseed Oil,4166
+2024-02-18,Tirupati Sunflower Oil,8239
+2024-02-18,Tirupati Groundnut Oil,1142
+2024-02-18,Tirupati Soybean Oil,4226
+2024-02-18,Tirupati Mustard Oil,8224
+2024-02-18,Olixir Olive Oil,1062
+2024-02-18,Olixir Sesame Oil,9295
+2024-02-18,Castor Oil,1717
+2024-02-18,Refined Castor Oil,3836
+2024-02-18,De Oiled Cake,8857
+2024-02-25,Tirupati Cottonseed Oil,8624
+2024-02-25,Tirupati Sunflower Oil,4670
+2024-02-25,Tirupati Groundnut Oil,7139
+2024-02-25,Tirupati Soybean Oil,4621
+2024-02-25,Tirupati Mustard Oil,3736
+2024-02-25,Olixir Olive Oil,4693
+2024-02-25,Olixir Sesame Oil,3936
+2024-02-25,Castor Oil,7181
+2024-02-25,Refined Castor Oil,6521
+2024-02-25,De Oiled Cake,4575
+2024-03-03,Tirupati Cottonseed Oil,5582
+2024-03-03,Tirupati Sunflower Oil,2008
+2024-03-03,Tirupati Groundnut Oil,9402
+2024-03-03,Tirupati Soybean Oil,2682
+2024-03-03,Tirupati Mustard Oil,3639
+2024-03-03,Olixir Olive Oil,3636
+2024-03-03,Olixir Sesame Oil,9371
+2024-03-03,Castor Oil,9189
+2024-03-03,Refined Castor Oil,2353
+2024-03-03,De Oiled Cake,4922
+2024-03-10,Tirupati Cottonseed Oil,5581
+2024-03-10,Tirupati Sunflower Oil,6317
+2024-03-10,Tirupati Groundnut Oil,9264
+2024-03-10,Tirupati Soybean Oil,7653
+2024-03-10,Tirupati Mustard Oil,9001
+2024-03-10,Olixir Olive Oil,7754
+2024-03-10,Olixir Sesame Oil,8611
+2024-03-10,Castor Oil,8153
+2024-03-10,Refined Castor Oil,5957
+2024-03-10,De Oiled Cake,1831
+2024-03-17,Tirupati Cottonseed Oil,2328
+2024-03-17,Tirupati Sunflower Oil,9649
+2024-03-17,Tirupati Groundnut Oil,4031
+2024-03-17,Tirupati Soybean Oil,8091
+2024-03-17,Tirupati Mustard Oil,5151
+2024-03-17,Olixir Olive Oil,9298
+2024-03-17,Olixir Sesame Oil,5817
+2024-03-17,Castor Oil,7965
+2024-03-17,Refined Castor Oil,3767
+2024-03-17,De Oiled Cake,8968
+2024-03-24,Tirupati Cottonseed Oil,7541
+2024-03-24,Tirupati Sunflower Oil,8368
+2024-03-24,Tirupati Groundnut Oil,9705
+2024-03-24,Tirupati Soybean Oil,6520
+2024-03-24,Tirupati Mustard Oil,6594
+2024-03-24,Olixir Olive Oil,1062
+2024-03-24,Olixir Sesame Oil,4943
+2024-03-24,Castor Oil,8772
+2024-03-24,Refined Castor Oil,2325
+2024-03-24,De Oiled Cake,2573
+2024-03-31,Tirupati Cottonseed Oil,1622
+2024-03-31,Tirupati Sunflower Oil,4461
+2024-03-31,Tirupati Groundnut Oil,2607
+2024-03-31,Tirupati Soybean Oil,2875
+2024-03-31,Tirupati Mustard Oil,8707
+2024-03-31,Olixir Olive Oil,1345
+2024-03-31,Olixir Sesame Oil,2963
+2024-03-31,Castor Oil,5251
+2024-03-31,Refined Castor Oil,1786
+2024-03-31,De Oiled Cake,5741
+2024-04-07,Tirupati Cottonseed Oil,3144
+2024-04-07,Tirupati Sunflower Oil,7032
+2024-04-07,Tirupati Groundnut Oil,1922
+2024-04-07,Tirupati Soybean Oil,7409
+2024-04-07,Tirupati Mustard Oil,8657
+2024-04-07,Olixir Olive Oil,2175
+2024-04-07,Olixir Sesame Oil,1824
+2024-04-07,Castor Oil,4618
+2024-04-07,Refined Castor Oil,9061
+2024-04-07,De Oiled Cake,2475
+2024-04-14,Tirupati Cottonseed Oil,8241
+2024-04-14,Tirupati Sunflower Oil,5757
+2024-04-14,Tirupati Groundnut Oil,6211
+2024-04-14,Tirupati Soybean Oil,3980
+2024-04-14,Tirupati Mustard Oil,6835
+2024-04-14,Olixir Olive Oil,6281
+2024-04-14,Olixir Sesame Oil,3646
+2024-04-14,Castor Oil,7216
+2024-04-14,Refined Castor Oil,1572
+2024-04-14,De Oiled Cake,4649
+2024-04-21,Tirupati Cottonseed Oil,1910
+2024-04-21,Tirupati Sunflower Oil,9550
+2024-04-21,Tirupati Groundnut Oil,5369
+2024-04-21,Tirupati Soybean Oil,4029
+2024-04-21,Tirupati Mustard Oil,6451
+2024-04-21,Olixir Olive Oil,4861
+2024-04-21,Olixir Sesame Oil,4958
+2024-04-21,Castor Oil,9504
+2024-04-21,Refined Castor Oil,5527
+2024-04-21,De Oiled Cake,3449
+2024-04-28,Tirupati Cottonseed Oil,5573
+2024-04-28,Tirupati Sunflower Oil,3924
+2024-04-28,Tirupati Groundnut Oil,5278
+2024-04-28,Tirupati Soybean Oil,9745
+2024-04-28,Tirupati Mustard Oil,4372
+2024-04-28,Olixir Olive Oil,7199
+2024-04-28,Olixir Sesame Oil,4023
+2024-04-28,Castor Oil,5052
+2024-04-28,Refined Castor Oil,9792
+2024-04-28,De Oiled Cake,6355
+2024-05-05,Tirupati Cottonseed Oil,5741
+2024-05-05,Tirupati Sunflower Oil,7067
+2024-05-05,Tirupati Groundnut Oil,9136
+2024-05-05,Tirupati Soybean Oil,3764
+2024-05-05,Tirupati Mustard Oil,9257
+2024-05-05,Olixir Olive Oil,4973
+2024-05-05,Olixir Sesame Oil,9343
+2024-05-05,Castor Oil,7825
+2024-05-05,Refined Castor Oil,9495
+2024-05-05,De Oiled Cake,5082
+2024-05-12,Tirupati Cottonseed Oil,7638
+2024-05-12,Tirupati Sunflower Oil,9800
+2024-05-12,Tirupati Groundnut Oil,4971
+2024-05-12,Tirupati Soybean Oil,2726
+2024-05-12,Tirupati Mustard Oil,8984
+2024-05-12,Olixir Olive Oil,2812
+2024-05-12,Olixir Sesame Oil,6886
+2024-05-12,Castor Oil,2740
+2024-05-12,Refined Castor Oil,2895
+2024-05-12,De Oiled Cake,3688
+2024-05-19,Tirupati Cottonseed Oil,4008
+2024-05-19,Tirupati Sunflower Oil,2627
+2024-05-19,Tirupati Groundnut Oil,7058
+2024-05-19,Tirupati Soybean Oil,7031
+2024-05-19,Tirupati Mustard Oil,5750
+2024-05-19,Olixir Olive Oil,8957
+2024-05-19,Olixir Sesame Oil,7464
+2024-05-19,Castor Oil,6127
+2024-05-19,Refined Castor Oil,5561
+2024-05-19,De Oiled Cake,4073
+2024-05-26,Tirupati Cottonseed Oil,3401
+2024-05-26,Tirupati Sunflower Oil,2371
+2024-05-26,Tirupati Groundnut Oil,4608
+2024-05-26,Tirupati Soybean Oil,1085
+2024-05-26,Tirupati Mustard Oil,4052
+2024-05-26,Olixir Olive Oil,1685
+2024-05-26,Olixir Sesame Oil,7114
+2024-05-26,Castor Oil,8504
+2024-05-26,Refined Castor Oil,8698
+2024-05-26,De Oiled Cake,8222
+2024-06-02,Tirupati Cottonseed Oil,7100
+2024-06-02,Tirupati Sunflower Oil,3170
+2024-06-02,Tirupati Groundnut Oil,3338
+2024-06-02,Tirupati Soybean Oil,2454
+2024-06-02,Tirupati Mustard Oil,7918
+2024-06-02,Olixir Olive Oil,6060
+2024-06-02,Olixir Sesame Oil,4185
+2024-06-02,Castor Oil,4902
+2024-06-02,Refined Castor Oil,2572
+2024-06-02,De Oiled Cake,3852
+2024-06-09,Tirupati Cottonseed Oil,6158
+2024-06-09,Tirupati Sunflower Oil,6387
+2024-06-09,Tirupati Groundnut Oil,9077
+2024-06-09,Tirupati Soybean Oil,1326
+2024-06-09,Tirupati Mustard Oil,3994
+2024-06-09,Olixir Olive Oil,6547
+2024-06-09,Olixir Sesame Oil,9840
+2024-06-09,Castor Oil,7887
+2024-06-09,Refined Castor Oil,7439
+2024-06-09,De Oiled Cake,8712
+2024-06-16,Tirupati Cottonseed Oil,8272
+2024-06-16,Tirupati Sunflower Oil,7852
+2024-06-16,Tirupati Groundnut Oil,2902
+2024-06-16,Tirupati Soybean Oil,3209
+2024-06-16,Tirupati Mustard Oil,1311
+2024-06-16,Olixir Olive Oil,5227
+2024-06-16,Olixir Sesame Oil,6707
+2024-06-16,Castor Oil,2564
+2024-06-16,Refined Castor Oil,7646
+2024-06-16,De Oiled Cake,1265
+2024-06-23,Tirupati Cottonseed Oil,4161
+2024-06-23,Tirupati Sunflower Oil,3086
+2024-06-23,Tirupati Groundnut Oil,6337
+2024-06-23,Tirupati Soybean Oil,1837
+2024-06-23,Tirupati Mustard Oil,7414
+2024-06-23,Olixir Olive Oil,1071
+2024-06-23,Olixir Sesame Oil,3532
+2024-06-23,Castor Oil,7533
+2024-06-23,Refined Castor Oil,7961
+2024-06-23,De Oiled Cake,9667
+2024-06-30,Tirupati Cottonseed Oil,3799
+2024-06-30,Tirupati Sunflower Oil,1513
+2024-06-30,Tirupati Groundnut Oil,9435
+2024-06-30,Tirupati Soybean Oil,6673
+2024-06-30,Tirupati Mustard Oil,4094
+2024-06-30,Olixir Olive Oil,7819
+2024-06-30,Olixir Sesame Oil,5326
+2024-06-30,Castor Oil,6547
+2024-06-30,Refined Castor Oil,4875
+2024-06-30,De Oiled Cake,9717
+2024-07-07,Tirupati Cottonseed Oil,7397
+2024-07-07,Tirupati Sunflower Oil,8015
+2024-07-07,Tirupati Groundnut Oil,3954
+2024-07-07,Tirupati Soybean Oil,7142
+2024-07-07,Tirupati Mustard Oil,9593
+2024-07-07,Olixir Olive Oil,2474
+2024-07-07,Olixir Sesame Oil,7176
+2024-07-07,Castor Oil,5872
+2024-07-07,Refined Castor Oil,5102
+2024-07-07,De Oiled Cake,8988
+2024-07-14,Tirupati Cottonseed Oil,1066
+2024-07-14,Tirupati Sunflower Oil,5457
+2024-07-14,Tirupati Groundnut Oil,5999
+2024-07-14,Tirupati Soybean Oil,3776
+2024-07-14,Tirupati Mustard Oil,3939
+2024-07-14,Olixir Olive Oil,9135
+2024-07-14,Olixir Sesame Oil,8578
+2024-07-14,Castor Oil,3199
+2024-07-14,Refined Castor Oil,2746
+2024-07-14,De Oiled Cake,7737
+2024-07-21,Tirupati Cottonseed Oil,4062
+2024-07-21,Tirupati Sunflower Oil,2036
+2024-07-21,Tirupati Groundnut Oil,7956
+2024-07-21,Tirupati Soybean Oil,8706
+2024-07-21,Tirupati Mustard Oil,3659
+2024-07-21,Olixir Olive Oil,5501
+2024-07-21,Olixir Sesame Oil,8499
+2024-07-21,Castor Oil,2744
+2024-07-21,Refined Castor Oil,2118
+2024-07-21,De Oiled Cake,9721
+2024-07-28,Tirupati Cottonseed Oil,3111
+2024-07-28,Tirupati Sunflower Oil,5198
+2024-07-28,Tirupati Groundnut Oil,1359
+2024-07-28,Tirupati Soybean Oil,9836
+2024-07-28,Tirupati Mustard Oil,6304
+2024-07-28,Olixir Olive Oil,2801
+2024-07-28,Olixir Sesame Oil,4594
+2024-07-28,Castor Oil,5654
+2024-07-28,Refined Castor Oil,2033
+2024-07-28,De Oiled Cake,7216
+2024-08-04,Tirupati Cottonseed Oil,5465
+2024-08-04,Tirupati Sunflower Oil,7155
+2024-08-04,Tirupati Groundnut Oil,5092
+2024-08-04,Tirupati Soybean Oil,1370
+2024-08-04,Tirupati Mustard Oil,5856
+2024-08-04,Olixir Olive Oil,6411
+2024-08-04,Olixir Sesame Oil,2897
+2024-08-04,Castor Oil,3617
+2024-08-04,Refined Castor Oil,2020
+2024-08-04,De Oiled Cake,5984
+2024-08-11,Tirupati Cottonseed Oil,5877
+2024-08-11,Tirupati Sunflower Oil,1431
+2024-08-11,Tirupati Groundnut Oil,1453
+2024-08-11,Tirupati Soybean Oil,4595
+2024-08-11,Tirupati Mustard Oil,7879
+2024-08-11,Olixir Olive Oil,8647
+2024-08-11,Olixir Sesame Oil,5889
+2024-08-11,Castor Oil,3831
+2024-08-11,Refined Castor Oil,3894
+2024-08-11,De Oiled Cake,3133
+2024-08-18,Tirupati Cottonseed Oil,8772
+2024-08-18,Tirupati Sunflower Oil,2086
+2024-08-18,Tirupati Groundnut Oil,7131
+2024-08-18,Tirupati Soybean Oil,9614
+2024-08-18,Tirupati Mustard Oil,8446
+2024-08-18,Olixir Olive Oil,3522
+2024-08-18,Olixir Sesame Oil,3494
+2024-08-18,Castor Oil,2982
+2024-08-18,Refined Castor Oil,3521
+2024-08-18,De Oiled Cake,9579
+2024-08-25,Tirupati Cottonseed Oil,7148
+2024-08-25,Tirupati Sunflower Oil,9184
+2024-08-25,Tirupati Groundnut Oil,3704
+2024-08-25,Tirupati Soybean Oil,9600
+2024-08-25,Tirupati Mustard Oil,8125
+2024-08-25,Olixir Olive Oil,5606
+2024-08-25,Olixir Sesame Oil,4656
+2024-08-25,Castor Oil,5802
+2024-08-25,Refined Castor Oil,2346
+2024-08-25,De Oiled Cake,4152
+2024-09-01,Tirupati Cottonseed Oil,2754
+2024-09-01,Tirupati Sunflower Oil,4397
+2024-09-01,Tirupati Groundnut Oil,1708
+2024-09-01,Tirupati Soybean Oil,4769
+2024-09-01,Tirupati Mustard Oil,7141
+2024-09-01,Olixir Olive Oil,9040
+2024-09-01,Olixir Sesame Oil,3117
+2024-09-01,Castor Oil,9750
+2024-09-01,Refined Castor Oil,6444
+2024-09-01,De Oiled Cake,8426
+2024-09-08,Tirupati Cottonseed Oil,4770
+2024-09-08,Tirupati Sunflower Oil,7954
+2024-09-08,Tirupati Groundnut Oil,3913
+2024-09-08,Tirupati Soybean Oil,1011
+2024-09-08,Tirupati Mustard Oil,9595
+2024-09-08,Olixir Olive Oil,3592
+2024-09-08,Olixir Sesame Oil,4979
+2024-09-08,Castor Oil,2192
+2024-09-08,Refined Castor Oil,5652
+2024-09-08,De Oiled Cake,7749
+2024-09-15,Tirupati Cottonseed Oil,5969
+2024-09-15,Tirupati Sunflower Oil,2302
+2024-09-15,Tirupati Groundnut Oil,5736
+2024-09-15,Tirupati Soybean Oil,7804
+2024-09-15,Tirupati Mustard Oil,4270
+2024-09-15,Olixir Olive Oil,6085
+2024-09-15,Olixir Sesame Oil,2075
+2024-09-15,Castor Oil,3507
+2024-09-15,Refined Castor Oil,2345
+2024-09-15,De Oiled Cake,1331
+2024-09-22,Tirupati Cottonseed Oil,4254
+2024-09-22,Tirupati Sunflower Oil,7151
+2024-09-22,Tirupati Groundnut Oil,3826
+2024-09-22,Tirupati Soybean Oil,9919
+2024-09-22,Tirupati Mustard Oil,1192
+2024-09-22,Olixir Olive Oil,5526
+2024-09-22,Olixir Sesame Oil,7943
+2024-09-22,Castor Oil,7135
+2024-09-22,Refined Castor Oil,8702
+2024-09-22,De Oiled Cake,7211
+2024-09-29,Tirupati Cottonseed Oil,6900
+2024-09-29,Tirupati Sunflower Oil,9808
+2024-09-29,Tirupati Groundnut Oil,5814
+2024-09-29,Tirupati Soybean Oil,8110
+2024-09-29,Tirupati Mustard Oil,9314
+2024-09-29,Olixir Olive Oil,4958
+2024-09-29,Olixir Sesame Oil,4988
+2024-09-29,Castor Oil,7397
+2024-09-29,Refined Castor Oil,4736
+2024-09-29,De Oiled Cake,3519
+2024-10-06,Tirupati Cottonseed Oil,5123
+2024-10-06,Tirupati Sunflower Oil,8679
+2024-10-06,Tirupati Groundnut Oil,1249
+2024-10-06,Tirupati Soybean Oil,8633
+2024-10-06,Tirupati Mustard Oil,1080
+2024-10-06,Olixir Olive Oil,7071
+2024-10-06,Olixir Sesame Oil,3962
+2024-10-06,Castor Oil,6648
+2024-10-06,Refined Castor Oil,2541
+2024-10-06,De Oiled Cake,1198
+2024-10-13,Tirupati Cottonseed Oil,2843
+2024-10-13,Tirupati Sunflower Oil,3660
+2024-10-13,Tirupati Groundnut Oil,3468
+2024-10-13,Tirupati Soybean Oil,5423
+2024-10-13,Tirupati Mustard Oil,4062
+2024-10-13,Olixir Olive Oil,3863
+2024-10-13,Olixir Sesame Oil,4429
+2024-10-13,Castor Oil,6049
+2024-10-13,Refined Castor Oil,7933
+2024-10-13,De Oiled Cake,3369
+2024-10-20,Tirupati Cottonseed Oil,8674
+2024-10-20,Tirupati Sunflower Oil,2383
+2024-10-20,Tirupati Groundnut Oil,9741
+2024-10-20,Tirupati Soybean Oil,6517
+2024-10-20,Tirupati Mustard Oil,2008
+2024-10-20,Olixir Olive Oil,5951
+2024-10-20,Olixir Sesame Oil,4545
+2024-10-20,Castor Oil,4478
+2024-10-20,Refined Castor Oil,5153
+2024-10-20,De Oiled Cake,7140
+2024-10-27,Tirupati Cottonseed Oil,4002
+2024-10-27,Tirupati Sunflower Oil,5616
+2024-10-27,Tirupati Groundnut Oil,8631
+2024-10-27,Tirupati Soybean Oil,9761
+2024-10-27,Tirupati Mustard Oil,5135
+2024-10-27,Olixir Olive Oil,2878
+2024-10-27,Olixir Sesame Oil,3368
+2024-10-27,Castor Oil,2001
+2024-10-27,Refined Castor Oil,5327
+2024-10-27,De Oiled Cake,3910
+2024-11-03,Tirupati Cottonseed Oil,2016
+2024-11-03,Tirupati Sunflower Oil,7030
+2024-11-03,Tirupati Groundnut Oil,6151
+2024-11-03,Tirupati Soybean Oil,6842
+2024-11-03,Tirupati Mustard Oil,1351
+2024-11-03,Olixir Olive Oil,4073
+2024-11-03,Olixir Sesame Oil,4819
+2024-11-03,Castor Oil,1247
+2024-11-03,Refined Castor Oil,7925
+2024-11-03,De Oiled Cake,9891
+2024-11-10,Tirupati Cottonseed Oil,6729
+2024-11-10,Tirupati Sunflower Oil,9087
+2024-11-10,Tirupati Groundnut Oil,2661
+2024-11-10,Tirupati Soybean Oil,7000
+2024-11-10,Tirupati Mustard Oil,1493
+2024-11-10,Olixir Olive Oil,6030
+2024-11-10,Olixir Sesame Oil,2137
+2024-11-10,Castor Oil,7453
+2024-11-10,Refined Castor Oil,4744
+2024-11-10,De Oiled Cake,7324
+2024-11-17,Tirupati Cottonseed Oil,7485
+2024-11-17,Tirupati Sunflower Oil,3304
+2024-11-17,Tirupati Groundnut Oil,4457
+2024-11-17,Tirupati Soybean Oil,3852
+2024-11-17,Tirupati Mustard Oil,8560
+2024-11-17,Olixir Olive Oil,4248
+2024-11-17,Olixir Sesame Oil,2309
+2024-11-17,Castor Oil,1777
+2024-11-17,Refined Castor Oil,8222
+2024-11-17,De Oiled Cake,9767
+2024-11-24,Tirupati Cottonseed Oil,8707
+2024-11-24,Tirupati Sunflower Oil,4159
+2024-11-24,Tirupati Groundnut Oil,1643
+2024-11-24,Tirupati Soybean Oil,6551
+2024-11-24,Tirupati Mustard Oil,4389
+2024-11-24,Olixir Olive Oil,1836
+2024-11-24,Olixir Sesame Oil,1676
+2024-11-24,Castor Oil,8795
+2024-11-24,Refined Castor Oil,2430
+2024-11-24,De Oiled Cake,6807
+2024-12-01,Tirupati Cottonseed Oil,4783
+2024-12-01,Tirupati Sunflower Oil,9245
+2024-12-01,Tirupati Groundnut Oil,9552
+2024-12-01,Tirupati Soybean Oil,4811
+2024-12-01,Tirupati Mustard Oil,6228
+2024-12-01,Olixir Olive Oil,1383
+2024-12-01,Olixir Sesame Oil,3090
+2024-12-01,Castor Oil,2751
+2024-12-01,Refined Castor Oil,5640
+2024-12-01,De Oiled Cake,2025
+2024-12-08,Tirupati Cottonseed Oil,9308
+2024-12-08,Tirupati Sunflower Oil,3422
+2024-12-08,Tirupati Groundnut Oil,1947
+2024-12-08,Tirupati Soybean Oil,2523
+2024-12-08,Tirupati Mustard Oil,4738
+2024-12-08,Olixir Olive Oil,1393
+2024-12-08,Olixir Sesame Oil,9350
+2024-12-08,Castor Oil,3283
+2024-12-08,Refined Castor Oil,6955
+2024-12-08,De Oiled Cake,3616
+2024-12-15,Tirupati Cottonseed Oil,9380
+2024-12-15,Tirupati Sunflower Oil,5896
+2024-12-15,Tirupati Groundnut Oil,4079
+2024-12-15,Tirupati Soybean Oil,4871
+2024-12-15,Tirupati Mustard Oil,3314
+2024-12-15,Olixir Olive Oil,9029
+2024-12-15,Olixir Sesame Oil,8966
+2024-12-15,Castor Oil,6106
+2024-12-15,Refined Castor Oil,7448
+2024-12-15,De Oiled Cake,2656
+2024-12-22,Tirupati Cottonseed Oil,5314
+2024-12-22,Tirupati Sunflower Oil,3517
+2024-12-22,Tirupati Groundnut Oil,5219
+2024-12-22,Tirupati Soybean Oil,5174
+2024-12-22,Tirupati Mustard Oil,7285
+2024-12-22,Olixir Olive Oil,7798
+2024-12-22,Olixir Sesame Oil,6878
+2024-12-22,Castor Oil,1106
+2024-12-22,Refined Castor Oil,3832
+2024-12-22,De Oiled Cake,3450
+2024-12-29,Tirupati Cottonseed Oil,2310
+2024-12-29,Tirupati Sunflower Oil,7888
+2024-12-29,Tirupati Groundnut Oil,1643
+2024-12-29,Tirupati Soybean Oil,1275
+2024-12-29,Tirupati Mustard Oil,3302
+2024-12-29,Olixir Olive Oil,3045
+2024-12-29,Olixir Sesame Oil,5687
+2024-12-29,Castor Oil,6535
+2024-12-29,Refined Castor Oil,2044
+2024-12-29,De Oiled Cake,9596
+2025-01-05,Tirupati Cottonseed Oil,2802
+2025-01-05,Tirupati Sunflower Oil,3236
+2025-01-05,Tirupati Groundnut Oil,6624
+2025-01-05,Tirupati Soybean Oil,3097
+2025-01-05,Tirupati Mustard Oil,7597
+2025-01-05,Olixir Olive Oil,2572
+2025-01-05,Olixir Sesame Oil,8119
+2025-01-05,Castor Oil,7000
+2025-01-05,Refined Castor Oil,4220
+2025-01-05,De Oiled Cake,3348
+2025-01-12,Tirupati Cottonseed Oil,9071
+2025-01-12,Tirupati Sunflower Oil,1334
+2025-01-12,Tirupati Groundnut Oil,2811
+2025-01-12,Tirupati Soybean Oil,2361
+2025-01-12,Tirupati Mustard Oil,7601
+2025-01-12,Olixir Olive Oil,7619
+2025-01-12,Olixir Sesame Oil,6919
+2025-01-12,Castor Oil,9322
+2025-01-12,Refined Castor Oil,2129
+2025-01-12,De Oiled Cake,9119
+2025-01-19,Tirupati Cottonseed Oil,1834
+2025-01-19,Tirupati Sunflower Oil,1223
+2025-01-19,Tirupati Groundnut Oil,6384
+2025-01-19,Tirupati Soybean Oil,1395
+2025-01-19,Tirupati Mustard Oil,7743
+2025-01-19,Olixir Olive Oil,2140
+2025-01-19,Olixir Sesame Oil,4538
+2025-01-19,Castor Oil,6544
+2025-01-19,Refined Castor Oil,4115
+2025-01-19,De Oiled Cake,5880
+2025-01-26,Tirupati Cottonseed Oil,9053
+2025-01-26,Tirupati Sunflower Oil,1721
+2025-01-26,Tirupati Groundnut Oil,3526
+2025-01-26,Tirupati Soybean Oil,6973
+2025-01-26,Tirupati Mustard Oil,6504
+2025-01-26,Olixir Olive Oil,9250
+2025-01-26,Olixir Sesame Oil,1598
+2025-01-26,Castor Oil,7161
+2025-01-26,Refined Castor Oil,2524
+2025-01-26,De Oiled Cake,8233
+2025-02-02,Tirupati Cottonseed Oil,9497
+2025-02-02,Tirupati Sunflower Oil,7831
+2025-02-02,Tirupati Groundnut Oil,4903
+2025-02-02,Tirupati Soybean Oil,3689
+2025-02-02,Tirupati Mustard Oil,5834
+2025-02-02,Olixir Olive Oil,9879
+2025-02-02,Olixir Sesame Oil,9557
+2025-02-02,Castor Oil,5795
+2025-02-02,Refined Castor Oil,5362
+2025-02-02,De Oiled Cake,3984
+2025-02-09,Tirupati Cottonseed Oil,6136
+2025-02-09,Tirupati Sunflower Oil,1607
+2025-02-09,Tirupati Groundnut Oil,8431
+2025-02-09,Tirupati Soybean Oil,5740
+2025-02-09,Tirupati Mustard Oil,7092
+2025-02-09,Olixir Olive Oil,6271
+2025-02-09,Olixir Sesame Oil,7542
+2025-02-09,Castor Oil,2538
+2025-02-09,Refined Castor Oil,9551
+2025-02-09,De Oiled Cake,3887
+2025-02-16,Tirupati Cottonseed Oil,2878
+2025-02-16,Tirupati Sunflower Oil,4675
+2025-02-16,Tirupati Groundnut Oil,4670
+2025-02-16,Tirupati Soybean Oil,3268
+2025-02-16,Tirupati Mustard Oil,1606
+2025-02-16,Olixir Olive Oil,7691
+2025-02-16,Olixir Sesame Oil,2415
+2025-02-16,Castor Oil,6709
+2025-02-16,Refined Castor Oil,2091
+2025-02-16,De Oiled Cake,6805
+2025-02-23,Tirupati Cottonseed Oil,5204
+2025-02-23,Tirupati Sunflower Oil,9251
+2025-02-23,Tirupati Groundnut Oil,8632
+2025-02-23,Tirupati Soybean Oil,8746
+2025-02-23,Tirupati Mustard Oil,6168
+2025-02-23,Olixir Olive Oil,1941
+2025-02-23,Olixir Sesame Oil,1046
+2025-02-23,Castor Oil,9497
+2025-02-23,Refined Castor Oil,2073
+2025-02-23,De Oiled Cake,9442
+2025-03-02,Tirupati Cottonseed Oil,4787
+2025-03-02,Tirupati Sunflower Oil,1669
+2025-03-02,Tirupati Groundnut Oil,5992
+2025-03-02,Tirupati Soybean Oil,7352
+2025-03-02,Tirupati Mustard Oil,7848
+2025-03-02,Olixir Olive Oil,7250
+2025-03-02,Olixir Sesame Oil,8456
+2025-03-02,Castor Oil,7440
+2025-03-02,Refined Castor Oil,1640
+2025-03-02,De Oiled Cake,1283
+2025-03-09,Tirupati Cottonseed Oil,4269
+2025-03-09,Tirupati Sunflower Oil,8440
+2025-03-09,Tirupati Groundnut Oil,1316
+2025-03-09,Tirupati Soybean Oil,4564
+2025-03-09,Tirupati Mustard Oil,3010
+2025-03-09,Olixir Olive Oil,2600
+2025-03-09,Olixir Sesame Oil,9892
+2025-03-09,Castor Oil,1471
+2025-03-09,Refined Castor Oil,4206
+2025-03-09,De Oiled Cake,3513
+2025-03-16,Tirupati Cottonseed Oil,8087
+2025-03-16,Tirupati Sunflower Oil,1689
+2025-03-16,Tirupati Groundnut Oil,3059
+2025-03-16,Tirupati Soybean Oil,4285
+2025-03-16,Tirupati Mustard Oil,6750
+2025-03-16,Olixir Olive Oil,5689
+2025-03-16,Olixir Sesame Oil,9015
+2025-03-16,Castor Oil,1085
+2025-03-16,Refined Castor Oil,2903
+2025-03-16,De Oiled Cake,2555
+2025-03-23,Tirupati Cottonseed Oil,5095
+2025-03-23,Tirupati Sunflower Oil,7646
+2025-03-23,Tirupati Groundnut Oil,6715
+2025-03-23,Tirupati Soybean Oil,1010
+2025-03-23,Tirupati Mustard Oil,5467
+2025-03-23,Olixir Olive Oil,6623
+2025-03-23,Olixir Sesame Oil,6384
+2025-03-23,Castor Oil,7984
+2025-03-23,Refined Castor Oil,3701
+2025-03-23,De Oiled Cake,1571
+2025-03-30,Tirupati Cottonseed Oil,3214
+2025-03-30,Tirupati Sunflower Oil,6874
+2025-03-30,Tirupati Groundnut Oil,3226
+2025-03-30,Tirupati Soybean Oil,1244
+2025-03-30,Tirupati Mustard Oil,7689
+2025-03-30,Olixir Olive Oil,1205
+2025-03-30,Olixir Sesame Oil,3545
+2025-03-30,Castor Oil,7326
+2025-03-30,Refined Castor Oil,3346
+2025-03-30,De Oiled Cake,2006
+2025-04-06,Tirupati Cottonseed Oil,5436
+2025-04-06,Tirupati Sunflower Oil,2153
+2025-04-06,Tirupati Groundnut Oil,2342
+2025-04-06,Tirupati Soybean Oil,3292
+2025-04-06,Tirupati Mustard Oil,3504
+2025-04-06,Olixir Olive Oil,9720
+2025-04-06,Olixir Sesame Oil,8930
+2025-04-06,Castor Oil,3988
+2025-04-06,Refined Castor Oil,1069
+2025-04-06,De Oiled Cake,5051
+2025-04-13,Tirupati Cottonseed Oil,4000
+2025-04-13,Tirupati Sunflower Oil,6461
+2025-04-13,Tirupati Groundnut Oil,5974
+2025-04-13,Tirupati Soybean Oil,1370
+2025-04-13,Tirupati Mustard Oil,5096
+2025-04-13,Olixir Olive Oil,3049
+2025-04-13,Olixir Sesame Oil,8683
+2025-04-13,Castor Oil,6520
+2025-04-13,Refined Castor Oil,2465
+2025-04-13,De Oiled Cake,2795
+2025-04-20,Tirupati Cottonseed Oil,3420
+2025-04-20,Tirupati Sunflower Oil,9519
+2025-04-20,Tirupati Groundnut Oil,2666
+2025-04-20,Tirupati Soybean Oil,4526
+2025-04-20,Tirupati Mustard Oil,5472
+2025-04-20,Olixir Olive Oil,9280
+2025-04-20,Olixir Sesame Oil,1252
+2025-04-20,Castor Oil,3574
+2025-04-20,Refined Castor Oil,8894
+2025-04-20,De Oiled Cake,3417
+2025-04-27,Tirupati Cottonseed Oil,1424
+2025-04-27,Tirupati Sunflower Oil,1659
+2025-04-27,Tirupati Groundnut Oil,3863
+2025-04-27,Tirupati Soybean Oil,6434
+2025-04-27,Tirupati Mustard Oil,8057
+2025-04-27,Olixir Olive Oil,9628
+2025-04-27,Olixir Sesame Oil,1804
+2025-04-27,Castor Oil,5988
+2025-04-27,Refined Castor Oil,3215
+2025-04-27,De Oiled Cake,7646
+2025-05-04,Tirupati Cottonseed Oil,3132
+2025-05-04,Tirupati Sunflower Oil,1851
+2025-05-04,Tirupati Groundnut Oil,1442
+2025-05-04,Tirupati Soybean Oil,2079
+2025-05-04,Tirupati Mustard Oil,9450
+2025-05-04,Olixir Olive Oil,7863
+2025-05-04,Olixir Sesame Oil,7819
+2025-05-04,Castor Oil,5940
+2025-05-04,Refined Castor Oil,1191
+2025-05-04,De Oiled Cake,1721
+2025-05-11,Tirupati Cottonseed Oil,2879
+2025-05-11,Tirupati Sunflower Oil,7324
+2025-05-11,Tirupati Groundnut Oil,4692
+2025-05-11,Tirupati Soybean Oil,3566
+2025-05-11,Tirupati Mustard Oil,5842
+2025-05-11,Olixir Olive Oil,9615
+2025-05-11,Olixir Sesame Oil,3103
+2025-05-11,Castor Oil,2931
+2025-05-11,Refined Castor Oil,6981
+2025-05-11,De Oiled Cake,9794
+2025-05-18,Tirupati Cottonseed Oil,7011
+2025-05-18,Tirupati Sunflower Oil,8313
+2025-05-18,Tirupati Groundnut Oil,3333
+2025-05-18,Tirupati Soybean Oil,6447
+2025-05-18,Tirupati Mustard Oil,1526
+2025-05-18,Olixir Olive Oil,4912
+2025-05-18,Olixir Sesame Oil,1498
+2025-05-18,Castor Oil,8812
+2025-05-18,Refined Castor Oil,3889
+2025-05-18,De Oiled Cake,3460
+2025-05-25,Tirupati Cottonseed Oil,3012
+2025-05-25,Tirupati Sunflower Oil,4434
+2025-05-25,Tirupati Groundnut Oil,6978
+2025-05-25,Tirupati Soybean Oil,7228
+2025-05-25,Tirupati Mustard Oil,9072
+2025-05-25,Olixir Olive Oil,2615
+2025-05-25,Olixir Sesame Oil,6478
+2025-05-25,Castor Oil,4672
+2025-05-25,Refined Castor Oil,7437
+2025-05-25,De Oiled Cake,7889
+2025-06-01,Tirupati Cottonseed Oil,5504
+2025-06-01,Tirupati Sunflower Oil,6582
+2025-06-01,Tirupati Groundnut Oil,2480
+2025-06-01,Tirupati Soybean Oil,8995
+2025-06-01,Tirupati Mustard Oil,3694
+2025-06-01,Olixir Olive Oil,2790
+2025-06-01,Olixir Sesame Oil,8192
+2025-06-01,Castor Oil,6720
+2025-06-01,Refined Castor Oil,1706
+2025-06-01,De Oiled Cake,3993
+2025-06-08,Tirupati Cottonseed Oil,5374
+2025-06-08,Tirupati Sunflower Oil,6399
+2025-06-08,Tirupati Groundnut Oil,2875
+2025-06-08,Tirupati Soybean Oil,8964
+2025-06-08,Tirupati Mustard Oil,1645
+2025-06-08,Olixir Olive Oil,3628
+2025-06-08,Olixir Sesame Oil,5241
+2025-06-08,Castor Oil,1833
+2025-06-08,Refined Castor Oil,7248
+2025-06-08,De Oiled Cake,8694
+2025-06-15,Tirupati Cottonseed Oil,8781
+2025-06-15,Tirupati Sunflower Oil,3866
+2025-06-15,Tirupati Groundnut Oil,3977
+2025-06-15,Tirupati Soybean Oil,2255
+2025-06-15,Tirupati Mustard Oil,6836
+2025-06-15,Olixir Olive Oil,6528
+2025-06-15,Olixir Sesame Oil,6246
+2025-06-15,Castor Oil,5559
+2025-06-15,Refined Castor Oil,5161
+2025-06-15,De Oiled Cake,8740
+2025-06-22,Tirupati Cottonseed Oil,6115
+2025-06-22,Tirupati Sunflower Oil,4232
+2025-06-22,Tirupati Groundnut Oil,9296
+2025-06-22,Tirupati Soybean Oil,1647
+2025-06-22,Tirupati Mustard Oil,9053
+2025-06-22,Olixir Olive Oil,8166
+2025-06-22,Olixir Sesame Oil,3473
+2025-06-22,Castor Oil,8124
+2025-06-22,Refined Castor Oil,9070
+2025-06-22,De Oiled Cake,1039
+2025-06-29,Tirupati Cottonseed Oil,7865
+2025-06-29,Tirupati Sunflower Oil,9444
+2025-06-29,Tirupati Groundnut Oil,3198
+2025-06-29,Tirupati Soybean Oil,9255
+2025-06-29,Tirupati Mustard Oil,9080
+2025-06-29,Olixir Olive Oil,2962
+2025-06-29,Olixir Sesame Oil,1624
+2025-06-29,Castor Oil,5515
+2025-06-29,Refined Castor Oil,8532
+2025-06-29,De Oiled Cake,2811
+2025-07-06,Tirupati Cottonseed Oil,8261
+2025-07-06,Tirupati Sunflower Oil,3578
+2025-07-06,Tirupati Groundnut Oil,6614
+2025-07-06,Tirupati Soybean Oil,2162
+2025-07-06,Tirupati Mustard Oil,3483
+2025-07-06,Olixir Olive Oil,2971
+2025-07-06,Olixir Sesame Oil,4292
+2025-07-06,Castor Oil,4842
+2025-07-06,Refined Castor Oil,1045
+2025-07-06,De Oiled Cake,9220
+2025-07-13,Tirupati Cottonseed Oil,8420
+2025-07-13,Tirupati Sunflower Oil,2913
+2025-07-13,Tirupati Groundnut Oil,1320
+2025-07-13,Tirupati Soybean Oil,4462
+2025-07-13,Tirupati Mustard Oil,7746
+2025-07-13,Olixir Olive Oil,8546
+2025-07-13,Olixir Sesame Oil,3007
+2025-07-13,Castor Oil,1782
+2025-07-13,Refined Castor Oil,1326
+2025-07-13,De Oiled Cake,5364
+2025-07-20,Tirupati Cottonseed Oil,1228
+2025-07-20,Tirupati Sunflower Oil,1694
+2025-07-20,Tirupati Groundnut Oil,8868
+2025-07-20,Tirupati Soybean Oil,2200
+2025-07-20,Tirupati Mustard Oil,8480
+2025-07-20,Olixir Olive Oil,4406
+2025-07-20,Olixir Sesame Oil,3187
+2025-07-20,Castor Oil,3629
+2025-07-20,Refined Castor Oil,6043
+2025-07-20,De Oiled Cake,1032
+2025-07-27,Tirupati Cottonseed Oil,1768
+2025-07-27,Tirupati Sunflower Oil,3717
+2025-07-27,Tirupati Groundnut Oil,1077
+2025-07-27,Tirupati Soybean Oil,2113
+2025-07-27,Tirupati Mustard Oil,3175
+2025-07-27,Olixir Olive Oil,1699
+2025-07-27,Olixir Sesame Oil,4826
+2025-07-27,Castor Oil,7592
+2025-07-27,Refined Castor Oil,6108
+2025-07-27,De Oiled Cake,1406
+2025-08-03,Tirupati Cottonseed Oil,6022
+2025-08-03,Tirupati Sunflower Oil,4753
+2025-08-03,Tirupati Groundnut Oil,6995
+2025-08-03,Tirupati Soybean Oil,5080
+2025-08-03,Tirupati Mustard Oil,9237
+2025-08-03,Olixir Olive Oil,6123
+2025-08-03,Olixir Sesame Oil,3122
+2025-08-03,Castor Oil,9488
+2025-08-03,Refined Castor Oil,6953
+2025-08-03,De Oiled Cake,7577
+2025-08-10,Tirupati Cottonseed Oil,1233
+2025-08-10,Tirupati Sunflower Oil,7248
+2025-08-10,Tirupati Groundnut Oil,3635
+2025-08-10,Tirupati Soybean Oil,1964
+2025-08-10,Tirupati Mustard Oil,2397
+2025-08-10,Olixir Olive Oil,2931
+2025-08-10,Olixir Sesame Oil,1618
+2025-08-10,Castor Oil,5407
+2025-08-10,Refined Castor Oil,3033
+2025-08-10,De Oiled Cake,3405
+2025-08-17,Tirupati Cottonseed Oil,5596
+2025-08-17,Tirupati Sunflower Oil,2802
+2025-08-17,Tirupati Groundnut Oil,8449
+2025-08-17,Tirupati Soybean Oil,4673
+2025-08-17,Tirupati Mustard Oil,8009
+2025-08-17,Olixir Olive Oil,2840
+2025-08-17,Olixir Sesame Oil,4504
+2025-08-17,Castor Oil,6833
+2025-08-17,Refined Castor Oil,9667
+2025-08-17,De Oiled Cake,2183
+2025-08-24,Tirupati Cottonseed Oil,7898
+2025-08-24,Tirupati Sunflower Oil,4651
+2025-08-24,Tirupati Groundnut Oil,2094
+2025-08-24,Tirupati Soybean Oil,7533
+2025-08-24,Tirupati Mustard Oil,8104
+2025-08-24,Olixir Olive Oil,9080
+2025-08-24,Olixir Sesame Oil,3634
+2025-08-24,Castor Oil,2549
+2025-08-24,Refined Castor Oil,2107
+2025-08-24,De Oiled Cake,1508
+2025-08-31,Tirupati Cottonseed Oil,4180
+2025-08-31,Tirupati Sunflower Oil,5711
+2025-08-31,Tirupati Groundnut Oil,5187
+2025-08-31,Tirupati Soybean Oil,9309
+2025-08-31,Tirupati Mustard Oil,6596
+2025-08-31,Olixir Olive Oil,3104
+2025-08-31,Olixir Sesame Oil,1196
+2025-08-31,Castor Oil,7357
+2025-08-31,Refined Castor Oil,9100
+2025-08-31,De Oiled Cake,5150
+2025-09-07,Tirupati Cottonseed Oil,7272
+2025-09-07,Tirupati Sunflower Oil,5733
+2025-09-07,Tirupati Groundnut Oil,8886
+2025-09-07,Tirupati Soybean Oil,9440
+2025-09-07,Tirupati Mustard Oil,3076
+2025-09-07,Olixir Olive Oil,5294
+2025-09-07,Olixir Sesame Oil,1770
+2025-09-07,Castor Oil,6841
+2025-09-07,Refined Castor Oil,7311
+2025-09-07,De Oiled Cake,1513
+2025-09-14,Tirupati Cottonseed Oil,4502
+2025-09-14,Tirupati Sunflower Oil,1435
+2025-09-14,Tirupati Groundnut Oil,7854
+2025-09-14,Tirupati Soybean Oil,1070
+2025-09-14,Tirupati Mustard Oil,6531
+2025-09-14,Olixir Olive Oil,4519
+2025-09-14,Olixir Sesame Oil,2516
+2025-09-14,Castor Oil,5617
+2025-09-14,Refined Castor Oil,4717
+2025-09-14,De Oiled Cake,3558
+2025-09-21,Tirupati Cottonseed Oil,1730
+2025-09-21,Tirupati Sunflower Oil,9631
+2025-09-21,Tirupati Groundnut Oil,1291
+2025-09-21,Tirupati Soybean Oil,7601
+2025-09-21,Tirupati Mustard Oil,7086
+2025-09-21,Olixir Olive Oil,3550
+2025-09-21,Olixir Sesame Oil,9251
+2025-09-21,Castor Oil,7591
+2025-09-21,Refined Castor Oil,7906
+2025-09-21,De Oiled Cake,9403
+2025-09-28,Tirupati Cottonseed Oil,5369
+2025-09-28,Tirupati Sunflower Oil,3991
+2025-09-28,Tirupati Groundnut Oil,8483
+2025-09-28,Tirupati Soybean Oil,2653
+2025-09-28,Tirupati Mustard Oil,5000
+2025-09-28,Olixir Olive Oil,8839
+2025-09-28,Olixir Sesame Oil,4851
+2025-09-28,Castor Oil,3906
+2025-09-28,Refined Castor Oil,2004
+2025-09-28,De Oiled Cake,4222
+2025-10-05,Tirupati Cottonseed Oil,8394
+2025-10-05,Tirupati Sunflower Oil,2384
+2025-10-05,Tirupati Groundnut Oil,7605
+2025-10-05,Tirupati Soybean Oil,2609
+2025-10-05,Tirupati Mustard Oil,7689
+2025-10-05,Olixir Olive Oil,2082
+2025-10-05,Olixir Sesame Oil,2955
+2025-10-05,Castor Oil,4515
+2025-10-05,Refined Castor Oil,1161
+2025-10-05,De Oiled Cake,6600
+2025-10-12,Tirupati Cottonseed Oil,4776
+2025-10-12,Tirupati Sunflower Oil,4978
+2025-10-12,Tirupati Groundnut Oil,9758
+2025-10-12,Tirupati Soybean Oil,4938
+2025-10-12,Tirupati Mustard Oil,5628
+2025-10-12,Olixir Olive Oil,6774
+2025-10-12,Olixir Sesame Oil,5181
+2025-10-12,Castor Oil,1410
+2025-10-12,Refined Castor Oil,6241
+2025-10-12,De Oiled Cake,2426
+2025-10-19,Tirupati Cottonseed Oil,2550
+2025-10-19,Tirupati Sunflower Oil,5605
+2025-10-19,Tirupati Groundnut Oil,1213
+2025-10-19,Tirupati Soybean Oil,4571
+2025-10-19,Tirupati Mustard Oil,7453
+2025-10-19,Olixir Olive Oil,3355
+2025-10-19,Olixir Sesame Oil,7704
+2025-10-19,Castor Oil,3870
+2025-10-19,Refined Castor Oil,5792
+2025-10-19,De Oiled Cake,9539
+2025-10-26,Tirupati Cottonseed Oil,9029
+2025-10-26,Tirupati Sunflower Oil,6010
+2025-10-26,Tirupati Groundnut Oil,9667
+2025-10-26,Tirupati Soybean Oil,4273
+2025-10-26,Tirupati Mustard Oil,5490
+2025-10-26,Olixir Olive Oil,8559
+2025-10-26,Olixir Sesame Oil,4779
+2025-10-26,Castor Oil,7820
+2025-10-26,Refined Castor Oil,9446
+2025-10-26,De Oiled Cake,3010
+2025-11-02,Tirupati Cottonseed Oil,9036
+2025-11-02,Tirupati Sunflower Oil,1477
+2025-11-02,Tirupati Groundnut Oil,4763
+2025-11-02,Tirupati Soybean Oil,6843
+2025-11-02,Tirupati Mustard Oil,9301
+2025-11-02,Olixir Olive Oil,6367
+2025-11-02,Olixir Sesame Oil,4911
+2025-11-02,Castor Oil,9541
+2025-11-02,Refined Castor Oil,8491
+2025-11-02,De Oiled Cake,7590
+2025-11-09,Tirupati Cottonseed Oil,1018
+2025-11-09,Tirupati Sunflower Oil,7386
+2025-11-09,Tirupati Groundnut Oil,7968
+2025-11-09,Tirupati Soybean Oil,5175
+2025-11-09,Tirupati Mustard Oil,9358
+2025-11-09,Olixir Olive Oil,5692
+2025-11-09,Olixir Sesame Oil,6668
+2025-11-09,Castor Oil,9922
+2025-11-09,Refined Castor Oil,7884
+2025-11-09,De Oiled Cake,7254
+2025-11-16,Tirupati Cottonseed Oil,8078
+2025-11-16,Tirupati Sunflower Oil,3922
+2025-11-16,Tirupati Groundnut Oil,7314
+2025-11-16,Tirupati Soybean Oil,5633
+2025-11-16,Tirupati Mustard Oil,2081
+2025-11-16,Olixir Olive Oil,6298
+2025-11-16,Olixir Sesame Oil,3200
+2025-11-16,Castor Oil,7857
+2025-11-16,Refined Castor Oil,9203
+2025-11-16,De Oiled Cake,9704
+2025-11-23,Tirupati Cottonseed Oil,8709
+2025-11-23,Tirupati Sunflower Oil,9978
+2025-11-23,Tirupati Groundnut Oil,2229
+2025-11-23,Tirupati Soybean Oil,1665
+2025-11-23,Tirupati Mustard Oil,4566
+2025-11-23,Olixir Olive Oil,2672
+2025-11-23,Olixir Sesame Oil,9602
+2025-11-23,Castor Oil,3282
+2025-11-23,Refined Castor Oil,1530
+2025-11-23,De Oiled Cake,50000
+2025-11-30,Tirupati Cottonseed Oil,1902
+2025-11-30,Tirupati Sunflower Oil,9885
+2025-11-30,Tirupati Groundnut Oil,9453
+2025-11-30,Tirupati Soybean Oil,6990
+2025-11-30,Tirupati Mustard Oil,9221
+2025-11-30,Olixir Olive Oil,6921
+2025-11-30,Olixir Sesame Oil,6014
+2025-11-30,Castor Oil,5677
+2025-11-30,Refined Castor Oil,4069
+2025-11-30,De Oiled Cake,50000
+2025-12-07,Tirupati Cottonseed Oil,4046
+2025-12-07,Tirupati Sunflower Oil,6925
+2025-12-07,Tirupati Groundnut Oil,6902
+2025-12-07,Tirupati Soybean Oil,8745
+2025-12-07,Tirupati Mustard Oil,4828
+2025-12-07,Olixir Olive Oil,9628
+2025-12-07,Olixir Sesame Oil,5835
+2025-12-07,Castor Oil,4388
+2025-12-07,Refined Castor Oil,3573
+2025-12-07,De Oiled Cake,50000
+2025-12-14,Tirupati Cottonseed Oil,7431
+2025-12-14,Tirupati Sunflower Oil,4127
+2025-12-14,Tirupati Groundnut Oil,6575
+2025-12-14,Tirupati Soybean Oil,1114
+2025-12-14,Tirupati Mustard Oil,4596
+2025-12-14,Olixir Olive Oil,4946
+2025-12-14,Olixir Sesame Oil,1903
+2025-12-14,Castor Oil,3041
+2025-12-14,Refined Castor Oil,4140
+2025-12-14,De Oiled Cake,50000
+2025-12-21,Tirupati Cottonseed Oil,6134
+2025-12-21,Tirupati Sunflower Oil,1283
+2025-12-21,Tirupati Groundnut Oil,7571
+2025-12-21,Tirupati Soybean Oil,1494
+2025-12-21,Tirupati Mustard Oil,8131
+2025-12-21,Olixir Olive Oil,1422
+2025-12-21,Olixir Sesame Oil,1513
+2025-12-21,Castor Oil,7870
+2025-12-21,Refined Castor Oil,4340
+2025-12-21,De Oiled Cake,50000
+2025-12-28,Tirupati Cottonseed Oil,3672
+2025-12-28,Tirupati Sunflower Oil,5204
+2025-12-28,Tirupati Groundnut Oil,9681
+2025-12-28,Tirupati Soybean Oil,3243
+2025-12-28,Tirupati Mustard Oil,4937
+2025-12-28,Olixir Olive Oil,8381
+2025-12-28,Olixir Sesame Oil,2310
+2025-12-28,Castor Oil,3416
+2025-12-28,Refined Castor Oil,4300
+2025-12-28,De Oiled Cake,50000
+2026-01-04,Tirupati Cottonseed Oil,4351
+2026-01-04,Tirupati Sunflower Oil,1899
+2026-01-04,Tirupati Groundnut Oil,7548
+2026-01-04,Tirupati Soybean Oil,3434
+2026-01-04,Tirupati Mustard Oil,7366
+2026-01-04,Olixir Olive Oil,3562
+2026-01-04,Olixir Sesame Oil,7326
+2026-01-04,Castor Oil,8290
+2026-01-04,Refined Castor Oil,3597
+2026-01-04,De Oiled Cake,50000
+2026-01-11,Tirupati Cottonseed Oil,9032
+2026-01-11,Tirupati Sunflower Oil,7157
+2026-01-11,Tirupati Groundnut Oil,4529
+2026-01-11,Tirupati Soybean Oil,8896
+2026-01-11,Tirupati Mustard Oil,1211
+2026-01-11,Olixir Olive Oil,3669
+2026-01-11,Olixir Sesame Oil,5513
+2026-01-11,Castor Oil,2145
+2026-01-11,Refined Castor Oil,1487
+2026-01-11,De Oiled Cake,50000
+2026-01-18,Tirupati Cottonseed Oil,1756
+2026-01-18,Tirupati Sunflower Oil,9050
+2026-01-18,Tirupati Groundnut Oil,9212
+2026-01-18,Tirupati Soybean Oil,6717
+2026-01-18,Tirupati Mustard Oil,9270
+2026-01-18,Olixir Olive Oil,7813
+2026-01-18,Olixir Sesame Oil,4324
+2026-01-18,Castor Oil,5002
+2026-01-18,Refined Castor Oil,8046
+2026-01-18,De Oiled Cake,50000
+2026-01-25,Tirupati Cottonseed Oil,3358
+2026-01-25,Tirupati Sunflower Oil,6386
+2026-01-25,Tirupati Groundnut Oil,8290
+2026-01-25,Tirupati Soybean Oil,4125
+2026-01-25,Tirupati Mustard Oil,1502
+2026-01-25,Olixir Olive Oil,7286
+2026-01-25,Olixir Sesame Oil,8113
+2026-01-25,Castor Oil,4129
+2026-01-25,Refined Castor Oil,8887
+2026-01-25,De Oiled Cake,50000
+2026-02-01,Tirupati Cottonseed Oil,5950
+2026-02-01,Tirupati Sunflower Oil,6732
+2026-02-01,Tirupati Groundnut Oil,4457
+2026-02-01,Tirupati Soybean Oil,1518
+2026-02-01,Tirupati Mustard Oil,5513
+2026-02-01,Olixir Olive Oil,7283
+2026-02-01,Olixir Sesame Oil,5765
+2026-02-01,Castor Oil,2316
+2026-02-01,Refined Castor Oil,1579
+2026-02-01,De Oiled Cake,50000
+2026-02-08,Tirupati Cottonseed Oil,6246
+2026-02-08,Tirupati Sunflower Oil,9750
+2026-02-08,Tirupati Groundnut Oil,8001
+2026-02-08,Tirupati Soybean Oil,4791
+2026-02-08,Tirupati Mustard Oil,8028
+2026-02-08,Olixir Olive Oil,1898
+2026-02-08,Olixir Sesame Oil,2962
+2026-02-08,Castor Oil,4209
+2026-02-08,Refined Castor Oil,9763
+2026-02-08,De Oiled Cake,50000
+2026-02-15,Tirupati Cottonseed Oil,4916
+2026-02-15,Tirupati Sunflower Oil,6247
+2026-02-15,Tirupati Groundnut Oil,7963
+2026-02-15,Tirupati Soybean Oil,2499
+2026-02-15,Tirupati Mustard Oil,3370
+2026-02-15,Olixir Olive Oil,8249
+2026-02-15,Olixir Sesame Oil,5319
+2026-02-15,Castor Oil,6842
+2026-02-15,Refined Castor Oil,7556
+2026-02-15,De Oiled Cake,50000
+2026-02-22,Tirupati Cottonseed Oil,2673
+2026-02-22,Tirupati Sunflower Oil,2116
+2026-02-22,Tirupati Groundnut Oil,8757
+2026-02-22,Tirupati Soybean Oil,9076
+2026-02-22,Tirupati Mustard Oil,1792
+2026-02-22,Olixir Olive Oil,7531
+2026-02-22,Olixir Sesame Oil,7900
+2026-02-22,Castor Oil,4795
+2026-02-22,Refined Castor Oil,8177
+2026-02-22,De Oiled Cake,50000
+2026-03-01,Tirupati Cottonseed Oil,8665
+2026-03-01,Tirupati Sunflower Oil,1854
+2026-03-01,Tirupati Groundnut Oil,1499
+2026-03-01,Tirupati Soybean Oil,1556
+2026-03-01,Tirupati Mustard Oil,2014
+2026-03-01,Olixir Olive Oil,9560
+2026-03-01,Olixir Sesame Oil,5598
+2026-03-01,Castor Oil,2781
+2026-03-01,Refined Castor Oil,5056
+2026-03-01,De Oiled Cake,50000
+2026-03-08,Tirupati Cottonseed Oil,5687
+2026-03-08,Tirupati Sunflower Oil,1545
+2026-03-08,Tirupati Groundnut Oil,3429
+2026-03-08,Tirupati Soybean Oil,6811
+2026-03-08,Tirupati Mustard Oil,4364
+2026-03-08,Olixir Olive Oil,8502
+2026-03-08,Olixir Sesame Oil,6936
+2026-03-08,Castor Oil,7732
+2026-03-08,Refined Castor Oil,6113
+2026-03-08,De Oiled Cake,50000
+2026-03-15,Tirupati Cottonseed Oil,2833
+2026-03-15,Tirupati Sunflower Oil,8736
+2026-03-15,Tirupati Groundnut Oil,5763
+2026-03-15,Tirupati Soybean Oil,4410
+2026-03-15,Tirupati Mustard Oil,3927
+2026-03-15,Olixir Olive Oil,5925
+2026-03-15,Olixir Sesame Oil,8037
+2026-03-15,Castor Oil,6335
+2026-03-15,Refined Castor Oil,1830
+2026-03-15,De Oiled Cake,50000
+2026-03-22,Tirupati Cottonseed Oil,4779
+2026-03-22,Tirupati Sunflower Oil,5858
+2026-03-22,Tirupati Groundnut Oil,4724
+2026-03-22,Tirupati Soybean Oil,9122
+2026-03-22,Tirupati Mustard Oil,7928
+2026-03-22,Olixir Olive Oil,2834
+2026-03-22,Olixir Sesame Oil,7505
+2026-03-22,Castor Oil,9221
+2026-03-22,Refined Castor Oil,2169
+2026-03-22,De Oiled Cake,50000
