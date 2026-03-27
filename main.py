@@ -162,47 +162,6 @@ async def ask_nk_ai(req: QueryRequest):
     )
 
 
-# --- Existing Specific Endpoints (Kept for backwards compatibility) ---
-
-@router.post("/get-sales-prediction", response_model=AIResponse)
-async def get_sales_prediction(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_sales_prediction()
-    user_context = f"User asked: {req.query}\n\nRaw Core Engine Data: {raw_math}"
-    if "list" in req.query.lower():
-        user_context += "\n\nIMPORTANT: Use a Markdown table for the products and ensure double spacing between sections."
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, user_context, metadata)
-    return AIResponse(response=ai_resp.strip(), action_type="sales_view", alert_data=metadata)
-
-@router.post("/get-liquidity-risk", response_model=AIResponse)
-async def get_liquidity_risk(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_liquidity_risk()
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
-    return AIResponse(response=ai_resp, action_type="legal_notice", alert_data=metadata)
-
-@router.post("/get-inventory-opt", response_model=AIResponse)
-async def get_inventory_opt(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_inventory_optimization()
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
-    return AIResponse(response=ai_resp, action_type="liquidate_stock", alert_data=metadata)
-
-@router.post("/get-tax-delta", response_model=AIResponse)
-async def get_tax_delta(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_tax_delta()
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
-    return AIResponse(response=ai_resp, action_type="reconcile_tax", alert_data=metadata)
-
-@router.post("/get-profitability", response_model=AIResponse)
-async def get_profitability(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_profitability_analysis()
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
-    return AIResponse(response=ai_resp, action_type="sales_view", alert_data=metadata)
-
-@router.post("/get-working-capital", response_model=AIResponse)
-async def get_working_capital(req: QueryRequest):
-    raw_math, metadata = analytics_engine.run_working_capital_analysis()
-    ai_resp = await call_ai_orchestration(SYSTEM_PROMPT, f"User asked: {req.query}. Raw data: {raw_math}", metadata)
-    return AIResponse(response=ai_resp, action_type="liquidate_stock", alert_data=metadata)
-
 app.include_router(router)
 
 if __name__ == "__main__":
